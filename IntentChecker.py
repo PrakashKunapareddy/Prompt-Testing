@@ -43,7 +43,7 @@ IntentCheckerPrompt = {"SYSTEM": """ You are an intent checker bot. Your task is
         """,
                        "DISPLAY": """Ensure that the output is in the following JSON format exactly as shown:
         {{
-                "is_intent_changed": "[True/False]",
+                "is_intent_changed": "[True/False]"
         }}"""
 
                        }
@@ -163,7 +163,7 @@ def gpt_call(GPT):
 
 
 def intentChecker(EmailHistory, CURRENT_INTENT, BOT_CURRENT_EMAIL, USER_CURRENT_EMAIL, Expected_Flag, GPT):
-    prompt = f"{IntentCheckerPrompt.get('SYSTEM')}\nCONTEXT:{EmailHistory}\nCURRENT_INTENT:{CURRENT_INTENT}\nBOT_CURRENT_EMAIL:{BOT_CURRENT_EMAIL}\nUSER_CURRENT_EMAIL:{USER_CURRENT_EMAIL}"
+    # prompt = f"{IntentCheckerPrompt.get('SYSTEM')}\nCONTEXT:{EmailHistory}\nCURRENT_INTENT:{CURRENT_INTENT}\nBOT_CURRENT_EMAIL:{BOT_CURRENT_EMAIL}\nUSER_CURRENT_EMAIL:{USER_CURRENT_EMAIL}"
 
     llm = gpt_call(GPT)
     template = ChatPromptTemplate(
@@ -176,8 +176,8 @@ def intentChecker(EmailHistory, CURRENT_INTENT, BOT_CURRENT_EMAIL, USER_CURRENT_
     )
     llm_chain = LLMChain(llm=llm, prompt=template, verbose=True)
     result = llm_chain.run(
-        {"EMAIL_HISTORY": EmailHistory, "CURRENT_INTENT": CURRENT_INTENT, "BOT_CURRENT_EMAIL": BOT_CURRENT_EMAIL,
-         "USER_CURRENT_EMAIL": USER_CURRENT_EMAIL})
+        {"EMAIL_HISTORY": EmailHistory, "BOT_CURRENT_EMAIL": BOT_CURRENT_EMAIL,
+         "USER_CURRENT_EMAIL": USER_CURRENT_EMAIL,"CURRENT_INTENT": CURRENT_INTENT})
 
     if result == Expected_Flag:
         print(f"Passed:{result}")

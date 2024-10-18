@@ -59,12 +59,6 @@ def gpt_call(GPT):
             "OPENAI_API_VERSION": "2024-02-15-preview",
         }
     }
-    # GPT4_OPENAI_API_KEY = "95058a9e99794e4689d179dd726e7eec"
-    # GPT4_OPENAI_DEPLOYMENT_NAME = "vassar-4o-mini"
-    # GPT4_OPENAI_API_BASE = "https://vassar-openai.openai.azure.com/"
-    # GPT4_MODEL_NAME = "gpt-4o-mini"
-    # GPT4_OPENAI_API_TYPE = "azure"
-    # GPT4_OPENAI_API_VERSION = "2024-02-15-preview"
 
     config = gpt_config.get(GPT)
     if not config:
