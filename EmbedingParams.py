@@ -1,0 +1,15 @@
+
+
+OPENAI_EMBEDDING_MODEL_API_KEY = "95058a9e99794e4689d179dd726e7eec"
+OPENAI_EMBEDDING_MODEL_DEPLOYMENT_NAME = "vassar-text-ada002"
+OPENAI_EMBEDDING_MODEL_API_BASE = "https://vassar-openai.openai.azure.com/"
+OPENAI_EMBEDDING_MODEL_NAME = "text-embedding-ada-002"
+OPENAI_EMBEDDING_API_TYPE = "azure"
+
+embeddings_params = {
+    "deployment":OPENAI_EMBEDDING_MODEL_DEPLOYMENT_NAME,
+    "model":OPENAI_EMBEDDING_MODEL_NAME,
+    "openai_api_base":OPENAI_EMBEDDING_MODEL_API_BASE,
+    "openai_api_type":OPENAI_EMBEDDING_API_TYPE,
+    "openai_api_key":OPENAI_EMBEDDING_MODEL_API_KEY
+}

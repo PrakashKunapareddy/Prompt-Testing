@@ -1,3 +1,6 @@
+import json
+
+import openpyxl
 from langchain.chains import LLMChain
 from langchain.chat_models import AzureChatOpenAI
 from langchain.prompts import (
@@ -47,82 +50,9 @@ IntentCheckerPrompt = {"SYSTEM": """ You are an intent checker bot. Your task is
         }}"""
 
                        }
-EMAIL_CONTEXT = [
-    {
-        "EMAIL_HISTORY": "User: Subject: Product Availability,Body:Is the Woven Leather Dining Chair available?\nBot: Yes, the Woven Leather Dining Chair is available.",
-        "CURRENT_INTENT": "PRODUCT_AVAILABILITY",
-        "BOT_CURRENT_EMAIL": "It's in stock.",
-        "USER_CURRENT_EMAIL": "Subject: Product Availability,Body: How many are available in stock?",
-        "Expected_Flag": "FALSE"
-    },
-    {
-        "EMAIL_HISTORY": "User:Subject: Product Availability,Body: Can I buy the Driskill Arm Chair?\nBot: Yes, the Driskill Arm Chair is available.",
-        "CURRENT_INTENT": "PRODUCT_AVAILABILITY",
-        "BOT_CURRENT_EMAIL": "It's available for purchase.",
-        "USER_CURRENT_EMAIL": "Subject: Product Availability,Body: Can I confirm the availability of 2 more units?",
-        "Expected_Flag": "FALSE"
-    },
-    {
-        "EMAIL_HISTORY": "User:Subject: Product Availability,Body: Is the product with SKU ID 136-112237 available?\nBot: Yes, the product with SKU ID 136-112237 is available.",
-        "CURRENT_INTENT": "PRODUCT_AVAILABILITY",
-        "BOT_CURRENT_EMAIL": "It's currently in stock.",
-        "USER_CURRENT_EMAIL": "Subject: Product Availability,Body: What is the return policy on this product?",
-        "Expected_Flag": "FALSE"
-    },
-    {
-        "EMAIL_HISTORY": "User: Subject: Product Availability,Body: Do you have the Amaranthus Stool available?\nBot: Yes, the Amaranthus Stool is in stock.",
-        "CURRENT_INTENT": "PRODUCT_AVAILABILITY",
-        "BOT_CURRENT_EMAIL": "It's available.",
-        "USER_CURRENT_EMAIL": "Subject: Product Availability,Body: Can I order more than one unit at a time?",
-        "Expected_Flag": "FALSE"
-    },
-    {
-        "EMAIL_HISTORY": "User: Subject: Product Availability,Body: Is the product with SKU ID 138-111298 available?\nBot: Yes, the product with SKU ID 138-111298 is in stock.",
-        "CURRENT_INTENT": "PRODUCT_AVAILABILITY",
-        "BOT_CURRENT_EMAIL": "It's available now.",
-        "USER_CURRENT_EMAIL": "Subject: Product Availability,Body: Can I cancel this order if I change my mind later?",
-        "Expected_Flag": "FALSE"
-    },
-    {
-        "EMAIL_HISTORY": "User:Subject: Return my Order,Body: I want to return a product\nBot: Can you please provide the Order ID?\nUser: Subject: Return my Order,Body: #295938",
-        "CURRENT_INTENT": "RETURNS",
-        "BOT_CURRENT_EMAIL": "The product is not eligible for return because it is beyond the return period.",
-        "USER_CURRENT_EMAIL": "Subject: Return my Order,Body:Okay, thank you.",
-        "Expected_Flag": "FALSE"
-    },
-    {
-        "EMAIL_HISTORY": "User:Subject: Return my Order,Body: I need to return an item.\nBot: Could you provide your order ID?\nUser:Subject: Return my Order,Body: I do not remember my order ID.",
-        "CURRENT_INTENT": "RETURNS",
-        "BOT_CURRENT_EMAIL": "Sorry, I can't proceed without it. Please provide the Order ID.",
-        "USER_CURRENT_EMAIL": "Subject: Return my Order,Body:Can I give you my email address instead?",
-        "Expected_Flag": "FALSE"
-    },
-    {
-        "EMAIL_HISTORY": "User:Subject: Return my Order,Body: I want to return a product\nBot: Can you please provide the Order ID?\nUser: Subject: Return my Order,Body: #295938\nBot: The product is not eligible for return because it is beyond the return period.",
-        "CURRENT_INTENT": "RETURNS",
-        "BOT_CURRENT_EMAIL": "The product is not eligible for return because it is beyond the return period.",
-        "USER_CURRENT_EMAIL": "Subject: Return my Order,Body:Do you have any new products on sale?",
-        "Expected_Flag": "FALSE"
-    },
-    {
-        "EMAIL_HISTORY": "User: Subject: Return my Order,Body:I would like to return a product.\nBot: Please provide the order ID.\nUser: Subject: Return my Order,Body: Order ID #298859",
-        "CURRENT_INTENT": "RETURNS",
-        "BOT_CURRENT_EMAIL": "Your return request is being processed.",
-        "USER_CURRENT_EMAIL": "Subject: Return my Order,Body: Can you tell me when my order will be delivered?",
-        "Expected_Flag": "FALSE"
-    },
-    {
-        "EMAIL_HISTORY": "User: Subject: Return my Order,Body:I need to return my Getty Table Lamp.\nBot: Could you provide the order ID?\nUser: Subject: Return my Order,Body: #295932",
-        "CURRENT_INTENT": "RETURNS",
-        "BOT_CURRENT_EMAIL": "The return request is processed.",
-        "USER_CURRENT_EMAIL": "Subject: Return my Order,Body: Is the Getty Table Lamp still under warranty?",
-        "Expected_Flag": "FALSE"
-    }
-]
 
 
 def gpt_call(GPT):
-    # Define configuration settings for different GPT versions
     gpt_config = {
         "4omini": {
             "OPENAI_API_KEY": "95058a9e99794e4689d179dd726e7eec",
@@ -135,10 +65,9 @@ def gpt_call(GPT):
         }
     }
 
-    # Fetch configuration based on GPT version
     config = gpt_config.get(GPT)
     if not config:
-        raise ValueError("Invalid GPT version specified")
+        print("Invalid GPT version specified")
 
     # Unpack configuration settings
     OPENAI_API_KEY = config["OPENAI_API_KEY"]
@@ -149,7 +78,6 @@ def gpt_call(GPT):
     OPENAI_API_TYPE = config["OPENAI_API_TYPE"]
     OPENAI_API_VERSION = config["OPENAI_API_VERSION"]
 
-    # Initialize the LLM
     llm = AzureChatOpenAI(
         deployment_name=OPENAI_DEPLOYMENT_NAME,
         model_name=MODEL_NAME,
@@ -162,30 +90,60 @@ def gpt_call(GPT):
     return llm
 
 
-def intentChecker(EmailHistory, CURRENT_INTENT, BOT_CURRENT_EMAIL, USER_CURRENT_EMAIL, Expected_Flag, GPT):
+def intentChecker(email_history, bot_current_email, user_current_email, current_intent, GPT):
     # prompt = f"{IntentCheckerPrompt.get('SYSTEM')}\nCONTEXT:{EmailHistory}\nCURRENT_INTENT:{CURRENT_INTENT}\nBOT_CURRENT_EMAIL:{BOT_CURRENT_EMAIL}\nUSER_CURRENT_EMAIL:{USER_CURRENT_EMAIL}"
-
     llm = gpt_call(GPT)
     template = ChatPromptTemplate(
         messages=[
-            SystemMessagePromptTemplate.from_template(IntentCheckerPrompt.get("SYSTEM_PROMPT")),
+            SystemMessagePromptTemplate.from_template(IntentCheckerPrompt.get("SYSTEM")),
             HumanMessagePromptTemplate.from_template(IntentCheckerPrompt.get("CONTEXT")),
             SystemMessagePromptTemplate.from_template(IntentCheckerPrompt.get("DISPLAY")),
-            SystemMessagePromptTemplate.from_template(IntentCheckerPrompt.get("REMEMBER"))
         ]
     )
     llm_chain = LLMChain(llm=llm, prompt=template, verbose=True)
-    result = llm_chain.run(
-        {"EMAIL_HISTORY": EmailHistory, "BOT_CURRENT_EMAIL": BOT_CURRENT_EMAIL,
-         "USER_CURRENT_EMAIL": USER_CURRENT_EMAIL,"CURRENT_INTENT": CURRENT_INTENT})
+    result = llm_chain.run({"email_history": email_history, "bot_current_email": bot_current_email,
+         "user_current_email": user_current_email, "current_intent": current_intent})
 
-    if result == Expected_Flag:
-        print(f"Passed:{result}")
+    return result
+
+
+file_path = '/home/saiprakesh/PycharmProjects/Prompt Testing Using Excel/intentChecker.xlsx'
+workbook = openpyxl.load_workbook(file_path)
+sheet = workbook.active
+for row in range(2, sheet.max_row + 1):
+    if sheet[f'A{row}'].value is None:
+        break
+    cell_value = sheet[f'C{row}'].value
+    if cell_value:
+        email_history = cell_value.split("Current_Intent:")[0].strip()
     else:
-        print(f"Failed:{result} but expected {Expected_Flag}")
+        email_history = ""
+    current_convo = sheet[f'C{row}'].value
+    print(current_convo)
+    current_intent = current_convo.split("Current_Intent:")[1].split("Bot's_Current_Email:")[0].strip()
+    bot_current_email = \
+        current_convo.split("Current_Intent:")[1].split("Bot's_Current_Email:")[1].split("User's_Current_Email:")[
+            0].strip()
+    user_current_email = \
+        current_convo.split("Current_Intent:")[1].split("Bot's_Current_Email:")[1].split("User's_Current_Email:")[
+            1].strip()
+    expected_result = sheet[f'D{row}'].value.strip()
+    print(f"email_history:: {email_history}")
+    print(f"current_intent: {current_intent}")
+    print(f"bot_current_email: {bot_current_email}")
+    print(f"user_current_email: {user_current_email}")
+    Intent_Change_Status = intentChecker(email_history, bot_current_email, user_current_email, current_intent,
+                                         GPT="4omini")
+    print(Intent_Change_Status)
+    print(json.loads(Intent_Change_Status).get("is_intent_changed", ""))
+    sheet[f'E{row}'] = json.loads(Intent_Change_Status).get("is_intent_changed", "")
+    if expected_result == json.loads(Intent_Change_Status).get("is_intent_changed", ""):
+        sheet[f'F{row}'] = "PASS"
+    else:
+        sheet[f'F{row}'] = "FAIL"
+    print(f"Intent Classification - {expected_result == json.loads(Intent_Change_Status).get("is_intent_changed", "")}")
 
+updated_file_path = '/home/saiprakesh/PycharmProjects/Prompt Testing Using Excel/intentChecker.xlsx'
+workbook.save(updated_file_path)
 
-for item in EMAIL_CONTEXT:
-    intentChecker(item['EMAIL_HISTORY'], item['CURRENT_INTENT'], item['BOT_CURRENT_EMAIL'],
-                  item['USER_CURRENT_EMAIL'],
-                  item['Expected_Flag'], "4omini")
+print("Updated File Path Saved Location:", updated_file_path)
