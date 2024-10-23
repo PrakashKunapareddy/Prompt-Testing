@@ -14,49 +14,49 @@ from langchain.prompts import (
 from ExampleSearchChromaDB import fetch_similar_queries
 
 IntentClassificationPrompt = {
-    "SYSTEM": """You are an intent identification bot. Your task is to identify the intent from the list given below, based on the user's latest email, email history and examples provided. 
-    User's latest email is identified in CURRENT_EMAIL.
-    
-    Prioritise email body over subject, while intent identification.
-    First try to identify the intent based on the user's latest email.
-    If you are not able to identify intent based on the user's latest email, then take email history into account, prioritising the most recent history. 
-    If more then one intent is discussed or if the intent is not clear then classify the intent as OTHERS.
-    Use EXAMPLES as a reference to help clarify the process.
-    
-    The intent should be one of the following listed intents below. 
-        INTENTS:
-          1. ORDER_STATUS:
-             - Handles emails inquiring about order status, ship dates, or delivery updates.
+    "SYSTEM": """You are an intent identification bot. Based on the EMAIL_HISTORY, determine the Bot’s likely response and identify the intent behind it.
+     The identified intent should be selected from the list of INTENTS below.
 
-          2. PRODUCT_AVAILABILITY:
-             - Handles emails inquiring about the availability of specific products, not about product promotions or discounts.
+        Prioritize email body over subject for intent identification.
+        If the intent of the bot’s likely response matches more than one intent, please provide the intent that most closely matches.
+        The EMAIL_HISTORY contains the conversation in chronological order, starting from the oldest to the most recent.
+        Look into the EXAMPLES to identify the intent where applicable.
 
-          3. DAMAGES:
-             - Handles emails reporting damage to a product that they received, claims for damages, or refused shipments.
+    INTENTS:
+      1. ORDER_STATUS:
+        - Handles emails inquiring about order status, ship dates, or delivery updates.
 
-          4. RETURNS:
-             - Handles customer requests to return products, reasons for returning the order and all other requests to process returns(specifying that the products are not damaged).
+      2. PRODUCT_AVAILABILITY:
+        - Handles emails inquiring about the availability of specific products, but not about product promotions or discounts.
 
-          5. TRADE_APPLICATION:
-             - Handles inquiries or applications related to trade accounts, including requests for setting up an account or checking the status of an existing account.
+      3. DAMAGES:
+        - Handles emails reporting product damage, claims for damages, or refused shipments. This includes any mention of damage in relation to a product. 
 
-          6. OTHERS:
-             - Any intent that not captured in the above intents should be considered OTHERS. This would include handles vague, non-specific questions, questions on return policy, status updates, followup messages or general emails where intent is unclear. If multiple intents are discussed or the email doesn't clearly inquire about a specific product, order, or category, classify it as "OTHERS". 
+      4. RETURNS:
+        - Handles customer requests to return products, specifying that the products are not damaged, along with the reasons for returning the order and other related requests to process returns.
+
+      5. TRADE_APPLICATION:
+        - Handles inquiries and applications related to trade accounts, including requests to set up a new account or check the status of an existing one.
+
+      6. BANTER: 
+        - It handles inquiries that are usually spontaneous, quick, and informal. General conversation, random comments, or greetings are all forms of banter.
+
+      7. OTHERS:
+        - Any intent not captured above. This includes vague questions, inquiries about return policies, general status updates, or emails where the intent is unclear. If multiple intents are discussed or the email does not clearly inquire about a specific product or order, classify it as 'OTHERS'.
+
     """,
     "CONTEXT": """
-        EMAIL_HISTORY:
-         {email_history}
-        CURRENT_EMAIL :
-         {current_email}
-           examples :
-         {examples}
+    EMAIL_HISTORY:
+    {email_history}
+    EXAMPLES:
+    {examples}
     """,
     "DISPLAY": """Ensure that the output is in the following JSON format exactly as shown:
         {{
           "intent": "[Main Intent Classified]",
         }}
         """,
-    "REMEMBER": """ Prioritize the email body for intent classification, followed by the subject line. If the current email lacks sufficient information, refer to previous conversations for context. If the email is a direct follow-up to a prior issue, classify it accordingly based on that context.""",
+    "REMEMBER": """Prioritize the email body for intent classification. classify it accordingly based on that context.""",
 }
 
 
@@ -97,7 +97,7 @@ def gpt_call(GPT):
     return llm
 
 
-def intent_classification(email_history, user_latest_email, examples, GPT):
+def intent_classification(email_body, examples, GPT):
     # prompt = f"{IntentClassificationPrompt.get('SYSTEM_PROMPT')}\nEMAIL_HISTORY:\n{email_history}\nCURRENT_EMAIL:\n{user_latest_email}"
     llm = gpt_call(GPT)
     prompt_template = ChatPromptTemplate(
@@ -110,7 +110,7 @@ def intent_classification(email_history, user_latest_email, examples, GPT):
     )
     llm_chain = LLMChain(llm=llm, prompt=prompt_template, verbose=True)
     # print("prompt :: ", prompt_template)
-    result = llm_chain.run({"email_history": email_history, "current_email": user_latest_email, "examples": examples})
+    result = llm_chain.run({"email_history": email_body, "examples": examples})
     return result
 
 
@@ -129,11 +129,12 @@ for row in range(2, sheet.max_row + 1):
     expected_intent = sheet[f'D{row}'].value.strip()
     latest_body = sheet[f'C{row}'].value
     if latest_body:
-        user_latest_email = latest_body.split("Body:")[-1].strip()
+        user_latest_email =  sheet[f'C{row}'].value.split("USER_LATEST_EMAIL:")[1].strip()
     else:
         user_latest_email = ""
     examples = fetch_similar_queries(user_latest_email, top_k=10)
-    classified_intent = intent_classification(email_history, user_latest_email, examples, GPT="4omini")
+    email_body = email_history + user_latest_email
+    classified_intent = intent_classification(email_body, examples, GPT="4omini")
     print(classified_intent)
     sheet[f'E{row}'] = json.loads(classified_intent).get("intent", "")
     if expected_intent == json.loads(classified_intent).get("intent", ""):
