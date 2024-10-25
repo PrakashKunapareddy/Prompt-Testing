@@ -14,12 +14,12 @@ from langchain.prompts import (
 from ExampleSearchChromaDB import fetch_similar_queries
 
 IntentClassificationPrompt = {
-    "SYSTEM": """You are an intent identification bot. Based on the EMAIL_HISTORY, determine the Bot’s likely response and identify the intent behind it.
+    "SYSTEM": """You are an intent identification bot. Based on the EMAIL_HISTORY, determine the Bot’s likely response and identify the intent of the bot's likely response.
      The identified intent should be selected from the list of INTENTS below.
-
+        
         Prioritize email body over subject for intent identification.
-        If the intent of the bot’s likely response matches more than one intent, please provide the intent that most closely matches.
         The EMAIL_HISTORY contains the conversation in chronological order, starting from the oldest to the most recent.
+        If the intent of the bot’s likely response matches more than one intent, please provide the intent that most closely matches.
         Look into the EXAMPLES to identify the intent where applicable.
 
     INTENTS:
@@ -30,33 +30,34 @@ IntentClassificationPrompt = {
         - Handles emails inquiring about the availability of specific products, but not about product promotions or discounts.
 
       3. DAMAGES:
-        - Handles emails reporting product damage, claims for damages, or refused shipments. This includes any mention of damage in relation to a product. 
+        - Handles emails reporting product damage, claims for damages, returning a damaged product or refused shipments. This includes any mention of damage in relation to a product.
 
       4. RETURNS:
-        - Handles customer requests to return products, specifying that the products are not damaged, along with the reasons for returning the order and other related requests to process returns.
+        - Handles customer requests to return products, specifying that the products are not damaged, along with the reasons for returning the order. Replacements does not come under returns.
 
       5. TRADE_APPLICATION:
         - Handles inquiries and applications related to trade accounts, including requests to set up a new account or check the status of an existing one.
 
       6. BANTER: 
-        - It handles inquiries that are usually spontaneous, quick, and informal. General conversation, random comments, or greetings are all forms of banter.
+        - It handles inquiries that are usually involves general conversation, random comments, or all form of greetings are banter.
 
       7. OTHERS:
-        - Any intent not captured above. This includes vague questions, inquiries about return policies, general status updates, or emails where the intent is unclear. If multiple intents are discussed or the email does not clearly inquire about a specific product or order, classify it as 'OTHERS'.
+        - Any intent not captured above. This includes inquiries about return policies, general status updates, cancelling order, replacements, refund. Emails where the intent is unclear. If multiple intents are discussed or the email does not clearly inquire about a specific product or order, classify it as 'OTHERS'.
 
     """,
     "CONTEXT": """
     EMAIL_HISTORY:
     {email_history}
+    
     EXAMPLES:
     {examples}
     """,
     "DISPLAY": """Ensure that the output is in the following JSON format exactly as shown:
         {{
-          "intent": "[Main Intent Classified]",
+          "intent": "[Main Intent Classified]"
         }}
         """,
-    "REMEMBER": """Prioritize the email body for intent classification. classify it accordingly based on that context.""",
+    "REMEMBER": """Prioritize the email body for intent classification. classify it accordingly based on that context. Return the intent of bot likely response. Follow each intent description.""",
 }
 
 
@@ -129,7 +130,7 @@ for row in range(2, sheet.max_row + 1):
     expected_intent = sheet[f'D{row}'].value.strip()
     latest_body = sheet[f'C{row}'].value
     if latest_body:
-        user_latest_email =  sheet[f'C{row}'].value.split("USER_LATEST_EMAIL:")[1].strip()
+        user_latest_email = sheet[f'C{row}'].value.split("USER_LATEST_EMAIL:")[1].strip()
     else:
         user_latest_email = ""
     examples = fetch_similar_queries(user_latest_email, top_k=10)
@@ -137,7 +138,7 @@ for row in range(2, sheet.max_row + 1):
     classified_intent = intent_classification(email_body, examples, GPT="4omini")
     print(classified_intent)
     sheet[f'E{row}'] = json.loads(classified_intent).get("intent", "")
-    if expected_intent == json.loads(classified_intent).get("intent", ""):
+    if expected_intent.lower() == json.loads(classified_intent).get("intent", "").lower():
         sheet[f'F{row}'] = "PASS"
     else:
         sheet[f'F{row}'] = "FAIL"
@@ -145,6 +146,7 @@ for row in range(2, sheet.max_row + 1):
     print("email_history: ", email_history)
     print("user_latest_email: ", user_latest_email)
     print("expected_intent: ", expected_intent)
+    # print("examples: ", examples)
 
 updated_file_path = '/home/saiprakesh/PycharmProjects/Prompt Testing Using Excel/automation_testing.xlsx'
 workbook.save(updated_file_path)
