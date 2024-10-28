@@ -1,3 +1,5 @@
+from venv import logger
+
 import openpyxl
 import json
 
@@ -24,22 +26,22 @@ IntentClassificationPrompt = {
 
     INTENTS:
       1. ORDER_STATUS:
-        - Handles emails inquiring about order status, ship dates, or delivery updates.
+        - Only Handles emails inquiring about order status, ship dates, or delivery updates.
 
       2. PRODUCT_AVAILABILITY:
-        - Handles emails inquiring about the availability of specific products, but not about product promotions or discounts.
+        - Only Handles emails inquiring about the availability of specific products, but not about product promotions or discounts.
 
       3. DAMAGES:
-        - Handles emails reporting product damage, claims for damages, returning a damaged product or refused shipments. This includes any mention of damage in relation to a product.
+        - Only Handles emails reporting product damage, claims for damages, returning a damaged product or refused shipments. This includes any mention of damage in relation to a product.
 
       4. RETURNS:
-        - Handles customer requests to return products, specifying that the products are not damaged, along with the reasons for returning the order. Replacements does not come under returns.
+        - Only Handles customer requests to return products, specifying that the products are not damaged, along with the reasons for returning the order. Replacements does not come under returns.
 
       5. TRADE_APPLICATION:
-        - Handles inquiries and applications related to trade accounts, including requests to set up a new account or check the status of an existing one.
+        - Only Handles inquiries and applications related to trade accounts, including requests to set up a new account or check the status of an existing one.
 
       6. BANTER: 
-        - It handles inquiries that are usually involves general conversation, random comments, or all form of greetings are banter.
+        - Only handles emails containing greetings, expressions of gratitude, casual conversation, or general friendly comments that do not request information or assistance on specific transactions, products, or services.
 
       7. OTHERS:
         - Any intent not captured above. This includes inquiries about return policies, general status updates, cancelling order, replacements, refund. Emails where the intent is unclear. If multiple intents are discussed or the email does not clearly inquire about a specific product or order, classify it as 'OTHERS'.
@@ -58,7 +60,7 @@ IntentClassificationPrompt = {
         }}
         """,
     "REMEMBER": """Prioritize the email body for intent classification. classify it accordingly based on that context. Return the intent of bot likely response. Follow each intent description.""",
-}
+    }
 
 
 def gpt_call(GPT):
@@ -115,11 +117,12 @@ def intent_classification(email_body, examples, GPT):
     return result
 
 
-file_path = '/home/saiprakesh/PycharmProjects/Prompt Testing Using Excel/automation_testing.xlsx'
+file_path = '/home/saiprakesh/PycharmProjects/Prompt Testing Using Excel/automation_testing_email.xlsx'
 workbook = openpyxl.load_workbook(file_path)
 sheet = workbook.active
-
+count = 0
 for row in range(2, sheet.max_row + 1):
+    count = count + 1
     if sheet[f'A{row}'].value is None:
         break
     cell_value = sheet[f'C{row}'].value
@@ -133,22 +136,30 @@ for row in range(2, sheet.max_row + 1):
         user_latest_email = sheet[f'C{row}'].value.split("USER_LATEST_EMAIL:")[1].strip()
     else:
         user_latest_email = ""
-    examples = fetch_similar_queries(user_latest_email, top_k=10)
+    if len(user_latest_email.split("Body:")) > 1:
+        user_latest_email_body = user_latest_email.split("Body:")[1]
+    else:
+        user_latest_email_body = user_latest_email.split("User:")[1]
+    examples = fetch_similar_queries(user_latest_email_body, top_k=10)
     email_body = email_history + user_latest_email
     classified_intent = intent_classification(email_body, examples, GPT="4omini")
-    print(classified_intent)
+    print(count, ": ", classified_intent)
     sheet[f'E{row}'] = json.loads(classified_intent).get("intent", "")
     if expected_intent.lower() == json.loads(classified_intent).get("intent", "").lower():
         sheet[f'F{row}'] = "PASS"
     else:
         sheet[f'F{row}'] = "FAIL"
-    print(f"Intent Classification - {expected_intent == json.loads(classified_intent).get("intent", "")}")
-    print("email_history: ", email_history)
-    print("user_latest_email: ", user_latest_email)
-    print("expected_intent: ", expected_intent)
-    # print("examples: ", examples)
+        print(f"Intent Classification - {expected_intent == json.loads(classified_intent).get("intent", "")}")
+        print("email_history: ", email_history)
+        print("user_latest_email: ", user_latest_email)
+        print("user_latest_email_body:", user_latest_email_body)
+        print("examples: ", examples)
+        print("expected_intent:", json.loads(classified_intent).get("intent", ""))
+        print("expected_intent: ", expected_intent)
 
-updated_file_path = '/home/saiprakesh/PycharmProjects/Prompt Testing Using Excel/automation_testing.xlsx'
+updated_file_path = '/home/saiprakesh/PycharmProjects/Prompt Testing Using Excel/automation_testing_email.xlsx'
 workbook.save(updated_file_path)
 
 print(f"Updated Excel file saved at: {updated_file_path}")
+
+# 3min:41sec
