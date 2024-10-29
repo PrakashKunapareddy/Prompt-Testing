@@ -7,13 +7,12 @@ from langchain.chains import LLMChain
 from langchain_community.chat_models import AzureChatOpenAI
 from langchain.prompts import (
     ChatPromptTemplate,
-    HumanMessagePromptTemplate,
     SystemMessagePromptTemplate
 )
 
 from ExampleSearchChromaDB import fetch_similar_queries
 
-IntentClassificationPrompt =""" You are an intent identification bot. Based on the CHAT_HISTORY and USER_QUERY, analyze the conversation and predict the likely response of the bot. Then, identify the intent of this likely response.
+IntentClassificationPrompt = """ You are an intent identification bot. Based on the CHAT_HISTORY and USER_QUERY, analyze the conversation and predict the likely response of the bot. Then, identify the intent of this likely response.
 
 Steps:
 
@@ -57,8 +56,6 @@ Below are examples to help clarify the process. Use them as a reference.
 """
 
 
-
-
 def gpt_call(GPT):
     gpt_config = {
         "4omini": {
@@ -96,18 +93,17 @@ def gpt_call(GPT):
     return llm
 
 
-def intent_classification(chat_history,user_latest_question_stripped, examples, GPT):
-    # prompt = f"{IntentClassificationPrompt.get('SYSTEM_PROMPT')}\nEMAIL_HISTORY:\n{email_history}\nCURRENT_EMAIL:\n{user_latest_email}"
+def intent_classification(chat_history, user_latest_question_stripped, examples, GPT):
     llm = gpt_call(GPT)
     prompt_template = ChatPromptTemplate(
         messages=[
             SystemMessagePromptTemplate.from_template(IntentClassificationPrompt),
         ],
-        input_variables=["CHAT_HISTORY", "question", "question"],
+        input_variables=["CHAT_HISTORY", "question", "examples"],
     )
-    llm_chain = LLMChain(llm=llm, prompt=prompt_template, verbose=True)
-    # print("prompt :: ", prompt_template)
-    result = llm_chain.run({"chat_history": chat_history, "question":user_latest_question_stripped,"examples": examples})
+    llm_chain = LLMChain(llm=llm, prompt=prompt_template, verbose=False)
+    result = llm_chain.run(
+        {"chat_history": chat_history, "question": user_latest_question_stripped, "examples": examples})
     return result
 
 
@@ -128,13 +124,16 @@ for row in range(2, sheet.max_row + 1):
 
     user_latest_question = sheet[f'C{row}'].value.split("USER_LATEST_CHAT:")[1].strip()
 
-    _, _,user_latest_question_stripped = user_latest_question.partition("Human:")
+    _, _, user_latest_question_stripped = user_latest_question.partition("Human:")
 
     examples = fetch_similar_queries(user_latest_question_stripped, top_k=10)
 
-    classified_intent = intent_classification(chat_history,user_latest_question_stripped, examples, GPT="4omini")
+    classified_intent = intent_classification(chat_history, user_latest_question_stripped, examples, GPT="4omini")
     print(count, ": ", classified_intent)
-    sheet[f'E{row}'] = classified_intent
+    if classified_intent == 'Banter':
+        sheet[f'E{row}'] = 'OTHERS'
+    else:
+        sheet[f'E{row}'] = classified_intent
     if expected_intent.lower() == classified_intent.lower():
         sheet[f'F{row}'] = "PASS"
     else:
@@ -149,4 +148,3 @@ updated_file_path = '/home/saiprakesh/PycharmProjects/Prompt Testing Using Excel
 workbook.save(updated_file_path)
 
 print(f"Updated Excel file saved at: {updated_file_path}")
-

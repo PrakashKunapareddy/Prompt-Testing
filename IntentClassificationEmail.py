@@ -2,6 +2,8 @@ from venv import logger
 
 import openpyxl
 import json
+import logging
+
 
 from langchain.chains.constitutional_ai.prompts import examples
 from openpyxl import load_workbook
@@ -15,6 +17,9 @@ from langchain.prompts import (
 
 from ExampleSearchChromaDB import fetch_similar_queries
 
+
+
+
 IntentClassificationPrompt = {
     "SYSTEM": """You are an intent identification bot. Based on the EMAIL_HISTORY, determine the Bot’s likely response and identify the intent of the bot's likely response.
      The identified intent should be selected from the list of INTENTS below.
@@ -22,23 +27,23 @@ IntentClassificationPrompt = {
         Prioritize email body over subject for intent identification.
         The EMAIL_HISTORY contains the conversation in chronological order, starting from the oldest to the most recent.
         If the intent of the bot’s likely response matches more than one intent, please provide the intent that most closely matches.
-        Look into the EXAMPLES to identify the intent where applicable.
+        Look into SAMPLE INTENT IDENTIFICATION EXAMPLES for additional context.
 
     INTENTS:
       1. ORDER_STATUS:
-        - Only Handles emails inquiring about order status, ship dates, or delivery updates.
+        - Only Handles emails specifically concerning estimated delivery dates or times and tracking information.
 
       2. PRODUCT_AVAILABILITY:
         - Only Handles emails inquiring about the availability of specific products, but not about product promotions or discounts.
 
       3. DAMAGES:
-        - Only Handles emails reporting product damage, claims for damages, returning a damaged product or refused shipments. This includes any mention of damage in relation to a product.
+        - Only Handles emails mentioning product damage specifically during shipping, returning items damaged in shipping, and any refused shipments.
 
       4. RETURNS:
-        - Only Handles customer requests to return products, specifying that the products are not damaged, along with the reasons for returning the order. Replacements does not come under returns.
+        - Only Handles customer requests to specifically for undamaged product return requests, with replacements excluded.
 
       5. TRADE_APPLICATION:
-        - Only Handles inquiries and applications related to trade accounts, including requests to set up a new account or check the status of an existing one.
+        - Only Handles inquiries and applications related to trade accounts, including requests to set up a new account or update of an existing one.
 
       6. BANTER: 
         - Only handles emails containing greetings, expressions of gratitude, casual conversation, or general friendly comments that do not request information or assistance on specific transactions, products, or services.
@@ -51,28 +56,39 @@ IntentClassificationPrompt = {
     EMAIL_HISTORY:
     {email_history}
     
-    EXAMPLES:
+    SAMPLE INTENT IDENTIFICATION EXAMPLES:
     {examples}
     """,
     "DISPLAY": """Ensure that the output is in the following JSON format exactly as shown:
         {{
-          "intent": "[Main Intent Classified]"
+          "intent": "[Main Intent Classified]",
+          "bot_likely_response": "[bot likely response]",
+          "last_message": "[last message]",
+          "reason": "[explain for the intent classified reason]"
         }}
         """,
     "REMEMBER": """Prioritize the email body for intent classification. classify it accordingly based on that context. Return the intent of bot likely response. Follow each intent description.""",
-    }
+}
 
+logging.basicConfig(
+    filename='intent_classification_with_reason_29_10_1.log',
+    level=logging.WARNING,
+    format='%(asctime)s - %(levelname)s - %(message)s'
+)
+class NoHTTPRequestsFilter(logging.Filter):
+    def filter(self, record):
+        return 'HTTP' not in record.getMessage()
 
 def gpt_call(GPT):
     gpt_config = {
         "4omini": {
-            "OPENAI_API_KEY": "95058a9e99794e4689d179dd726e7eec",
-            "OPENAI_DEPLOYMENT_NAME": "vassar-4o-mini",
-            "OPENAI_EMBEDDING_MODEL_NAME": "vassar-text-ada002",
-            "OPENAI_API_BASE": "https://vassar-openai.openai.azure.com/",
-            "MODEL_NAME": "gpt-4o-mini",
-            "OPENAI_API_TYPE": "azure",
-            "OPENAI_API_VERSION": "2024-02-15-preview",
+        "OPENAI_API_KEY": "95058a9e99794e4689d179dd726e7eec",
+        "OPENAI_DEPLOYMENT_NAME": "vassar-4o-mini",
+        "OPENAI_EMBEDDING_MODEL_NAME": "vassar-text-ada002",
+        "OPENAI_API_BASE": "https://vassar-openai.openai.azure.com/",
+        "MODEL_NAME": "gpt-4o-mini",
+        "OPENAI_API_TYPE": "azure",
+        "OPENAI_API_VERSION": "2024-02-15-preview",
         }
     }
 
@@ -101,7 +117,6 @@ def gpt_call(GPT):
 
 
 def intent_classification(email_body, examples, GPT):
-    # prompt = f"{IntentClassificationPrompt.get('SYSTEM_PROMPT')}\nEMAIL_HISTORY:\n{email_history}\nCURRENT_EMAIL:\n{user_latest_email}"
     llm = gpt_call(GPT)
     prompt_template = ChatPromptTemplate(
         messages=[
@@ -111,8 +126,7 @@ def intent_classification(email_body, examples, GPT):
             SystemMessagePromptTemplate.from_template(IntentClassificationPrompt.get("REMEMBER"))
         ]
     )
-    llm_chain = LLMChain(llm=llm, prompt=prompt_template, verbose=True)
-    # print("prompt :: ", prompt_template)
+    llm_chain = LLMChain(llm=llm, prompt=prompt_template, verbose=False)
     result = llm_chain.run({"email_history": email_body, "examples": examples})
     return result
 
@@ -141,7 +155,7 @@ for row in range(2, sheet.max_row + 1):
     else:
         user_latest_email_body = user_latest_email.split("User:")[1]
     examples = fetch_similar_queries(user_latest_email_body, top_k=10)
-    email_body = email_history + user_latest_email
+    email_body = email_history + "\n" + user_latest_email
     classified_intent = intent_classification(email_body, examples, GPT="4omini")
     print(count, ": ", classified_intent)
     sheet[f'E{row}'] = json.loads(classified_intent).get("intent", "")
@@ -149,12 +163,23 @@ for row in range(2, sheet.max_row + 1):
         sheet[f'F{row}'] = "PASS"
     else:
         sheet[f'F{row}'] = "FAIL"
+        logging.getLogger().addFilter(NoHTTPRequestsFilter())
+        logging.error(
+            "Failed Case #%d :: Expected intent :: '%s', but got  :: '%s'.\nEmail History:: %s\nUser Latest Email :: %s\nExamples:: %s\n",
+            count, expected_intent, classified_intent, email_history, user_latest_email_body, examples
+        )
+        logging.error(
+            "bot_likely_response ::  '%s', \n last_message ::  '%s', \n reason ::  '%s' \n",
+            json.loads(classified_intent).get("bot_likely_response", ""),
+            json.loads(classified_intent).get("last_message", ""),
+            json.loads(classified_intent).get("reason", "")
+        )
         print(f"Intent Classification - {expected_intent == json.loads(classified_intent).get("intent", "")}")
         print("email_history: ", email_history)
         print("user_latest_email: ", user_latest_email)
         print("user_latest_email_body:", user_latest_email_body)
         print("examples: ", examples)
-        print("expected_intent:", json.loads(classified_intent).get("intent", ""))
+        print("classified_intent:", json.loads(classified_intent).get("intent", ""))
         print("expected_intent: ", expected_intent)
 
 updated_file_path = '/home/saiprakesh/PycharmProjects/Prompt Testing Using Excel/automation_testing_email.xlsx'
