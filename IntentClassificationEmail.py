@@ -1,9 +1,9 @@
+from datetime import datetime
 from venv import logger
 
 import openpyxl
 import json
 import logging
-
 
 from langchain.chains.constitutional_ai.prompts import examples
 from openpyxl import load_workbook
@@ -15,80 +15,31 @@ from langchain.prompts import (
     SystemMessagePromptTemplate
 )
 
-from ExampleSearchChromaDB import fetch_similar_queries
-
-
-
-
-IntentClassificationPrompt = {
-    "SYSTEM": """You are an intent identification bot. Based on the EMAIL_HISTORY, determine the Bot’s likely response and identify the intent of the bot's likely response.
-     The identified intent should be selected from the list of INTENTS below.
-        
-        Prioritize email body over subject for intent identification.
-        The EMAIL_HISTORY contains the conversation in chronological order, starting from the oldest to the most recent.
-        If the intent of the bot’s likely response matches more than one intent, please provide the intent that most closely matches.
-        Look into SAMPLE INTENT IDENTIFICATION EXAMPLES for additional context.
-
-    INTENTS:
-      1. ORDER_STATUS:
-        - Only Handles emails specifically concerning estimated delivery dates or times and tracking information.
-
-      2. PRODUCT_AVAILABILITY:
-        - Only Handles emails inquiring about the availability of specific products, but not about product promotions or discounts.
-
-      3. DAMAGES:
-        - Only Handles emails mentioning product damage specifically during shipping, returning items damaged in shipping, and any refused shipments.
-
-      4. RETURNS:
-        - Only Handles customer requests to specifically for undamaged product return requests, with replacements excluded.
-
-      5. TRADE_APPLICATION:
-        - Only Handles inquiries and applications related to trade accounts, including requests to set up a new account or update of an existing one.
-
-      6. BANTER: 
-        - Only handles emails containing greetings, expressions of gratitude, casual conversation, or general friendly comments that do not request information or assistance on specific transactions, products, or services.
-
-      7. OTHERS:
-        - Any intent not captured above. This includes inquiries about return policies, general status updates, cancelling order, replacements, refund. Emails where the intent is unclear. If multiple intents are discussed or the email does not clearly inquire about a specific product or order, classify it as 'OTHERS'.
-
-    """,
-    "CONTEXT": """
-    EMAIL_HISTORY:
-    {email_history}
-    
-    SAMPLE INTENT IDENTIFICATION EXAMPLES:
-    {examples}
-    """,
-    "DISPLAY": """Ensure that the output is in the following JSON format exactly as shown:
-        {{
-          "intent": "[Main Intent Classified]",
-          "bot_likely_response": "[bot likely response]",
-          "last_message": "[last message]",
-          "reason": "[explain for the intent classified reason]"
-        }}
-        """,
-    "REMEMBER": """Prioritize the email body for intent classification. classify it accordingly based on that context. Return the intent of bot likely response. Follow each intent description.""",
-}
+from ExampleSearchChromaDB import fetch_similar_queries, fetch_similar_queries_for_intent
+from IntentClassificationPromptEmail import IntentClassificationPrompt
 
 logging.basicConfig(
     filename='intent_classification_with_reason_29_10_1.log',
     level=logging.WARNING,
     format='%(asctime)s - %(levelname)s - %(message)s'
 )
+
+
 class NoHTTPRequestsFilter(logging.Filter):
     def filter(self, record):
         return 'HTTP' not in record.getMessage()
 
+
 def gpt_call(GPT):
     gpt_config = {
         "4omini": {
-        "OPENAI_API_KEY": "95058a9e99794e4689d179dd726e7eec",
-        "OPENAI_DEPLOYMENT_NAME": "vassar-4o-mini",
-        "OPENAI_EMBEDDING_MODEL_NAME": "vassar-text-ada002",
-        "OPENAI_API_BASE": "https://vassar-openai.openai.azure.com/",
-        "MODEL_NAME": "gpt-4o-mini",
-        "OPENAI_API_TYPE": "azure",
-        "OPENAI_API_VERSION": "2024-02-15-preview",
+            "OPENAI_API_KEY": "95058a9e99794e4689d179dd726e7eec",
+            "OPENAI_DEPLOYMENT_NAME": "vassar-4o-mini",
+            "OPENAI_EMBEDDING_MODEL_NAME": "vassar-text-ada002",
+            "OPENAI_API_BASE": "https://vassar-openai.openai.azure.com/",
+            "MODEL_NAME": "gpt-4o-mini",
+            "OPENAI_API_TYPE": "azure",
+            "OPENAI_API_VERSION": "2024-02-15-preview",
         }
     }
 
@@ -131,12 +82,23 @@ def intent_classification(email_body, examples, GPT):
     return result
 
 
+def sub_intent_classification(classified_intent, email_body, GPT):
+    llm = gpt_call(GPT)
+    _, _, user_latest_email = email_body.partition("\n")
+    user_latest_email_body = user_latest_email.split("Body:")[1]
+    examples = fetch_similar_queries_for_intent(user_latest_email_body, classified_intent, top_k=10)
+
+
 file_path = '/home/saiprakesh/PycharmProjects/Prompt Testing Using Excel/automation_testing_email.xlsx'
 workbook = openpyxl.load_workbook(file_path)
 sheet = workbook.active
 count = 0
+formatted_time1 = ''
 for row in range(2, sheet.max_row + 1):
     count = count + 1
+    if count == 1:
+        current_time1 = datetime.now()
+        formatted_time1 = current_time1.strftime("%H:%M:%S")
     if sheet[f'A{row}'].value is None:
         break
     cell_value = sheet[f'C{row}'].value
@@ -157,6 +119,10 @@ for row in range(2, sheet.max_row + 1):
     examples = fetch_similar_queries(user_latest_email_body, top_k=10)
     email_body = email_history + "\n" + user_latest_email
     classified_intent = intent_classification(email_body, examples, GPT="4omini")
+    classified_sub_intent = ""
+    if classified_intent.lower() == "ORDER_STATUS":
+        classified_sub_intent = sub_intent_classification(classified_intent, email_body, GPT="4omini")
+    print("classified_sub_intent : ", classified_sub_intent)
     print(count, ": ", classified_intent)
     sheet[f'E{row}'] = json.loads(classified_intent).get("intent", "")
     if expected_intent.lower() == json.loads(classified_intent).get("intent", "").lower():
@@ -184,7 +150,9 @@ for row in range(2, sheet.max_row + 1):
 
 updated_file_path = '/home/saiprakesh/PycharmProjects/Prompt Testing Using Excel/automation_testing_email.xlsx'
 workbook.save(updated_file_path)
-
+current_time2 = datetime.now()
+formatted_time2 = current_time2.strftime("%H:%M:%S")
+print("Start Time", formatted_time1)
+print("END Time", formatted_time2)
 print(f"Updated Excel file saved at: {updated_file_path}")
 
-# 3min:41sec
