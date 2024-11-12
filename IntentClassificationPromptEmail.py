@@ -1,4 +1,4 @@
-IntentClassificationPrompt = {
+IntentClassificationPromptEmail = {
     "SYSTEM": """You are an intent identification bot. Based on the EMAIL_HISTORY, determine the Bot’s likely response and identify the intent of the bot's likely response.
      The identified intent should be selected from the list of INTENTS below.
 
@@ -46,3 +46,7 @@ IntentClassificationPrompt = {
         """,
     "REMEMBER": """Prioritize the email body for intent classification. classify it accordingly based on that context. Return the intent of bot likely response. Follow each intent description.""",
 }
+
+
+class IntentClassificationPrompt:
+    pass

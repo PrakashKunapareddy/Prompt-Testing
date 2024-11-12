@@ -1,8 +1,9 @@
 sub_intents_email = {
     "PRODUCT_AVAILABILITY": "",
     "DAMAGES": "",
-    "ORDER_STATUS": {
-        "SYSTEM": """You are an intent identification bot. Based on the EMAIL_HISTORY, determine the Bot’s likely response and identify the sub intent of the bot's likely response for order status intent.
+    "ORDER_STATUS":
+        {
+"SYSTEM": """You are an intent identification bot. Based on the EMAIL_HISTORY, determine the Bot’s likely response and identify the sub intent of the bot's likely response for order status intent.
 Look into SAMPLE INTENT IDENTIFICATION EXAMPLES for additional context.
 
 The given email content into one of the following SUB_INTENTS:
@@ -39,23 +40,21 @@ OTHERS:
         - Only Handles inquiries and applications related to trade accounts, including requests to set up a new account or update of an existing one.
 
 """,
-
-        "CONTEXT": """
-User: Subject: Assistance with Order #26262 Body: Hi, please confirm if this is a valid order number. I placed this order last month.
-Bot: Hi, the order number provided doesn’t match our format. Could you double-check the details?
-USER_LATEST_EMAIL: User: Subject: Assistance with Order #26262 My mistake! Here’s the correct order number: #262626.
-
+"CONTEXT": """
+EMAIL_HISTORY:
+{email_history}
+SAMPLE INTENT IDENTIFICATION EXAMPLES:
+{examples}
 """,
-        "DISPLAY": """Ensure that the output is in the following JSON format exactly as shown:
+"DISPLAY": """Ensure that the output is in the following JSON format exactly as shown:
 {{
   "sub_intent": "[Sub Intent Classified]",
   "bot_likely_response": "[bot likely response]",
   "last_message": "[last message]",
   "reason": "[explain for the intent classified reason]"
-}}
-""",
-        "REMEMBER": """Prioritize the email body for intent classification. classify it accordingly based on that context. Return the intent of bot likely response. Follow each intent description.""",
-    },
+}}""",
+"REMEMBER": """Prioritize the email body for intent classification. classify it accordingly based on that context. Return the intent of bot likely response. Follow each intent description.""",
+},
     "RETURNS": {
         "SYSTEM": """You are an intent identification bot. Based on the EMAIL_HISTORY, determine the Bot’s likely response and identify the sub intent of the bot's likely response for returns.
         Look into SAMPLE INTENT IDENTIFICATION EXAMPLES for additional context.
@@ -94,12 +93,12 @@ USER_LATEST_EMAIL: User: Subject: Assistance with Order #26262 My mistake! Here�
         {examples}
         """,
         "DISPLAY": """Ensure that the output is in the following JSON format exactly as shown:
-        {
+        {{
           "sub_intent": "[Sub Intent Classified]",
           "bot_likely_response": "[bot likely response]",
           "last_message": "[last message]",
           "reason": "[explain for the intent classified reason]"
-        }""",
+        }}""",
         "REMEMBER": """Prioritize the email body for intent classification. Classify it accordingly based on that context. Return the intent of bot likely response. Follow each intent description."""
     },
     "TRADE_APPLICATION": ""

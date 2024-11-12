@@ -1,25 +1,16 @@
 from datetime import datetime
-from venv import logger
-
 import openpyxl
 import json
 import logging
-
-from langchain.chains.constitutional_ai.prompts import examples
-from openpyxl import load_workbook
 from langchain.chains import LLMChain
+from langchain.prompts import ChatPromptTemplate, HumanMessagePromptTemplate, SystemMessagePromptTemplate
 from langchain_community.chat_models import AzureChatOpenAI
-from langchain.prompts import (
-    ChatPromptTemplate,
-    HumanMessagePromptTemplate,
-    SystemMessagePromptTemplate
-)
-
+import SubIntentClassificationEmail
 from ExampleSearchChromaDB import fetch_similar_queries, fetch_similar_queries_for_intent
-from IntentClassificationPromptEmail import IntentClassificationPrompt
+from IntentClassificationPromptEmail import IntentClassificationPromptEmail
 
 logging.basicConfig(
-    filename='intent_classification_with_reason_29_10_1.log',
+    filename='intent_classification_with_reason.log',
     level=logging.WARNING,
     format='%(asctime)s - %(levelname)s - %(message)s'
 )
@@ -42,26 +33,17 @@ def gpt_call(GPT):
             "OPENAI_API_VERSION": "2024-02-15-preview",
         }
     }
-
     config = gpt_config.get(GPT)
     if not config:
-        print("Invalid GPT version specified")
-
-    OPENAI_API_KEY = config["OPENAI_API_KEY"]
-    OPENAI_DEPLOYMENT_NAME = config["OPENAI_DEPLOYMENT_NAME"]
-    OPENAI_EMBEDDING_MODEL_NAME = config["OPENAI_EMBEDDING_MODEL_NAME"]
-    OPENAI_API_BASE = config["OPENAI_API_BASE"]
-    MODEL_NAME = config["MODEL_NAME"]
-    OPENAI_API_TYPE = config["OPENAI_API_TYPE"]
-    OPENAI_API_VERSION = config["OPENAI_API_VERSION"]
+        raise ValueError("Invalid GPT version specified")
 
     llm = AzureChatOpenAI(
-        deployment_name=OPENAI_DEPLOYMENT_NAME,
-        model_name=MODEL_NAME,
-        azure_endpoint=OPENAI_API_BASE,
-        openai_api_type=OPENAI_API_TYPE,
-        openai_api_key=OPENAI_API_KEY,
-        openai_api_version=OPENAI_API_VERSION,
+        deployment_name=config["OPENAI_DEPLOYMENT_NAME"],
+        model_name=config["MODEL_NAME"],
+        azure_endpoint=config["OPENAI_API_BASE"],
+        openai_api_type=config["OPENAI_API_TYPE"],
+        openai_api_key=config["OPENAI_API_KEY"],
+        openai_api_version=config["OPENAI_API_VERSION"],
         temperature=0.0
     )
     return llm
@@ -71,88 +53,91 @@ def intent_classification(email_body, examples, GPT):
     llm = gpt_call(GPT)
     prompt_template = ChatPromptTemplate(
         messages=[
-            SystemMessagePromptTemplate.from_template(IntentClassificationPrompt.get("SYSTEM")),
-            HumanMessagePromptTemplate.from_template(IntentClassificationPrompt.get("CONTEXT")),
-            SystemMessagePromptTemplate.from_template(IntentClassificationPrompt.get("DISPLAY")),
-            SystemMessagePromptTemplate.from_template(IntentClassificationPrompt.get("REMEMBER"))
+            SystemMessagePromptTemplate.from_template(IntentClassificationPromptEmail.get("SYSTEM")),
+            HumanMessagePromptTemplate.from_template(IntentClassificationPromptEmail.get("CONTEXT")),
+            SystemMessagePromptTemplate.from_template(IntentClassificationPromptEmail.get("DISPLAY")),
+            SystemMessagePromptTemplate.from_template(IntentClassificationPromptEmail.get("REMEMBER"))
         ]
     )
     llm_chain = LLMChain(llm=llm, prompt=prompt_template, verbose=False)
-    result = llm_chain.run({"email_history": email_body, "examples": examples})
-    return result
+    return llm_chain.run({"email_history": email_body, "examples": examples})
 
 
-def sub_intent_classification(classified_intent, email_body, GPT):
+def sub_intent_classification(email_body, intent, GPT):
     llm = gpt_call(GPT)
-    _, _, user_latest_email = email_body.partition("\n")
-    user_latest_email_body = user_latest_email.split("Body:")[1]
-    examples = fetch_similar_queries_for_intent(user_latest_email_body, classified_intent, top_k=10)
+    examples = fetch_similar_queries_for_intent(email_body, intent, top_k=10)
+    sub_intent_data = SubIntentClassificationEmail.sub_intents_email.get(intent.upper(), {})
+    if not sub_intent_data:
+        logging.warning(f"Sub-intent configuration not found for: {intent.upper()}")
+        return "No DATA FOR SUB-INTENT"
+
+    prompt_template = ChatPromptTemplate(
+        messages=[
+            SystemMessagePromptTemplate.from_template(sub_intent_data.get("SYSTEM")),
+            HumanMessagePromptTemplate.from_template(sub_intent_data.get("CONTEXT")),
+            SystemMessagePromptTemplate.from_template(sub_intent_data.get("DISPLAY")),
+            SystemMessagePromptTemplate.from_template(sub_intent_data.get("REMEMBER"))
+        ]
+    )
+    llm_chain = LLMChain(llm=llm, prompt=prompt_template, verbose=False)
+    return llm_chain.run({"email_history": email_body, "examples": examples})
+
+
+def process_email_classifications(file_path, GPT):
+    workbook = openpyxl.load_workbook(file_path)
+    sheet = workbook.active
+    formatted_time1 = datetime.now().strftime("%H:%M:%S")
+
+    for row in range(2, sheet.max_row + 1):
+        if sheet[f'A{row}'].value is None:
+            break
+        email_history = (sheet[f'C{row}'].value or "").split("USER_LATEST_EMAIL:")[0].strip()
+        user_latest_email = (sheet[f'C{row}'].value or "").split("USER_LATEST_EMAIL:")[1].strip() if sheet[
+            f'C{row}'].value else ""
+        user_latest_email_body = user_latest_email.split("Body:")[1] if "Body:" in user_latest_email else ""
+
+        examples = fetch_similar_queries(user_latest_email_body, top_k=10)
+        email_body = f"{email_history}\n{user_latest_email}"
+        expected_intent = sheet[f'D{row}'].value.strip()
+
+        classified_intent = intent_classification(email_body, examples, GPT)
+        classified_data = json.loads(classified_intent)
+        intent = classified_data.get("intent", "")
+
+        if intent.lower() not in ["others", "banter"]:
+            classified_sub_intent = sub_intent_classification(email_body, intent, GPT)
+            sub_intent_data =  json.loads(classified_sub_intent)
+            print(type(sub_intent_data))
+            print(sub_intent_data)
+            sub_intent = sub_intent_data['sub_intent']
+            print(type(sub_intent))
+        else:
+            sub_intent = ""
+
+        if (intent == "ORDER_STATUS" and sub_intent != "SHIPPING_UPDATES") or \
+                (intent == "RETURNS" and sub_intent != "RETURNS_PROCESSING"):
+            final_intent = "OTHERS"
+        else:
+            final_intent = intent
+
+        sheet[f'E{row}'] = final_intent
+
+        if expected_intent.lower() == classified_data.get("intent", "").lower():
+            sheet[f'F{row}'] = "PASS"
+        else:
+            sheet[f'F{row}'] = "FAIL"
+            logging.getLogger().addFilter(NoHTTPRequestsFilter())
+            logging.error(
+                f"Failed Case #{row} :: Expected intent :: '{expected_intent}', but got :: '{classified_intent}'."
+                f"\nEmail History:: {email_history}\nUser Latest Email :: {user_latest_email_body}\nExamples:: {examples}\n"
+            )
+
+    workbook.save(file_path)
+    formatted_time2 = datetime.now().strftime("%H:%M:%S")
+    print("Start Time", formatted_time1)
+    print("END Time", formatted_time2)
+    print(f"Updated Excel file saved at: {file_path}")
 
 
 file_path = '/home/saiprakesh/PycharmProjects/Prompt Testing Using Excel/automation_testing_email.xlsx'
-workbook = openpyxl.load_workbook(file_path)
-sheet = workbook.active
-count = 0
-formatted_time1 = ''
-for row in range(2, sheet.max_row + 1):
-    count = count + 1
-    if count == 1:
-        current_time1 = datetime.now()
-        formatted_time1 = current_time1.strftime("%H:%M:%S")
-    if sheet[f'A{row}'].value is None:
-        break
-    cell_value = sheet[f'C{row}'].value
-    if cell_value:
-        email_history = cell_value.split("USER_LATEST_EMAIL:")[0].strip()
-    else:
-        email_history = ""
-    expected_intent = sheet[f'D{row}'].value.strip()
-    latest_body = sheet[f'C{row}'].value
-    if latest_body:
-        user_latest_email = sheet[f'C{row}'].value.split("USER_LATEST_EMAIL:")[1].strip()
-    else:
-        user_latest_email = ""
-    if len(user_latest_email.split("Body:")) > 1:
-        user_latest_email_body = user_latest_email.split("Body:")[1]
-    else:
-        user_latest_email_body = user_latest_email.split("User:")[1]
-    examples = fetch_similar_queries(user_latest_email_body, top_k=10)
-    email_body = email_history + "\n" + user_latest_email
-    classified_intent = intent_classification(email_body, examples, GPT="4omini")
-    classified_sub_intent = ""
-    if classified_intent.lower() == "ORDER_STATUS":
-        classified_sub_intent = sub_intent_classification(classified_intent, email_body, GPT="4omini")
-    print("classified_sub_intent : ", classified_sub_intent)
-    print(count, ": ", classified_intent)
-    sheet[f'E{row}'] = json.loads(classified_intent).get("intent", "")
-    if expected_intent.lower() == json.loads(classified_intent).get("intent", "").lower():
-        sheet[f'F{row}'] = "PASS"
-    else:
-        sheet[f'F{row}'] = "FAIL"
-        logging.getLogger().addFilter(NoHTTPRequestsFilter())
-        logging.error(
-            "Failed Case #%d :: Expected intent :: '%s', but got  :: '%s'.\nEmail History:: %s\nUser Latest Email :: %s\nExamples:: %s\n",
-            count, expected_intent, classified_intent, email_history, user_latest_email_body, examples
-        )
-        logging.error(
-            "bot_likely_response ::  '%s', \n last_message ::  '%s', \n reason ::  '%s' \n",
-            json.loads(classified_intent).get("bot_likely_response", ""),
-            json.loads(classified_intent).get("last_message", ""),
-            json.loads(classified_intent).get("reason", "")
-        )
-        print(f"Intent Classification - {expected_intent == json.loads(classified_intent).get("intent", "")}")
-        print("email_history: ", email_history)
-        print("user_latest_email: ", user_latest_email)
-        print("user_latest_email_body:", user_latest_email_body)
-        print("examples: ", examples)
-        print("classified_intent:", json.loads(classified_intent).get("intent", ""))
-        print("expected_intent: ", expected_intent)
-
-updated_file_path = '/home/saiprakesh/PycharmProjects/Prompt Testing Using Excel/automation_testing_email.xlsx'
-workbook.save(updated_file_path)
-current_time2 = datetime.now()
-formatted_time2 = current_time2.strftime("%H:%M:%S")
-print("Start Time", formatted_time1)
-print("END Time", formatted_time2)
-print(f"Updated Excel file saved at: {updated_file_path}")
-
+process_email_classifications(file_path, GPT="4omini")

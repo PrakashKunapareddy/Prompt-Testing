@@ -61,7 +61,6 @@ def fetch_similar_queries_for_intent(input_query, main_intent, top_k=10):
             'query': document,
             'sub_intent': sub_intent  # Store all intents for the current document
         })
-    print(similar_queries)
     return format_similar_queries_sub_intent(similar_queries)
 
 
