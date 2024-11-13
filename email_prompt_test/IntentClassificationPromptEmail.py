@@ -39,8 +39,6 @@ IntentClassificationPromptEmail = {
     "DISPLAY": """Ensure that the output is in the following JSON format exactly as shown:
        {{
          "intent": "[Main Intent Classified]",
-         "bot_likely_response": "[bot likely response]",
-         "last_message": "[last message]",
          "reason": "[explain for the intent classified reason]"
        }}
        """,

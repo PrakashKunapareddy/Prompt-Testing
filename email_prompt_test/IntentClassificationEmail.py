@@ -60,7 +60,7 @@ def intent_classification(email_body, examples, GPT):
 
 def sub_intent_classification(email_body, intent, GPT):
     llm = gpt_call(GPT)
-    sub_examples = fetch_similar_queries_for_intent(email_body, intent, top_k=10)
+    sub_examples = fetch_similar_queries_for_intent(email_body, intent, top_k=5)
     sub_intent_data = SubIntentClassificationEmail.sub_intents_email.get(intent.upper(), {})
     if not sub_intent_data:
         logging.warning(f"Sub-intent configuration not found for: {intent.upper()}")
@@ -106,7 +106,7 @@ def process_email_classifications(file_path, GPT):
             f'C{row}'].value else ""
         user_latest_email_body = user_latest_email.split("Body:")[1] if "Body:" in user_latest_email else ""
 
-        examples = fetch_similar_queries(user_latest_email_body, top_k=10)
+        examples = fetch_similar_queries(user_latest_email_body, top_k=5)
         sub_examples = ""
         classified_sub_intent = ""
         email_body = f"{email_history}\n{user_latest_email}"
@@ -115,7 +115,6 @@ def process_email_classifications(file_path, GPT):
         classified_intent = intent_classification(email_body, examples, GPT)
         classified_data = json.loads(classified_intent)
         intent = classified_data.get("intent", "")
-        final_intent = ""
         if intent not in ["OTHERS", "BANTER"]:
             classified_sub_intent_and_examples = sub_intent_classification(email_body, intent, GPT)
             classified_sub_intent = classified_sub_intent_and_examples[0]
@@ -140,7 +139,7 @@ def process_email_classifications(file_path, GPT):
             sheet[f'F{row}'] = "FAIL"
             logger.error(
                 f"Row #{row}: FAIL - Expected Intent: '{expected_intent}', Classified Intent: '{final_intent}'."
-                f"\nEmail History: {email_history}\nUser Latest Email: {user_latest_email_body}\n"
+                f"\nEmail History: {email_history}\nUser Latest Email: {user_latest_email_body}\n\nIntent_Data:{classified_intent}"
                 f"Intent Examples: {examples}\nSub Intent Data: {classified_sub_intent}\nSub Intent Examples: {sub_examples}"
             )
 
