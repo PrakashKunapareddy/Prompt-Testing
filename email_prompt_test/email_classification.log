@@ -1,0 +1,352 @@
+2024-11-13 18:12:32,121 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com//openai/deployments/vassar-text-ada002/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2024-11-13 18:12:32,130 - INFO - HTTP Request: POST http://localhost:8000/api/v1/collections/68cf1259-1ad5-4e89-a466-9eb5e28da86c/query "HTTP/1.1 200 OK"
+2024-11-13 18:12:35,800 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com/openai/deployments/vassar-4o-mini/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-11-13 18:12:35,802 - INFO - Row #2: PASS - Expected Intent: 'OTHERS', Classified Intent: 'OTHERS'
+2024-11-13 18:12:36,077 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com//openai/deployments/vassar-text-ada002/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2024-11-13 18:12:36,089 - INFO - HTTP Request: POST http://localhost:8000/api/v1/collections/68cf1259-1ad5-4e89-a466-9eb5e28da86c/query "HTTP/1.1 200 OK"
+2024-11-13 18:12:38,638 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com/openai/deployments/vassar-4o-mini/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-11-13 18:12:38,938 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com//openai/deployments/vassar-text-ada002/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2024-11-13 18:12:38,949 - INFO - HTTP Request: POST http://localhost:8000/api/v1/collections/68cf1259-1ad5-4e89-a466-9eb5e28da86c/query "HTTP/1.1 200 OK"
+2024-11-13 18:12:41,984 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com/openai/deployments/vassar-4o-mini/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-11-13 18:12:41,987 - INFO - Row #3: PASS - Expected Intent: 'PRODUCT_AVAILABILITY', Classified Intent: 'PRODUCT_AVAILABILITY'
+2024-11-13 18:12:43,622 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com//openai/deployments/vassar-text-ada002/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2024-11-13 18:12:43,634 - INFO - HTTP Request: POST http://localhost:8000/api/v1/collections/68cf1259-1ad5-4e89-a466-9eb5e28da86c/query "HTTP/1.1 200 OK"
+2024-11-13 18:12:46,139 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com/openai/deployments/vassar-4o-mini/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-11-13 18:12:46,142 - INFO - Row #4: PASS - Expected Intent: 'OTHERS', Classified Intent: 'OTHERS'
+2024-11-13 18:12:46,753 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com//openai/deployments/vassar-text-ada002/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2024-11-13 18:12:46,764 - INFO - HTTP Request: POST http://localhost:8000/api/v1/collections/68cf1259-1ad5-4e89-a466-9eb5e28da86c/query "HTTP/1.1 200 OK"
+2024-11-13 18:12:48,602 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com/openai/deployments/vassar-4o-mini/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-11-13 18:12:48,608 - INFO - Row #5: PASS - Expected Intent: 'BANTER', Classified Intent: 'BANTER'
+2024-11-13 18:12:48,905 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com//openai/deployments/vassar-text-ada002/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2024-11-13 18:12:48,917 - INFO - HTTP Request: POST http://localhost:8000/api/v1/collections/68cf1259-1ad5-4e89-a466-9eb5e28da86c/query "HTTP/1.1 200 OK"
+2024-11-13 18:12:50,993 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com/openai/deployments/vassar-4o-mini/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-11-13 18:12:51,279 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com//openai/deployments/vassar-text-ada002/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2024-11-13 18:12:51,290 - INFO - HTTP Request: POST http://localhost:8000/api/v1/collections/68cf1259-1ad5-4e89-a466-9eb5e28da86c/query "HTTP/1.1 200 OK"
+2024-11-13 18:12:53,733 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com/openai/deployments/vassar-4o-mini/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-11-13 18:12:53,736 - INFO - Row #6: PASS - Expected Intent: 'ORDER_STATUS', Classified Intent: 'ORDER_STATUS'
+2024-11-13 18:12:54,016 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com//openai/deployments/vassar-text-ada002/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2024-11-13 18:12:54,030 - INFO - HTTP Request: POST http://localhost:8000/api/v1/collections/68cf1259-1ad5-4e89-a466-9eb5e28da86c/query "HTTP/1.1 200 OK"
+2024-11-13 18:12:57,002 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com/openai/deployments/vassar-4o-mini/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-11-13 18:12:57,305 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com//openai/deployments/vassar-text-ada002/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2024-11-13 18:12:57,316 - INFO - HTTP Request: POST http://localhost:8000/api/v1/collections/68cf1259-1ad5-4e89-a466-9eb5e28da86c/query "HTTP/1.1 200 OK"
+2024-11-13 18:12:59,156 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com/openai/deployments/vassar-4o-mini/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-11-13 18:12:59,158 - INFO - Row #7: PASS - Expected Intent: 'RETURNS', Classified Intent: 'RETURNS'
+2024-11-13 18:12:59,426 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com//openai/deployments/vassar-text-ada002/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2024-11-13 18:12:59,440 - INFO - HTTP Request: POST http://localhost:8000/api/v1/collections/68cf1259-1ad5-4e89-a466-9eb5e28da86c/query "HTTP/1.1 200 OK"
+2024-11-13 18:13:01,295 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com/openai/deployments/vassar-4o-mini/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-11-13 18:13:01,609 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com//openai/deployments/vassar-text-ada002/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2024-11-13 18:13:01,620 - INFO - HTTP Request: POST http://localhost:8000/api/v1/collections/68cf1259-1ad5-4e89-a466-9eb5e28da86c/query "HTTP/1.1 200 OK"
+2024-11-13 18:13:04,382 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com/openai/deployments/vassar-4o-mini/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-11-13 18:13:04,384 - INFO - Row #8: PASS - Expected Intent: 'RETURNS', Classified Intent: 'RETURNS'
+2024-11-13 18:13:04,684 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com//openai/deployments/vassar-text-ada002/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2024-11-13 18:13:04,697 - INFO - HTTP Request: POST http://localhost:8000/api/v1/collections/68cf1259-1ad5-4e89-a466-9eb5e28da86c/query "HTTP/1.1 200 OK"
+2024-11-13 18:13:08,365 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com/openai/deployments/vassar-4o-mini/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-11-13 18:13:08,367 - INFO - Row #9: PASS - Expected Intent: 'OTHERS', Classified Intent: 'OTHERS'
+2024-11-13 18:13:08,638 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com//openai/deployments/vassar-text-ada002/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2024-11-13 18:13:08,649 - INFO - HTTP Request: POST http://localhost:8000/api/v1/collections/68cf1259-1ad5-4e89-a466-9eb5e28da86c/query "HTTP/1.1 200 OK"
+2024-11-13 18:13:11,230 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com/openai/deployments/vassar-4o-mini/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-11-13 18:13:11,535 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com//openai/deployments/vassar-text-ada002/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2024-11-13 18:13:11,545 - INFO - HTTP Request: POST http://localhost:8000/api/v1/collections/68cf1259-1ad5-4e89-a466-9eb5e28da86c/query "HTTP/1.1 200 OK"
+2024-11-13 18:13:13,902 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com/openai/deployments/vassar-4o-mini/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-11-13 18:13:13,905 - INFO - Row #10: PASS - Expected Intent: 'DAMAGES', Classified Intent: 'DAMAGES'
+2024-11-13 18:13:14,200 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com//openai/deployments/vassar-text-ada002/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2024-11-13 18:13:14,216 - INFO - HTTP Request: POST http://localhost:8000/api/v1/collections/68cf1259-1ad5-4e89-a466-9eb5e28da86c/query "HTTP/1.1 200 OK"
+2024-11-13 18:13:16,045 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com/openai/deployments/vassar-4o-mini/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-11-13 18:13:16,350 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com//openai/deployments/vassar-text-ada002/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2024-11-13 18:13:16,362 - INFO - HTTP Request: POST http://localhost:8000/api/v1/collections/68cf1259-1ad5-4e89-a466-9eb5e28da86c/query "HTTP/1.1 200 OK"
+2024-11-13 18:13:18,673 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com/openai/deployments/vassar-4o-mini/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-11-13 18:13:18,676 - INFO - Row #11: PASS - Expected Intent: 'OTHERS', Classified Intent: 'OTHERS'
+2024-11-13 18:13:18,923 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com//openai/deployments/vassar-text-ada002/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2024-11-13 18:13:18,935 - INFO - HTTP Request: POST http://localhost:8000/api/v1/collections/68cf1259-1ad5-4e89-a466-9eb5e28da86c/query "HTTP/1.1 200 OK"
+2024-11-13 18:13:22,208 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com/openai/deployments/vassar-4o-mini/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-11-13 18:13:22,211 - INFO - Row #12: PASS - Expected Intent: 'OTHERS', Classified Intent: 'OTHERS'
+2024-11-13 18:13:22,494 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com//openai/deployments/vassar-text-ada002/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2024-11-13 18:13:22,506 - INFO - HTTP Request: POST http://localhost:8000/api/v1/collections/68cf1259-1ad5-4e89-a466-9eb5e28da86c/query "HTTP/1.1 200 OK"
+2024-11-13 18:13:25,792 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com/openai/deployments/vassar-4o-mini/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-11-13 18:13:26,123 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com//openai/deployments/vassar-text-ada002/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2024-11-13 18:13:26,131 - INFO - HTTP Request: POST http://localhost:8000/api/v1/collections/68cf1259-1ad5-4e89-a466-9eb5e28da86c/query "HTTP/1.1 200 OK"
+2024-11-13 18:13:28,639 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com/openai/deployments/vassar-4o-mini/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-11-13 18:13:28,642 - INFO - Row #13: PASS - Expected Intent: 'OTHERS', Classified Intent: 'OTHERS'
+2024-11-13 18:13:28,958 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com//openai/deployments/vassar-text-ada002/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2024-11-13 18:13:28,969 - INFO - HTTP Request: POST http://localhost:8000/api/v1/collections/68cf1259-1ad5-4e89-a466-9eb5e28da86c/query "HTTP/1.1 200 OK"
+2024-11-13 18:13:31,924 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com/openai/deployments/vassar-4o-mini/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-11-13 18:13:32,223 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com//openai/deployments/vassar-text-ada002/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2024-11-13 18:13:32,232 - INFO - HTTP Request: POST http://localhost:8000/api/v1/collections/68cf1259-1ad5-4e89-a466-9eb5e28da86c/query "HTTP/1.1 200 OK"
+2024-11-13 18:13:34,492 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com/openai/deployments/vassar-4o-mini/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-11-13 18:13:34,495 - INFO - Row #14: PASS - Expected Intent: 'OTHERS', Classified Intent: 'OTHERS'
+2024-11-13 18:13:34,783 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com//openai/deployments/vassar-text-ada002/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2024-11-13 18:13:34,798 - INFO - HTTP Request: POST http://localhost:8000/api/v1/collections/68cf1259-1ad5-4e89-a466-9eb5e28da86c/query "HTTP/1.1 200 OK"
+2024-11-13 18:13:37,547 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com/openai/deployments/vassar-4o-mini/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-11-13 18:13:37,860 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com//openai/deployments/vassar-text-ada002/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2024-11-13 18:13:37,871 - INFO - HTTP Request: POST http://localhost:8000/api/v1/collections/68cf1259-1ad5-4e89-a466-9eb5e28da86c/query "HTTP/1.1 200 OK"
+2024-11-13 18:13:40,132 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com/openai/deployments/vassar-4o-mini/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-11-13 18:13:40,135 - INFO - Row #15: PASS - Expected Intent: 'RETURNS', Classified Intent: 'RETURNS'
+2024-11-13 18:13:40,397 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com//openai/deployments/vassar-text-ada002/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2024-11-13 18:13:40,409 - INFO - HTTP Request: POST http://localhost:8000/api/v1/collections/68cf1259-1ad5-4e89-a466-9eb5e28da86c/query "HTTP/1.1 200 OK"
+2024-11-13 18:13:42,706 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com/openai/deployments/vassar-4o-mini/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-11-13 18:13:42,989 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com//openai/deployments/vassar-text-ada002/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2024-11-13 18:13:42,997 - INFO - HTTP Request: POST http://localhost:8000/api/v1/collections/68cf1259-1ad5-4e89-a466-9eb5e28da86c/query "HTTP/1.1 200 OK"
+2024-11-13 18:13:46,460 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com/openai/deployments/vassar-4o-mini/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-11-13 18:13:46,463 - INFO - Row #16: PASS - Expected Intent: 'OTHERS', Classified Intent: 'OTHERS'
+2024-11-13 18:13:46,714 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com//openai/deployments/vassar-text-ada002/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2024-11-13 18:13:46,724 - INFO - HTTP Request: POST http://localhost:8000/api/v1/collections/68cf1259-1ad5-4e89-a466-9eb5e28da86c/query "HTTP/1.1 200 OK"
+2024-11-13 18:13:48,608 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com/openai/deployments/vassar-4o-mini/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-11-13 18:13:48,914 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com//openai/deployments/vassar-text-ada002/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2024-11-13 18:13:48,923 - INFO - HTTP Request: POST http://localhost:8000/api/v1/collections/68cf1259-1ad5-4e89-a466-9eb5e28da86c/query "HTTP/1.1 200 OK"
+2024-11-13 18:13:52,601 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com/openai/deployments/vassar-4o-mini/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-11-13 18:13:52,603 - INFO - Row #17: PASS - Expected Intent: 'ORDER_STATUS', Classified Intent: 'ORDER_STATUS'
+2024-11-13 18:13:52,909 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com//openai/deployments/vassar-text-ada002/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2024-11-13 18:13:52,921 - INFO - HTTP Request: POST http://localhost:8000/api/v1/collections/68cf1259-1ad5-4e89-a466-9eb5e28da86c/query "HTTP/1.1 200 OK"
+2024-11-13 18:13:56,606 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com/openai/deployments/vassar-4o-mini/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-11-13 18:13:56,889 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com//openai/deployments/vassar-text-ada002/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2024-11-13 18:13:56,900 - INFO - HTTP Request: POST http://localhost:8000/api/v1/collections/68cf1259-1ad5-4e89-a466-9eb5e28da86c/query "HTTP/1.1 200 OK"
+2024-11-13 18:13:59,156 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com/openai/deployments/vassar-4o-mini/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-11-13 18:13:59,159 - INFO - Row #18: PASS - Expected Intent: 'OTHERS', Classified Intent: 'OTHERS'
+2024-11-13 18:13:59,459 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com//openai/deployments/vassar-text-ada002/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2024-11-13 18:13:59,470 - INFO - HTTP Request: POST http://localhost:8000/api/v1/collections/68cf1259-1ad5-4e89-a466-9eb5e28da86c/query "HTTP/1.1 200 OK"
+2024-11-13 18:14:01,514 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com/openai/deployments/vassar-4o-mini/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-11-13 18:14:01,515 - INFO - Row #19: PASS - Expected Intent: 'OTHERS', Classified Intent: 'OTHERS'
+2024-11-13 18:14:01,824 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com//openai/deployments/vassar-text-ada002/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2024-11-13 18:14:01,836 - INFO - HTTP Request: POST http://localhost:8000/api/v1/collections/68cf1259-1ad5-4e89-a466-9eb5e28da86c/query "HTTP/1.1 200 OK"
+2024-11-13 18:14:04,587 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com/openai/deployments/vassar-4o-mini/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-11-13 18:14:04,890 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com//openai/deployments/vassar-text-ada002/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2024-11-13 18:14:04,901 - INFO - HTTP Request: POST http://localhost:8000/api/v1/collections/68cf1259-1ad5-4e89-a466-9eb5e28da86c/query "HTTP/1.1 200 OK"
+2024-11-13 18:14:07,552 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com/openai/deployments/vassar-4o-mini/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-11-13 18:14:07,555 - INFO - Row #20: PASS - Expected Intent: 'OTHERS', Classified Intent: 'OTHERS'
+2024-11-13 18:14:08,693 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com//openai/deployments/vassar-text-ada002/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2024-11-13 18:14:08,706 - INFO - HTTP Request: POST http://localhost:8000/api/v1/collections/68cf1259-1ad5-4e89-a466-9eb5e28da86c/query "HTTP/1.1 200 OK"
+2024-11-13 18:14:10,755 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com/openai/deployments/vassar-4o-mini/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-11-13 18:14:11,137 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com//openai/deployments/vassar-text-ada002/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2024-11-13 18:14:11,144 - INFO - HTTP Request: POST http://localhost:8000/api/v1/collections/68cf1259-1ad5-4e89-a466-9eb5e28da86c/query "HTTP/1.1 200 OK"
+2024-11-13 18:14:13,254 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com/openai/deployments/vassar-4o-mini/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-11-13 18:14:13,257 - INFO - Row #21: PASS - Expected Intent: 'ORDER_STATUS', Classified Intent: 'ORDER_STATUS'
+2024-11-13 18:14:13,506 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com//openai/deployments/vassar-text-ada002/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2024-11-13 18:14:13,518 - INFO - HTTP Request: POST http://localhost:8000/api/v1/collections/68cf1259-1ad5-4e89-a466-9eb5e28da86c/query "HTTP/1.1 200 OK"
+2024-11-13 18:14:15,969 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com/openai/deployments/vassar-4o-mini/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-11-13 18:14:16,270 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com//openai/deployments/vassar-text-ada002/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2024-11-13 18:14:16,281 - INFO - HTTP Request: POST http://localhost:8000/api/v1/collections/68cf1259-1ad5-4e89-a466-9eb5e28da86c/query "HTTP/1.1 200 OK"
+2024-11-13 18:14:18,615 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com/openai/deployments/vassar-4o-mini/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-11-13 18:14:18,618 - ERROR - Row #22: FAIL - Expected Intent: 'DAMAGES', Classified Intent: 'OTHERS'.
+Email History: User: Subject:Missing Item,Body: Can You Give details on my order #295947 
+Bot; The order details are given
+User Latest Email:  A leg of the chair is missing can you please look into my problem
+Intent Examples: User message : The chair I ordered arrived with broken legs and scuffs, and I want to return it immediately. Can you help me with the return process? - Intent Identified : Damages
+User message : My office chair has started to break down after just a month of use. How do I report this damage and request assistance? - Intent Identified : Damages
+User message : This message is in reference to order #285550 that was placed in November of 2022. It took almost 1 whole year to finally receive this order. The chairs were delivered to us in September of 2023 after continued delays in production and shipment. We have spent the last month on site at our client's residence installing our largest project to date. A project that will complete Brittany's published book with Rizzoli, and will make up the majority of the book. These chairs have been in our client's possession for less than 1 month, and already we have had one break. This is completely unacceptable given the time that it took for these chairs to arrive, and the little time that our clients have actually had them. Please see the attached photos of the broken leg on one of the chairs. We have sent this to our woodshop repair technician who was able to salvage the chair leg, and we now owe a balance of $225 for the repair. A photo of the invoice from the repair is also attached. We would greatly appreciate a partial refund to cover the cost of this repair. We are less than satisfied with our overall experience with this order and have strongly reconsidered future purchases. All my best, Maddy Brittany Bromley Interiors 5902 S. Dixie Hwy West Palm Beach, FL 33405 Office: 561-284-6427 www.bbromleyinteriors.com (http://www.bbromleyinteriors.com/)" - Intent Identified : DAMAGES
+User message : I didn’t receive the discount I was supposed to get on my armchair order. Can you help me fix this? - Intent Identified : ORDER_STATUS
+User message : I would like to start the process of returning the chairs. Can you please let me know next steps? - Intent Identified : RETURNS
+User message : I have not received a response on replacing the 2 chairs. One damaged in shipping and the other that does not match. Can you please process the replacements? Thank you - Intent Identified : DAMAGES
+User message : I still have not received any updates about my broken furniture - Intent Identified : DAMAGES
+User message : Per your request, attached please find photos of the broken marble and damage to the desk (these were taken by the delivery team). Also, the delivery team could not get the display case into the elevator or up the stairs, so we could not take delivery of that either. Given none of the items could be delivered, I refused the chair as it didn’t make sense to just accept that alone. Please let me know if you have any further questions at all. Thank you! - Intent Identified : DAMAGES
+User message : customer needs return label to return chair 292682 chair is not comfortable - Intent Identified : RETURNS
+User message : I refused the delivery of my table because the box was crushed, and I could see the item inside was broken. How will this be resolved? - Intent Identified : Damages
+Sub Intent Data: {
+  "sub_intent": "MISSING_ITEMS",
+  "bot_likely_response": "We apologize for the inconvenience. We will look into the missing leg of the chair and get back to you shortly.",
+  "last_message": "A leg of the chair is missing can you please look into my problem",
+  "reason": "The user is reporting that a specific part of their order (a leg of the chair) is missing, which falls under the category of missing items."
+}
+Sub Intent Examples: User message : This message is in reference to order #285550 that was placed in November of 2022. It took almost 1 whole year to finally receive this order. The chairs were delivered to us in September of 2023 after continued delays in production and shipment. We have spent the last month on site at our client's residence installing our largest project to date. A project that will complete Brittany's published book with Rizzoli, and will make up the majority of the book. These chairs have been in our client's possession for less than 1 month, and already we have had one break. This is completely unacceptable given the time that it took for these chairs to arrive, and the little time that our clients have actually had them. Please see the attached photos of the broken leg on one of the chairs. We have sent this to our woodshop repair technician who was able to salvage the chair leg, and we now owe a balance of $225 for the repair. A photo of the invoice from the repair is also attached. We would greatly appreciate a partial refund to cover the cost of this repair. We are less than satisfied with our overall experience with this order and have strongly reconsidered future purchases. All my best, Maddy Brittany Bromley Interiors 5902 S. Dixie Hwy West Palm Beach, FL 33405 Office: 561-284-6427 www.bbromleyinteriors.com (http://www.bbromleyinteriors.com/)" - Sub_Intent Identified : OTHERS
+User message : I have not received a response on replacing the 2 chairs. One damaged in shipping and the other that does not match. Can you please process the replacements? Thank you - Sub_Intent Identified : REPLACEMENT_REQUEST
+User message : I ordered a bed & it was delivered without a headboard. Order #295204 - Sub_Intent Identified : MISSING_ITEMS
+User message : The table top on my order has a crack in it.  It was documented by the carrier. They said to contact you for a replacement table top. Order #295557 - Sub_Intent Identified : DAMAGED_DURING_SHIPPING
+User message : Per your request, attached please find photos of the broken marble and damage to the desk (these were taken by the delivery team). Also, the delivery team could not get the display case into the elevator or up the stairs, so we could not take delivery of that either. Given none of the items could be delivered, I refused the chair as it didn’t make sense to just accept that alone. Please let me know if you have any further questions at all. Thank you! - Sub_Intent Identified : OTHERS
+User message : Our receiver let us know that this order arrived damaged (please see attached photos). Can you please advise on replacements? Thanks! - Sub_Intent Identified : REPLACEMENT_REQUEST
+User message : Hello, My furniture order arrived and the top was broken. Below are pictures and the delivery company also took pictures and made note of this. No one has contacted me from Wisteria to make this right which is disappointing. Please respond with either a full refund of the item or expedited replacement of the broken part. - Sub_Intent Identified : DAMAGED_DURING_SHIPPING
+User message : I still have not received any updates about my broken furniture - Sub_Intent Identified : OTHERS
+User message : Thank you for your email. I want to clarify that I did not return anything. I live on the third floor, and the delivery company couldn’t fit the display case in the elevator or up the stairs, so they couldn't deliver it. The desk, which arrived broken, was pointless to accept without the matching pieces. I did not refuse delivery, and I shouldn't have to pay for the broken desk, display, or chair, as I purchased them all together. I still want the furniture and would like to arrange a delayed delivery for late summer to my new first-floor home. Thank you for your help! - Sub_Intent Identified : OTHERS
+User message : They left it-I asked our warehouse for clarification on the damage and they sent this: ONE OF THE CHEST TOPS HAS CHIPS ON THE BACK EDGE AND BOTH THE CHEST BASES HAVE CHIPS ON THE FRONT TOP EDGES, SCRATCHES ON THE SIDES, AND RUBBING/WEARING ON THE LEGS. - Sub_Intent Identified : OTHERS
+2024-11-13 18:14:19,837 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com//openai/deployments/vassar-text-ada002/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2024-11-13 18:14:19,851 - INFO - HTTP Request: POST http://localhost:8000/api/v1/collections/68cf1259-1ad5-4e89-a466-9eb5e28da86c/query "HTTP/1.1 200 OK"
+2024-11-13 18:14:24,701 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com/openai/deployments/vassar-4o-mini/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-11-13 18:14:24,704 - INFO - Row #23: PASS - Expected Intent: 'OTHERS', Classified Intent: 'OTHERS'
+2024-11-13 18:14:24,957 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com//openai/deployments/vassar-text-ada002/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2024-11-13 18:14:24,969 - INFO - HTTP Request: POST http://localhost:8000/api/v1/collections/68cf1259-1ad5-4e89-a466-9eb5e28da86c/query "HTTP/1.1 200 OK"
+2024-11-13 18:14:27,322 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com/openai/deployments/vassar-4o-mini/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-11-13 18:14:27,623 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com//openai/deployments/vassar-text-ada002/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2024-11-13 18:14:27,633 - INFO - HTTP Request: POST http://localhost:8000/api/v1/collections/68cf1259-1ad5-4e89-a466-9eb5e28da86c/query "HTTP/1.1 200 OK"
+2024-11-13 18:14:29,711 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com/openai/deployments/vassar-4o-mini/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-11-13 18:14:29,714 - ERROR - Row #24: FAIL - Expected Intent: 'OTHERS', Classified Intent: 'PRODUCT_AVAILABILITY'.
+Email History: User: Subject:Warrenty Query,Body: let me know the product availability of the product with SKU ID 138-111312 
+Bot; The product details are given
+User Latest Email:  What is the Warrenty of the product
+Intent Examples: User message : I’ve received a damaged product and need to make a claim for a refund. What’s the procedure, and how long does the refund take? - Intent Identified : Damages
+User message : Hi, what is your return policy on furniture? - Intent Identified : RETURNS
+User message : I rejected the shipment because the product was visibly damaged upon arrival. What’s the process for getting a replacement or my money back? - Intent Identified : Damages
+User message : What is your return policy should I order it and the dimensions not work for me? - Intent Identified : RETURNS
+User message : I need to file a claim because the product I received was severely damaged in transit. How long will it take to process a refund? - Intent Identified : Damages
+User message : The item I ordered arrived damaged, and I’d like to file a claim for a refund. Can you guide me through the process? - Intent Identified : Damages
+User message : I had to refuse my delivery because the box and the contents inside were both damaged. How do I get this resolved with either a replacement or a refund? - Intent Identified : Damages
+User message : Could you confirm that my item has shipped? I may desire a full refund if not. - Intent Identified : ORDER_STATUS
+User message : My office chair has started to break down after just a month of use. How do I report this damage and request assistance? - Intent Identified : Damages
+User message : The delivery guy tried to drop off my order, but the package was so damaged I refused to accept it. How do I get a replacement or a refund? - Intent Identified : Damages
+Sub Intent Data: {
+  "sub_intent": "STOCK_STATUS",
+  "bot_likely_response": "The product with SKU ID 138-111312 is currently available.",
+  "last_message": "let me know the product availability of the product with SKU ID 138-111312",
+  "reason": "The user is specifically asking about the availability of a product by its SKU ID, which directly relates to the stock status of that product."
+}
+Sub Intent Examples: User message : I would like to know if this chair is in stock SKU#: 118-111583 - Sub_Intent Identified : STOCK_STATUS
+User message : customer wanted information on Benten Counter/Bar Stools. - Sub_Intent Identified : PRODUCT_QUERIES
+User message : Hi, It says on the website this mirror is in stock and ships in 5-7 days. I am just checking to make sure that is correct before placing an order. Can you please let me know and also please let me know if it ships by Fedex or UPS or freight. Thank you - Sub_Intent Identified : STOCK_STATUS
+User message : The black leather chair I wanted is out of stock. Can you let me know when it will be back in stock, or if I can pre-order it? - Sub_Intent Identified : STOCK_STATUS
+User message : Do you have stock of the Provencial Side Table SKU#: 118-111778? - Sub_Intent Identified : STOCK_STATUS
+User message : The armchair I want is currently out of stock. Once it’s back in stock, how long would it take to ship to my address? - Sub_Intent Identified : SHIPPING_TIMELINES
+User message : I’ve been looking at the oak wardrobe for a few days, but now it’s showing as out of stock. Can you inform me when it will be available again? - Sub_Intent Identified : STOCK_STATUS
+User message : How long does it typically take for a backordered item to ship? I was told the coffee table is out of stock, and I need an idea of when it will be available. - Sub_Intent Identified : SHIPPING_TIMELINES
+User message : I ordered a mirror last week, and I was wondering when it will ship. Could you provide a specific delivery timeline for this item? - Sub_Intent Identified : SHIPPING_TIMELINES
+User message : Can you tell me when I can expect the sectional I ordered to arrive? It’s been a few days since I placed the order, and I want to know if it’s on track for delivery. - Sub_Intent Identified : SHIPPING_TIMELINES
+2024-11-13 18:14:29,974 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com//openai/deployments/vassar-text-ada002/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2024-11-13 18:14:29,985 - INFO - HTTP Request: POST http://localhost:8000/api/v1/collections/68cf1259-1ad5-4e89-a466-9eb5e28da86c/query "HTTP/1.1 200 OK"
+2024-11-13 18:14:32,332 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com/openai/deployments/vassar-4o-mini/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-11-13 18:14:32,642 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com//openai/deployments/vassar-text-ada002/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2024-11-13 18:14:32,653 - INFO - HTTP Request: POST http://localhost:8000/api/v1/collections/68cf1259-1ad5-4e89-a466-9eb5e28da86c/query "HTTP/1.1 200 OK"
+2024-11-13 18:14:35,184 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com/openai/deployments/vassar-4o-mini/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-11-13 18:14:35,186 - INFO - Row #25: PASS - Expected Intent: 'OTHERS', Classified Intent: 'OTHERS'
+2024-11-13 18:14:35,435 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com//openai/deployments/vassar-text-ada002/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2024-11-13 18:14:35,447 - INFO - HTTP Request: POST http://localhost:8000/api/v1/collections/68cf1259-1ad5-4e89-a466-9eb5e28da86c/query "HTTP/1.1 200 OK"
+2024-11-13 18:14:38,068 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com/openai/deployments/vassar-4o-mini/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-11-13 18:14:38,390 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com//openai/deployments/vassar-text-ada002/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2024-11-13 18:14:38,402 - INFO - HTTP Request: POST http://localhost:8000/api/v1/collections/68cf1259-1ad5-4e89-a466-9eb5e28da86c/query "HTTP/1.1 200 OK"
+2024-11-13 18:14:40,805 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com/openai/deployments/vassar-4o-mini/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-11-13 18:14:40,808 - INFO - Row #26: PASS - Expected Intent: 'OTHERS', Classified Intent: 'OTHERS'
+2024-11-13 18:14:41,135 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com//openai/deployments/vassar-text-ada002/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2024-11-13 18:14:41,147 - INFO - HTTP Request: POST http://localhost:8000/api/v1/collections/68cf1259-1ad5-4e89-a466-9eb5e28da86c/query "HTTP/1.1 200 OK"
+2024-11-13 18:14:43,614 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com/openai/deployments/vassar-4o-mini/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-11-13 18:14:43,617 - INFO - Row #27: PASS - Expected Intent: 'OTHERS', Classified Intent: 'OTHERS'
+2024-11-13 18:14:43,903 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com//openai/deployments/vassar-text-ada002/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2024-11-13 18:14:43,916 - INFO - HTTP Request: POST http://localhost:8000/api/v1/collections/68cf1259-1ad5-4e89-a466-9eb5e28da86c/query "HTTP/1.1 200 OK"
+2024-11-13 18:14:46,154 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com/openai/deployments/vassar-4o-mini/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-11-13 18:14:46,471 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com//openai/deployments/vassar-text-ada002/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2024-11-13 18:14:46,477 - INFO - HTTP Request: POST http://localhost:8000/api/v1/collections/68cf1259-1ad5-4e89-a466-9eb5e28da86c/query "HTTP/1.1 200 OK"
+2024-11-13 18:14:49,970 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com/openai/deployments/vassar-4o-mini/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-11-13 18:14:49,973 - ERROR - Row #28: FAIL - Expected Intent: 'OTHERS', Classified Intent: 'RETURNS'.
+Email History: User: Subject:Orginal Packing is missing, Body: Give me my order details for #293959 
+Bot; The order details are given
+User Latest Email:  i want to return my order as it is not fit in my place and I lost my original packing
+Intent Examples: User message : I’m seeking compensation for the damages to my order. The package was in terrible condition upon arrival, and I’d like a refund as soon as possible. - Intent Identified : Damages
+User message : My package arrived crushed, and the contents are unusable. I need to return the damaged item and would appreciate instructions on how to do so. - Intent Identified : Damages
+User message : I just want to confirm that the chest will be picked up. The original packaging was discarded. I hoped that the replacement top would be more safely packed and would not be broken. It was not. Please let me know when you can schedule the pickup and refund. - Intent Identified : OTHERS
+User message : I’m really disappointed as my order arrived with a broken top. I’d like to return it due to the damage. Can you issue a return label for this? - Intent Identified : Damages
+User message : My product arrived in pieces, and I’d prefer to return it rather than get a replacement. How can I start the return process for the damaged item? - Intent Identified : Damages
+User message : received order unhappy how it was shipped has black marks, and it looks terrible. wants to return & replace but wants to be rest assured that this doesn't happen again. - Intent Identified : RETURNS
+User message : The delivery guy tried to drop off my order, but the package was so damaged I refused to accept it. How do I get a replacement or a refund? - Intent Identified : Damages
+User message : I need to return this order. #295108. Please let men know how to proceed. - Intent Identified : RETURNS
+User message : What is your return policy should I order it and the dimensions not work for me? - Intent Identified : RETURNS
+User message : customer needs return label to return chair 292682 chair is not comfortable - Intent Identified : RETURNS
+Sub Intent Data: {
+  "sub_intent": "RETURNS_PROCESSING",
+  "bot_likely_response": "I can assist you with the return process. Since you mentioned that the original packing is missing, I will provide you with the necessary steps to return your order.",
+  "last_message": "i want to return my order as it is not fit in my place and I lost my original packing",
+  "reason": "The user explicitly states a desire to return the order due to it not fitting in their space and mentions the loss of original packing, which indicates they are initiating the return process."
+}
+Sub Intent Examples: User message : I need to return this order. #295108. Please let men know how to proceed. - Sub_Intent Identified : QUERIES
+User message : received order unhappy how it was shipped has black marks, and it looks terrible. wants to return & replace but wants to be rest assured that this doesn't happen again. - Sub_Intent Identified : REPLACEMENT
+User message : customer needs return label to return chair 292682 chair is not comfortable - Sub_Intent Identified : RETURN_PROCESSING
+User message : I need to process a return for the above referenced order number (unfortunately, the candle holders are too tall for my space). Can you let me know how I complete the process? - Sub_Intent Identified : RETURN_PROCESSING
+User message : I need to return my Pohai Cluster Bowl but my email doesnt have an order number. - Sub_Intent Identified : RETURN_PROCESSING
+User message : My order #289925, I ordered 4 counter height bar stools but received bar stools. I need to return them. Please advise how to return. Thank you for your help - Sub_Intent Identified : QUERIES
+User message : What is your return policy should I order it and the dimensions not work for me? - Sub_Intent Identified : RETURN POLICY
+User message : Hi, there! Unfortunately, the blue doesn't match our other blues! May we return the blue baskets? Thanks! - Sub_Intent Identified : Unknown
+User message : I do not want to keep the headboard because it is bordering on brown in my opinion. From the online photo, it looked like it was light beige. Unfortunately, it is too dark to go with my bedroom. She is furnished in light tones. Please supply me with a play so I can return the headboard. I kept the original wrapping since once I saw the color I knew I was going to return it. I look forward to receiving the return label. - Sub_Intent Identified : RETURN_PROCESSING
+User message : I returned the chairs I ordered, but the refund amount seems lower than expected. Can you clarify the discrepancy and when I’ll get the full refund? - Sub_Intent Identified : REFUND
+2024-11-13 18:14:50,269 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com//openai/deployments/vassar-text-ada002/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2024-11-13 18:14:50,282 - INFO - HTTP Request: POST http://localhost:8000/api/v1/collections/68cf1259-1ad5-4e89-a466-9eb5e28da86c/query "HTTP/1.1 200 OK"
+2024-11-13 18:14:59,396 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com/openai/deployments/vassar-4o-mini/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-11-13 18:15:01,831 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com//openai/deployments/vassar-text-ada002/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2024-11-13 18:15:01,844 - INFO - HTTP Request: POST http://localhost:8000/api/v1/collections/68cf1259-1ad5-4e89-a466-9eb5e28da86c/query "HTTP/1.1 200 OK"
+2024-11-13 18:15:04,524 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com/openai/deployments/vassar-4o-mini/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-11-13 18:15:04,527 - ERROR - Row #29: FAIL - Expected Intent: 'OTHERS', Classified Intent: 'PRODUCT_AVAILABILITY'.
+Email History: User: Subject:Getty Table Lamp, Body: Is the product available 
+Bot; The product is out of stock
+User Latest Email:  I am In Austin, any of your stores available near me for these products
+Intent Examples: User message : I'd like to schedule my delivery asap - Intent Identified : OTHERS
+User message : I noticed the outdoor furniture is discounted this week, but is there any additional discount for trade members or bulk purchases? - Intent Identified : PRODUCT_AVAILABILITY
+User message : I’m thinking of buying a few items, including a lamp and a rug. Are there any discounts for buying multiple items or any current sales events? - Intent Identified : PRODUCT_AVAILABILITY
+User message : Hello, Can I get an update on the order below? Thanks - Intent Identified : ORDER_STATUS
+User message : Hi, reaching out about the two side tables and wanted to get a delivery date? - Intent Identified : ORDER_STATUS
+User message : The console table I wanted is out of stock, but can you recommend any other similar pieces in stock that would match my living room decor? - Intent Identified : PRODUCT_AVAILABILITY
+User message : You received a new message from your online store's contact form.
+Country Code:
+US
+Name 0:
+Holly Foster
+Email:
+hjfoster69@gmail.com
+Message:
+I live in Canton Ga sp close to you. Is it possible to pick up my order from you in Symrna. Ga? - Intent Identified : OTHERS
+User message : I’ve been checking for the steel-framed shelving unit, but it appears to be unavailable. Is there an expected restock date or an alternative option you can recommend? - Intent Identified : PRODUCT_AVAILABILITY
+User message : I was eyeing the velvet armchair, but it’s unavailable. Could you provide suggestions for any similar comfortable chairs that you have in stock? - Intent Identified : PRODUCT_AVAILABILITY
+User message : Please give me a call at 972-408-7082. I need confirmation regarding my refund.  - Intent Identified : OTHERS
+Sub Intent Data: {
+  "sub_intent": "STOCK_STATUS",
+  "bot_likely_response": "Unfortunately, the Getty Table Lamp is currently out of stock at all our locations in Austin.",
+  "last_message": "I am In Austin, any of your stores available near me for these products",
+  "reason": "The user is inquiring about the availability of the Getty Table Lamp in stores near them, which directly relates to the stock status of the product."
+}
+Sub Intent Examples: User message : How long does it typically take for a backordered item to ship? I was told the coffee table is out of stock, and I need an idea of when it will be available. - Sub_Intent Identified : SHIPPING_TIMELINES
+User message : The console table I wanted is out of stock, but can you recommend any other similar pieces in stock that would match my living room decor? - Sub_Intent Identified : ALTERNATIVE_PRODUCTS
+User message : The black leather chair I wanted is out of stock. Can you let me know when it will be back in stock, or if I can pre-order it? - Sub_Intent Identified : STOCK_STATUS
+User message : The armchair I want is currently out of stock. Once it’s back in stock, how long would it take to ship to my address? - Sub_Intent Identified : SHIPPING_TIMELINES
+User message : I’m really interested in the marble coffee table, but it’s listed as out of stock. Could you confirm when it will be available again for purchase? - Sub_Intent Identified : STOCK_STATUS
+User message : I would like to know if this chair is in stock SKU#: 118-111583 - Sub_Intent Identified : STOCK_STATUS
+User message : Do you have stock of the Provencial Side Table SKU#: 118-111778? - Sub_Intent Identified : STOCK_STATUS
+User message : I was set on buying the walnut dining table, but it’s out of stock. Can you recommend another dining table in the same style or material that’s available? - Sub_Intent Identified : ALTERNATIVE_PRODUCTS
+User message : I’ve been looking at the oak wardrobe for a few days, but now it’s showing as out of stock. Can you inform me when it will be available again? - Sub_Intent Identified : STOCK_STATUS
+User message : I was going to order the outdoor dining set, but I noticed it’s no longer available. Can you tell me when the stock will be replenished, or if I can get an update on it? - Sub_Intent Identified : STOCK_STATUS
+2024-11-13 18:15:04,796 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com//openai/deployments/vassar-text-ada002/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2024-11-13 18:15:04,809 - INFO - HTTP Request: POST http://localhost:8000/api/v1/collections/68cf1259-1ad5-4e89-a466-9eb5e28da86c/query "HTTP/1.1 200 OK"
+2024-11-13 18:15:10,088 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com/openai/deployments/vassar-4o-mini/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-11-13 18:15:11,246 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com//openai/deployments/vassar-text-ada002/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2024-11-13 18:15:11,257 - INFO - HTTP Request: POST http://localhost:8000/api/v1/collections/68cf1259-1ad5-4e89-a466-9eb5e28da86c/query "HTTP/1.1 200 OK"
+2024-11-13 18:15:13,600 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com/openai/deployments/vassar-4o-mini/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-11-13 18:15:13,603 - INFO - Row #30: PASS - Expected Intent: 'OTHERS', Classified Intent: 'OTHERS'
+2024-11-13 18:15:13,910 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com//openai/deployments/vassar-text-ada002/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2024-11-13 18:15:13,923 - INFO - HTTP Request: POST http://localhost:8000/api/v1/collections/68cf1259-1ad5-4e89-a466-9eb5e28da86c/query "HTTP/1.1 200 OK"
+2024-11-13 18:15:17,590 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com/openai/deployments/vassar-4o-mini/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-11-13 18:15:17,593 - INFO - Row #31: PASS - Expected Intent: 'OTHERS', Classified Intent: 'OTHERS'
+2024-11-13 18:15:17,846 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com//openai/deployments/vassar-text-ada002/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2024-11-13 18:15:17,861 - INFO - HTTP Request: POST http://localhost:8000/api/v1/collections/68cf1259-1ad5-4e89-a466-9eb5e28da86c/query "HTTP/1.1 200 OK"
+2024-11-13 18:15:20,545 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com/openai/deployments/vassar-4o-mini/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-11-13 18:15:20,876 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com//openai/deployments/vassar-text-ada002/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2024-11-13 18:15:20,886 - INFO - HTTP Request: POST http://localhost:8000/api/v1/collections/68cf1259-1ad5-4e89-a466-9eb5e28da86c/query "HTTP/1.1 200 OK"
+2024-11-13 18:15:24,251 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com/openai/deployments/vassar-4o-mini/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-11-13 18:15:24,254 - INFO - Row #32: PASS - Expected Intent: 'OTHERS', Classified Intent: 'OTHERS'
+2024-11-13 18:15:24,561 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com//openai/deployments/vassar-text-ada002/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2024-11-13 18:15:24,572 - INFO - HTTP Request: POST http://localhost:8000/api/v1/collections/68cf1259-1ad5-4e89-a466-9eb5e28da86c/query "HTTP/1.1 200 OK"
+2024-11-13 18:15:26,707 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com/openai/deployments/vassar-4o-mini/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-11-13 18:15:27,020 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com//openai/deployments/vassar-text-ada002/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2024-11-13 18:15:27,032 - INFO - HTTP Request: POST http://localhost:8000/api/v1/collections/68cf1259-1ad5-4e89-a466-9eb5e28da86c/query "HTTP/1.1 200 OK"
+2024-11-13 18:15:30,697 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com/openai/deployments/vassar-4o-mini/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-11-13 18:15:30,699 - ERROR - Row #33: FAIL - Expected Intent: 'BANTER', Classified Intent: 'OTHERS'.
+Email History: User:Subject:Return #294652,Body:Hello, I was in touch with you and your HQ on this order last week. One of the two tables was shipped and I received it. Please do not ship the second and I need to return the one I have (2 boxes for the one table) and be refunded for both. The marble top just sits on top of the base and does not secure to it, making it too precarious. If someone leaned on the table at all the top will topple over. Please confirm the second table won’t ship and the process for returning the one I have. 
+Bot: Hi Marisa, Thank you for reaching out regarding your order. I’m pleased to inform you that both Iron & Marble Side Tables are eligible for return within the return period. Please box up your items in the original packaging, print and attach the UPS return label included in this email, and bring your package to a nearby UPS store. They will handle the rest! Please note, if the products are not sent back in their original packaging and damage occurs, you may incur additional costs. For your convenience, I have included the UPS return label. Upon receipt and inspection of the products, we will issue a refund to your original payment method. Once the refund is processed, please allow 3-5 business days for any credits to be applied back to your account. Note that a restocking fee of 10% will be deducted from the refunded amount, as well as the shipping cost. Please visit the Returns Policy section of our website for more information. If you have any further questions or need assistance, please don’t hesitate to reach out. Best regards, Cassy
+User Latest Email: The two boxes for the first table were dropped at UPS yesterday morning. Thanks, Marisa
+Intent Examples: User message : Hi, reaching out about the two side tables and wanted to get a delivery date? - Intent Identified : ORDER_STATUS
+User message : Greetings two of the end tables delivered yesterday have damage. Please see pictures.- we have been waiting for quote some time for these I hope that is not the case with the replacements - Intent Identified : DAMAGES
+User message : Per your request, attached please find photos of the broken marble and damage to the desk (these were taken by the delivery team). Also, the delivery team could not get the display case into the elevator or up the stairs, so we could not take delivery of that either. Given none of the items could be delivered, I refused the chair as it didn’t make sense to just accept that alone. Please let me know if you have any further questions at all. Thank you! - Intent Identified : DAMAGES
+User message : Hi Cassy, checking back to see if we are still expecting the tables at the end of the month. - Intent Identified : ORDER_STATUS
+User message : I refused the delivery of my table because the box was crushed, and I could see the item inside was broken. How will this be resolved? - Intent Identified : Damages
+User message : I just want to confirm that the chest will be picked up. The original packaging was discarded. I hoped that the replacement top would be more safely packed and would not be broken. It was not. Please let me know when you can schedule the pickup and refund. - Intent Identified : OTHERS
+User message : Thank you for your email. I want to clarify that I did not return anything. I live on the third floor, and the delivery company couldn’t fit the display case in the elevator or up the stairs, so they couldn't deliver it. The desk, which arrived broken, was pointless to accept without the matching pieces. I did not refuse delivery, and I shouldn't have to pay for the broken desk, display, or chair, as I purchased them all together. I still want the furniture and would like to arrange a delayed delivery for late summer to my new first-floor home. Thank you for your help! - Intent Identified : DAMAGES
+User message : Yes, the delivery company kept it on the truck and took it back to the warehouse, I presume. It was unopened - Intent Identified : OTHERS
+User message : Unfortunately, the Coffee Table just did not fit the space and there is concern for ware and tear being so white. Thank for your help in returning them. - Intent Identified : BANTER
+User message : The delivery person arrived with my order, but the box was crushed, and I refused the shipment. Can you confirm what happens now? - Intent Identified : Damages
+Sub Intent Data: {
+  "sub_intent": "REFUND",
+  "bot_likely_response": "Hi Marisa, Thank you for letting us know that you dropped off the return at UPS. We will process your refund once we receive and inspect the returned item. Please allow 3-5 business days for the refund to be credited back to your original payment method. If you have any further questions or need assistance, please don’t hesitate to reach out. Best regards, Cassy",
+  "last_message": "The two boxes for the first table were dropped at UPS yesterday morning. Thanks, Marisa",
+  "reason": "The user has confirmed that they have returned the item and is implicitly inquiring about the refund process, which aligns with the REFUND sub-intent."
+}
+Sub Intent Examples: User message : I need to return this order. #295108. Please let men know how to proceed. - Sub_Intent Identified : QUERIES
+User message : Hi, what is your return policy on furniture? - Sub_Intent Identified : RETURN POLICY
+User message : I need to process a return for the above referenced order number (unfortunately, the candle holders are too tall for my space). Can you let me know how I complete the process? - Sub_Intent Identified : RETURN_PROCESSING
+User message : received order unhappy how it was shipped has black marks, and it looks terrible. wants to return & replace but wants to be rest assured that this doesn't happen again. - Sub_Intent Identified : REPLACEMENT
+User message : I need an update on my refund for the dining table I returned last week. When will it be processed? - Sub_Intent Identified : REFUND
+User message : My order #289925, I ordered 4 counter height bar stools but received bar stools. I need to return them. Please advise how to return. Thank you for your help - Sub_Intent Identified : QUERIES
+User message : I would like to start the process of returning the chairs. Can you please let me know next steps? - Sub_Intent Identified : RETURN_PROCESSING
+User message : I’ve sent back the nightstands I purchased, but the refund hasn’t shown up on my card statement. Can you check the status for me? - Sub_Intent Identified : REFUND
+User message : I have two items delivered white glove that need to be returned. The seat height noted in the dimensions on your website are 22" the actual seat height is 24.5". These chairs took 16 weeks and we are unable to use them. Order #292935  - Sub_Intent Identified : RETURN_PROCESSING
+User message : customer needs return label to return chair 292682 chair is not comfortable - Sub_Intent Identified : RETURN_PROCESSING
+2024-11-13 18:15:31,008 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com//openai/deployments/vassar-text-ada002/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2024-11-13 18:15:31,016 - INFO - HTTP Request: POST http://localhost:8000/api/v1/collections/68cf1259-1ad5-4e89-a466-9eb5e28da86c/query "HTTP/1.1 200 OK"
