@@ -19,7 +19,7 @@ embeddings_factory = ModelFactory(EMBEDDING_MODEL_MAPPING)
 embeddings = embeddings_factory.create_model_instance(model_map_name="AzureOpenAIEmbeddings", **embeddings_params)
 
 
-def fetch_similar_queries(input_query, top_k=10):
+def fetch_similar_queries(input_query, top_k):
     # Embed the input query
     input_query_embedding = embeddings.embed_query(input_query)
 
@@ -41,7 +41,7 @@ def fetch_similar_queries(input_query, top_k=10):
 
     return format_similar_queries(similar_queries)
 
-def fetch_similar_queries_for_intent(input_query, main_intent, top_k=10):
+def fetch_similar_queries_for_intent(input_query, main_intent, top_k):
     # Embed the input query
     input_query_embedding = embeddings.embed_query(input_query)
     # Fetch similar queries from the collection

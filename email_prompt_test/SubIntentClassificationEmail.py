@@ -35,6 +35,8 @@ SAMPLE INTENT IDENTIFICATION EXAMPLES:
         "DISPLAY": """Ensure that the output is in the following JSON format exactly as shown:
 {{
   "sub_intent": "[Sub Intent Classified]",
+    "bot_likely_response": "[bot likely response]",
+  "last_message": "[last message]",
   "reason": "[explain for the intent classified reason]"
 }}
 """,
@@ -83,6 +85,8 @@ SAMPLE INTENT IDENTIFICATION EXAMPLES:
         "DISPLAY": """Ensure that the output is in the following JSON format exactly as shown:
 {{
   "sub_intent": "[Sub Intent Classified]",
+    "bot_likely_response": "[bot likely response]",
+  "last_message": "[last message]",
   "reason": "[explain for the intent classified reason]"
 }}
 """,
@@ -124,6 +128,8 @@ SAMPLE INTENT IDENTIFICATION EXAMPLES:
         "DISPLAY": """Ensure that the output is in the following JSON format exactly as shown:
 {{
   "sub_intent": "[Sub Intent Classified]",
+    "bot_likely_response": "[bot likely response]",
+  "last_message": "[last message]",
   "reason": "[explain for the intent classified reason]"
 }}
 """,
@@ -168,6 +174,8 @@ SAMPLE INTENT IDENTIFICATION EXAMPLES:
         "DISPLAY": """Ensure that the output is in the following JSON format exactly as shown:
 {{
   "sub_intent": "[Sub Intent Classified]",
+    "bot_likely_response": "[bot likely response]",
+  "last_message": "[last message]",
   "reason": "[explain for the intent classified reason]"
 }}
 """,
@@ -203,6 +211,8 @@ SAMPLE INTENT IDENTIFICATION EXAMPLES:
         "DISPLAY": """Ensure that the output is in the following JSON format exactly as shown:
 {{
   "sub_intent": "[Sub Intent Classified]",
+    "bot_likely_response": "[bot likely response]",
+  "last_message": "[last message]",
   "reason": "[explain for the intent classified reason]"
 }}
 """,
