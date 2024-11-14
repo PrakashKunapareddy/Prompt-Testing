@@ -9,20 +9,11 @@ from IntentClassificationPromptChat import INTENT_CLASSIFICATION_PROMPT_CHAT
 from SubIntentClassificationChat import sub_intents_chat
 from otherSubIntents import Others
 
-# Set up logging
-logging.basicConfig(
-    filename='chat_classification.log',
-    level=logging.WARNING,
-    format='%(asctime)s - %(levelname)s - %(message)s'
-)
-logger = logging.getLogger()
 
 
-class NoHTTPRequestsFilter(logging.Filter):
-    def filter(self, record):
-        return 'HTTP' not in record.getMessage()
 
-logger.addFilter(NoHTTPRequestsFilter())
+
+
 
 GPT_CONFIG = {
     "4omini": {
@@ -94,6 +85,7 @@ def process_excel(file_path, GPT_version):
         examples = fetch_similar_queries(user_latest_question, top_k=5)
         classified_intent_raw = classify_intent(llm, chat_history, user_latest_question, examples)
         classified_intent = get_intent_name(classified_intent_raw)
+        print("=" * 50)
         update_sheet(llm, sheet, row, expected_intent, classified_intent, chat_history, user_latest_question, examples)
 
     save_workbook(workbook, file_path)
@@ -117,12 +109,12 @@ def update_sheet(llm, sheet, row, expected_intent, classified_intent, chat_histo
         sheet[f'G{row}'] = final_intent
 
     if isinstance(classified_intent, list):
-        classified_intent_str = ", ".join(classified_intent)
         if set(classified_intent) == {"DAMAGES", "RETURNS"}:
             sheet[f'E{row}'] = "DAMAGES"
             update_sub_intent_and_final_intent("DAMAGES")
         else:
-            sheet[f'E{row}'] = classified_intent_str
+            sheet[f'E{row}'] = "OTHERS"
+            sheet[f'G{row}'] = "OTHERS"
     else:
         classified_intent = classified_intent.upper()
         if classified_intent == "BANTER" and expected_intent.upper() == "OTHERS":
@@ -131,17 +123,12 @@ def update_sheet(llm, sheet, row, expected_intent, classified_intent, chat_histo
         elif classified_intent not in ["OTHERS", "BANTER"]:
             sheet[f'E{row}'] = classified_intent
             update_sub_intent_and_final_intent(classified_intent)
-
-    if sheet[f'H{row}'].value == "FAIL":
-        log_failure(row, expected_intent, classified_intent, chat_history, user_latest_question, examples)
-
-
-def log_failure(row, expected_intent, classified_intent, chat_history, user_latest_question, examples):
-    logger.error(
-        f"Failed Case #{row} :: Expected intent: '{expected_intent}', but got: '{classified_intent}'."
-        f"\nChat History: {chat_history}\nUser Latest Chat: {user_latest_question}\nExamples: {examples}\n"
-    )
-
+        else:
+            sheet[f'E{row}'] = "OTHERS"
+            sheet[f'G{row}'] = "OTHERS"
+    expected = expected_intent.strip().upper()
+    final = sheet[f'G{row}'].value.strip().upper() if sheet[f'G{row}'].value else ""
+    sheet[f'H{row}'] = "PASS" if expected == final else "FAIL"
 
 def save_workbook(workbook, file_path):
     workbook.save(file_path)
