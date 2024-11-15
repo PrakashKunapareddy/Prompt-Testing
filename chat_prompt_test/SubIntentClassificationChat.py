@@ -31,6 +31,15 @@ sub_intents_chat = {
         - Focus on the most recent messages in the chat history, as they are more likely to indicate the user's current intent.
         - Classify the subintent based on the descriptions provided above, following them closely for accuracy.
 
+
+
+Ensure that the output is in the following JSON format exactly as shown:
+            {{
+            "sub_intent": "[Sub Intent Classified]",
+            "bot_likely_response": "[bot likely response]",
+            "reason": "[explain for the intent classified reason]"
+            }}
+
         user_query: {question}
         chat_history: {chat_history}
         subintent_examples: {examples}
@@ -73,11 +82,20 @@ sub_intents_chat = {
         - Focus on the most recent messages in the chat history, as they are more likely to indicate the user's current intent.
         - Classify the subintent based on the descriptions provided above, following them closely for accuracy.
 
+Ensure that the output is in the following JSON format exactly as shown:
+            {{
+            "sub_intent": "[Sub Intent Classified]",
+            "bot_likely_response": "[bot likely response]",
+            "reason": "[explain for the intent classified reason]"
+            }}
+
+
+
         user_query: {question}
         chat_history: {chat_history}
         subintent_examples: {examples}
-    """,
-    "ORDER_STATUS": """
+    """ ,
+    "ORDER_STATUS":"""
         You are a sub intent identification bot for a chat application. Based on the CHAT_HISTORY, determine the sub intent of the Order Status inquiry.
         Refer to SAMPLE SUB INTENT IDENTIFICATION EXAMPLES for additional context.
 
@@ -110,6 +128,15 @@ sub_intents_chat = {
         REMEMBER:
         - Focus on the most recent messages in the chat history, as they are more likely to indicate the user's current intent.
         - Classify the subintent based on the intent descriptions provided above, following them closely for accuracy.
+
+
+Ensure that the output is in the following JSON format exactly as shown:
+            {{
+            "sub_intent": "[Sub Intent Classified]",
+            "bot_likely_response": "[bot likely response]",
+            "reason": "[explain for the intent classified reason]"
+            }}
+
 
         user_query: {question}
         chat_history: {chat_history}
@@ -150,6 +177,13 @@ sub_intents_chat = {
         - Focus on the most recent messages in the chat history, as they are more likely to indicate the user's current intent.
         - Classify the subintent based on the descriptions provided above, following them closely for accuracy.
 
+Ensure that the output is in the following JSON format exactly as shown:
+            {{
+            "sub_intent": "[Sub Intent Classified]",
+            "bot_likely_response": "[bot likely response]",
+            "reason": "[explain for the intent classified reason]"
+            }}
+
         user_query: {question}
         chat_history: {chat_history}
         subintent_examples: {examples}
@@ -180,11 +214,19 @@ sub_intents_chat = {
         - Focus on the most recent messages in the chat history, as they are more likely to indicate the user's current intent.
         - Classify the subintent based on the descriptions provided above, following them closely for accuracy.
 
+Ensure that the output is in the following JSON format exactly as shown:
+            {{
+            "sub_intent": "[Sub Intent Classified]",
+            "bot_likely_response": "[bot likely response]",
+            "reason": "[explain for the intent classified reason]"
+            }}
+
+
+
         user_query: {question}
         chat_history: {chat_history}
         subintent_examples: {examples}
     """
-
 }
 
 class SubIntentClassificationEmail:

@@ -25,13 +25,15 @@ INTENT_CLASSIFICATION_PROMPT_CHAT = """ You are an intent identification bot. Ba
     6. OTHERS: If the user query falls outside the scope of the above categories, classify it as "OTHERS."
 
     DISPLAY: Ensure that the output is in the following JSON format exactly as shown:
-          {{
-          "intent": [
-                {{
-                    “intent_name": “[Intent]”,
-                    "similarity_score": “[Similarity Score]”,
-                }}]
-          }}
+              {{
+              "intent": [
+                    {{
+                        “intent_name": “[Intent]”,
+                        "similarity_score": “[Similarity Score]”,
+                    }}],
+               "bot_likely_response": "[Bot's Likely Response]",
+               "reason": "[Reason for the classification]"
+              }}
 
     Remember:
     1. If multiple intents match, include all relevant intents with their scores as separate list entries.

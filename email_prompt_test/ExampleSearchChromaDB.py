@@ -75,6 +75,6 @@ def format_similar_queries_sub_intent(similar_queries):
     formatted_queries = []
     for query, intent in zip(similar_queries[0]['query'], similar_queries[0]['sub_intent']):
         query= query.replace("\n", " ")
-        formatted_queries.append(f"User message : {query} - Sub_Intent Identified : {intent}")
+        formatted_queries.append(f"User message : {query} - Sub Intent Identified : {intent}")
         # print(formatted_queries)
     return "\n".join(formatted_queries)

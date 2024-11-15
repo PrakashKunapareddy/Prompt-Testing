@@ -1,19 +1,14 @@
+import json
 import logging
 import openpyxl
 from langchain.chains import LLMChain
 from langchain_community.chat_models import AzureChatOpenAI
 from langchain.prompts import ChatPromptTemplate, SystemMessagePromptTemplate
 from ExampleSearchChromaDB import fetch_similar_queries, fetch_similar_queries_for_intent
-from ExtractJsonFromStringChat import get_intent_name
+from ExtractJsonFromStringChat import process_classifications
 from IntentClassificationPromptChat import INTENT_CLASSIFICATION_PROMPT_CHAT
 from SubIntentClassificationChat import sub_intents_chat
 from otherSubIntents import Others
-
-
-
-
-
-
 
 GPT_CONFIG = {
     "4omini": {
@@ -84,9 +79,11 @@ def process_excel(file_path, GPT_version):
         chat_history, user_latest_question, expected_intent = extract_row_data(sheet, row)
         examples = fetch_similar_queries(user_latest_question, top_k=5)
         classified_intent_raw = classify_intent(llm, chat_history, user_latest_question, examples)
-        classified_intent = get_intent_name(classified_intent_raw)
+        classified_intent = process_classifications(input_string=classified_intent_raw,sub_intent_string="")[0]
+        print(type(classified_intent))
+        print(classified_intent)
         print("=" * 50)
-        update_sheet(llm, sheet, row, expected_intent, classified_intent, chat_history, user_latest_question, examples)
+        update_sheet(llm, sheet, row, expected_intent, classified_intent, chat_history, user_latest_question)
 
     save_workbook(workbook, file_path)
     print(f"Updated Excel file saved at: {file_path}")
@@ -100,35 +97,55 @@ def extract_row_data(sheet, row):
     return chat_history.strip(), user_latest_question, expected_intent
 
 
-def update_sheet(llm, sheet, row, expected_intent, classified_intent, chat_history, user_latest_question, examples):
+def update_sheet(llm, sheet, row, expected_intent, classified_intent, chat_history, user_latest_question):
     def update_sub_intent_and_final_intent(intent):
-        classified_sub_intent = classify_sub_intent(llm, chat_history, user_latest_question, intent)
-        sheet[f'F{row}'] = classified_sub_intent
+        classified_sub_intent_raw = classify_sub_intent(llm, chat_history, user_latest_question, intent)
+        print(classified_sub_intent_raw)
+        print(type(classified_sub_intent_raw))
+        classified_sub_intent_json = process_classifications(input_string= "",sub_intent_string=classified_sub_intent_raw)[1]
+        print(classified_sub_intent_json)
+        print(type(classified_sub_intent_json))
+        classified_sub_intent = classified_sub_intent_json.get("sub_intent", "")
+        sheet[f'H{row}'] = classified_sub_intent
+        sheet[f'I{row}'] = classified_sub_intent_json.get("bot_likely_response", "")
+        sheet[f'J{row}'] = classified_sub_intent_json.get("reason", "")
         list_intents = [intent.strip() for intent in Others.get(intent, [])]
         final_intent = "OTHERS" if classified_sub_intent in list_intents else intent
-        sheet[f'G{row}'] = final_intent
+        sheet[f'K{row}'] = final_intent
 
-    if isinstance(classified_intent, list):
-        if set(classified_intent) == {"DAMAGES", "RETURNS"}:
-            sheet[f'E{row}'] = "DAMAGES"
-            update_sub_intent_and_final_intent("DAMAGES")
-        else:
-            sheet[f'E{row}'] = "OTHERS"
-            sheet[f'G{row}'] = "OTHERS"
+    if len(classified_intent.get("classified_intents")) > 1:
+        for item in classified_intent.get("classified_intents"):
+            intents_only = item.get("intent_name")
+            if set(intents_only) == {"DAMAGES", "RETURNS"}:
+                sheet[f'E{row}'] = "DAMAGES"
+                sheet[f'F{row}'] = classified_intent.get("bot_likely_response", "")
+                sheet[f'G{row}'] = classified_intent.get("reason", "")
+                update_sub_intent_and_final_intent("DAMAGES")
+            else:
+                sheet[f'E{row}'] = "OTHERS"
+                sheet[f'F{row}'] = classified_intent.get("bot_likely_response", "")
+                sheet[f'G{row}'] = classified_intent.get("reason", "")
+                sheet[f'K{row}'] = "OTHERS"
     else:
-        classified_intent = classified_intent.upper()
-        if classified_intent == "BANTER" and expected_intent.upper() == "OTHERS":
+        if classified_intent.get("classified_intents")[0].get("intent_name") == "BANTER" and expected_intent.upper() == "OTHERS":
             sheet[f'E{row}'] = "OTHERS"
-            sheet[f'G{row}'] = "OTHERS"
-        elif classified_intent not in ["OTHERS", "BANTER"]:
-            sheet[f'E{row}'] = classified_intent
-            update_sub_intent_and_final_intent(classified_intent)
+            sheet[f'F{row}'] = classified_intent.get("bot_likely_response", "")
+            sheet[f'G{row}'] = classified_intent.get("reason", "")
+            sheet[f'K{row}'] = "OTHERS"
+        elif classified_intent.get("classified_intents")[0].get("intent_name") not in ["OTHERS", "BANTER"]:
+            sheet[f'E{row}'] = classified_intent.get("classified_intents")[0].get("intent_name")
+            sheet[f'F{row}'] = classified_intent.get("bot_likely_response", "")
+            sheet[f'G{row}'] = classified_intent.get("reason", "")
+            update_sub_intent_and_final_intent(classified_intent.get("classified_intents")[0].get("intent_name"))
         else:
             sheet[f'E{row}'] = "OTHERS"
-            sheet[f'G{row}'] = "OTHERS"
+            sheet[f'F{row}'] = classified_intent.get("bot_likely_response", "")
+            sheet[f'G{row}'] = classified_intent.get("reason", "")
+            sheet[f'K{row}'] = "OTHERS"
     expected = expected_intent.strip().upper()
-    final = sheet[f'G{row}'].value.strip().upper() if sheet[f'G{row}'].value else ""
-    sheet[f'H{row}'] = "PASS" if expected == final else "FAIL"
+    final = sheet[f'K{row}'].value.strip().upper() if sheet[f'K{row}'].value else ""
+    sheet[f'L{row}'] = "PASS" if expected == final else "FAIL"
+
 
 def save_workbook(workbook, file_path):
     workbook.save(file_path)
@@ -138,3 +155,15 @@ file_path = '/home/saiprakesh/PycharmProjects/Prompt Testing Using Excel/chat_pr
 process_excel(file_path, GPT_version="4omini")
 
 
+
+# My Intent json output:
+# {
+#   "classified_intents": [
+#     {
+#       "intent_name": "OTHERS",
+#       "similarity_score": 0.9
+#     }
+#   ],
+#   "bot_likely_response": "Thank you for providing your order number. Since you received a different product, we can initiate a replacement for you. Please hold on while I process this request.",
+#   "reason": "The user is requesting a replacement for a product that was received incorrectly, which falls under a general request for assistance rather than a specific intent like returns or damages."
+# }
