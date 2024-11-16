@@ -17,7 +17,6 @@ class NoHTTPRequestsFilter(logging.Filter):
         return 'HTTP' not in record.getMessage()
 
 
-# Helper functions
 def gpt_call(config):
     return AzureChatOpenAI(
         deployment_name=config["OPENAI_DEPLOYMENT_NAME"],
@@ -51,12 +50,13 @@ def parse_email_data(email_data):
     return email_history, user_latest_email, user_latest_email_body
 
 
-def log_result(row, result, expected_intent, final_intent, additional_info=""):
+def log_result(row, result, expected_intent, final_intent, examples, sub_examples, email_history, user_latest_email):
     if result == "PASS":
         logger.info(f"Row #{row}: PASS - Expected Intent: '{expected_intent}', Classified Intent: '{final_intent}'")
     else:
         logger.error(
-            f"Row #{row}: FAIL - Expected Intent: '{expected_intent}', Classified Intent: '{final_intent}'. {additional_info}"
+            f"Row #{row}: FAIL - Expected Intent: '{expected_intent}', Classified Intent: '{final_intent}'\n"
+            f"email_history::{email_history} \n\n user_latest_email::{user_latest_email} \n\n intent_examples:: {examples} \n\n sub_intent_examples::{sub_examples}"
         )
 
 
@@ -144,7 +144,12 @@ def process_email_classifications(file_path, GPT):
             sheet[f'I{row}'] = sub_intent_bot_likely_res
             sheet[f'J{row}'] = sub_intent_data.get("reason").strip()
             list_intents = Others.get(intent, [])
-            final_intent = "OTHERS" if sub_intent in list_intents else intent
+            if sub_intent in list_intents:
+                final_intent = "OTHERS"
+            elif sub_intent == "RETURNING_DAMAGED_PRODUCT":
+                final_intent = "DAMAGES"
+            else:
+                final_intent = intent
             sheet[f'K{row}'] = final_intent
         else:
             final_intent = intent
@@ -152,7 +157,7 @@ def process_email_classifications(file_path, GPT):
 
         result = "PASS" if expected_intent.lower().strip() == final_intent.lower().strip() else "FAIL"
         sheet[f'L{row}'] = result
-        log_result(row, result, expected_intent, final_intent)
+        log_result(row, result, expected_intent, final_intent, examples, sub_examples, email_history, user_latest_email)
 
     workbook.save(file_path)
     formatted_time2 = datetime.now().strftime("%H:%M:%S")
