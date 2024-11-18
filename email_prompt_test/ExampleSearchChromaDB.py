@@ -1,3 +1,6 @@
+from uuid import uuid4
+
+import pandas as pd
 from langchain.schema import embeddings
 import chromadb
 
@@ -78,3 +81,52 @@ def format_similar_queries_sub_intent(similar_queries):
         formatted_queries.append(f"User message : {query} - Sub Intent Identified : {intent}")
         # print(formatted_queries)
     return "\n".join(formatted_queries)
+
+
+# def handle_delete_collection(collection_name):
+#     # Check if the collection exists, if not, create it
+#     try:
+#         client.delete_collection(name=collection_name)
+#         print("Collection already exist deleting it")
+#     except Exception as e:
+#         print(f"Collection '{collection_name}' does not exist, creating it.")
+#
+#     return client.get_or_create_collection(name=collection_name)
+#
+# def insert_intent_classification_examples_data(file_path = "/home/saiprakesh/Downloads/nov17_examples_Intent_classification.xlsx", collection_name ="intent_classification_wisteria"):
+#     # Load the Excel file
+#     # file_path = os.path.join(BASE_DIR, "static/Examples for Intent Identification.xlsx")
+#     print(f"File path :: {file_path}")
+#     df = pd.read_excel(file_path)
+#     df = df.fillna("")
+#     df.columns = df.columns.str.strip()
+#
+#     # Extract the 'Query' and 'Intent' columns
+#     queries = df['Query'].tolist()
+#     intents = df['Intent'].tolist()
+#     sub_intents = df['Sub Intents'].tolist()
+#
+#     collection = handle_delete_collection(collection_name)
+#
+#     # Loop through each query and intent, embed the query and add it to the collection
+#     for query, intent, sub_intent in zip(queries, intents, sub_intents):
+#         question_id = str(uuid4())
+#         query_embedding = embeddings.embed_query(query)
+#
+#         # Prepare metadata with intent
+#         metadata = {
+#             "intent": intent,
+#             "sub_intent": sub_intent,
+#             "source": "intent_classification_examples"
+#         }
+#         # print("metadata ::", metadata)
+#         # Add data to the collection
+#         collection.add(
+#             embeddings=[query_embedding],
+#             documents=[query],
+#             metadatas=[metadata],
+#             ids=[question_id]
+#         )
+#
+#     print(f"Successfully added {len(queries)} queries and intents to the collection.")
+#
