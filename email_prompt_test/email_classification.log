@@ -208,3 +208,972 @@ User message : My item arrived damaged, and I would like to request a refund for
 2024-11-18 13:17:14,130 - INFO - Row #35: PASS - Expected Intent: 'OTHERS', Classified Intent: 'OTHERS'
 2024-11-18 13:17:14,430 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com//openai/deployments/vassar-text-ada002/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
 2024-11-18 13:17:14,454 - INFO - HTTP Request: POST http://localhost:8000/api/v1/collections/5f0bb24d-e4c1-4622-a3e7-f6f90181d5fe/query "HTTP/1.1 200 OK"
+2024-11-18 13:17:15,877 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com/openai/deployments/vassar-4o-mini/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-11-18 13:17:15,880 - INFO - Row #36: PASS - Expected Intent: 'OTHERS', Classified Intent: 'OTHERS'
+2024-11-18 13:17:16,172 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com//openai/deployments/vassar-text-ada002/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2024-11-18 13:17:16,193 - INFO - HTTP Request: POST http://localhost:8000/api/v1/collections/5f0bb24d-e4c1-4622-a3e7-f6f90181d5fe/query "HTTP/1.1 200 OK"
+2024-11-18 13:17:18,216 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com/openai/deployments/vassar-4o-mini/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-11-18 13:17:18,219 - INFO - Row #37: PASS - Expected Intent: 'OTHERS', Classified Intent: 'OTHERS'
+2024-11-18 13:17:18,533 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com//openai/deployments/vassar-text-ada002/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2024-11-18 13:17:18,556 - INFO - HTTP Request: POST http://localhost:8000/api/v1/collections/5f0bb24d-e4c1-4622-a3e7-f6f90181d5fe/query "HTTP/1.1 200 OK"
+2024-11-18 13:17:20,167 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com/openai/deployments/vassar-4o-mini/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-11-18 13:17:20,474 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com//openai/deployments/vassar-text-ada002/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2024-11-18 13:17:20,494 - INFO - HTTP Request: POST http://localhost:8000/api/v1/collections/5f0bb24d-e4c1-4622-a3e7-f6f90181d5fe/query "HTTP/1.1 200 OK"
+2024-11-18 13:17:21,699 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com/openai/deployments/vassar-4o-mini/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-11-18 13:17:21,702 - INFO - Row #38: PASS - Expected Intent: 'OTHERS', Classified Intent: 'OTHERS'
+2024-11-18 13:17:22,016 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com//openai/deployments/vassar-text-ada002/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2024-11-18 13:17:22,037 - INFO - HTTP Request: POST http://localhost:8000/api/v1/collections/5f0bb24d-e4c1-4622-a3e7-f6f90181d5fe/query "HTTP/1.1 200 OK"
+2024-11-18 13:17:25,098 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com/openai/deployments/vassar-4o-mini/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-11-18 13:17:25,385 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com//openai/deployments/vassar-text-ada002/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2024-11-18 13:17:25,405 - INFO - HTTP Request: POST http://localhost:8000/api/v1/collections/5f0bb24d-e4c1-4622-a3e7-f6f90181d5fe/query "HTTP/1.1 200 OK"
+2024-11-18 13:17:26,818 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com/openai/deployments/vassar-4o-mini/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-11-18 13:17:26,821 - INFO - Row #39: PASS - Expected Intent: 'ORDER_STATUS', Classified Intent: 'ORDER_STATUS'
+2024-11-18 13:17:27,125 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com//openai/deployments/vassar-text-ada002/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2024-11-18 13:17:27,147 - INFO - HTTP Request: POST http://localhost:8000/api/v1/collections/5f0bb24d-e4c1-4622-a3e7-f6f90181d5fe/query "HTTP/1.1 200 OK"
+2024-11-18 13:17:28,566 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com/openai/deployments/vassar-4o-mini/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-11-18 13:17:28,908 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com//openai/deployments/vassar-text-ada002/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2024-11-18 13:17:28,926 - INFO - HTTP Request: POST http://localhost:8000/api/v1/collections/5f0bb24d-e4c1-4622-a3e7-f6f90181d5fe/query "HTTP/1.1 200 OK"
+2024-11-18 13:17:30,459 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com/openai/deployments/vassar-4o-mini/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-11-18 13:17:30,463 - INFO - Row #40: PASS - Expected Intent: 'OTHERS', Classified Intent: 'OTHERS'
+2024-11-18 13:17:30,712 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com//openai/deployments/vassar-text-ada002/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2024-11-18 13:17:30,734 - INFO - HTTP Request: POST http://localhost:8000/api/v1/collections/5f0bb24d-e4c1-4622-a3e7-f6f90181d5fe/query "HTTP/1.1 200 OK"
+2024-11-18 13:17:32,143 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com/openai/deployments/vassar-4o-mini/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-11-18 13:17:32,454 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com//openai/deployments/vassar-text-ada002/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2024-11-18 13:17:32,475 - INFO - HTTP Request: POST http://localhost:8000/api/v1/collections/5f0bb24d-e4c1-4622-a3e7-f6f90181d5fe/query "HTTP/1.1 200 OK"
+2024-11-18 13:17:33,479 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com/openai/deployments/vassar-4o-mini/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-11-18 13:17:33,482 - INFO - Row #41: PASS - Expected Intent: 'OTHERS', Classified Intent: 'OTHERS'
+2024-11-18 13:17:33,729 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com//openai/deployments/vassar-text-ada002/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2024-11-18 13:17:33,751 - INFO - HTTP Request: POST http://localhost:8000/api/v1/collections/5f0bb24d-e4c1-4622-a3e7-f6f90181d5fe/query "HTTP/1.1 200 OK"
+2024-11-18 13:17:34,883 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com/openai/deployments/vassar-4o-mini/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-11-18 13:17:34,886 - INFO - Row #42: PASS - Expected Intent: 'OTHERS', Classified Intent: 'OTHERS'
+2024-11-18 13:17:35,131 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com//openai/deployments/vassar-text-ada002/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2024-11-18 13:17:35,152 - INFO - HTTP Request: POST http://localhost:8000/api/v1/collections/5f0bb24d-e4c1-4622-a3e7-f6f90181d5fe/query "HTTP/1.1 200 OK"
+2024-11-18 13:17:36,530 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com/openai/deployments/vassar-4o-mini/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-11-18 13:17:36,534 - INFO - Row #43: PASS - Expected Intent: 'OTHERS', Classified Intent: 'OTHERS'
+2024-11-18 13:17:36,783 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com//openai/deployments/vassar-text-ada002/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2024-11-18 13:17:36,802 - INFO - HTTP Request: POST http://localhost:8000/api/v1/collections/5f0bb24d-e4c1-4622-a3e7-f6f90181d5fe/query "HTTP/1.1 200 OK"
+2024-11-18 13:17:37,877 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com/openai/deployments/vassar-4o-mini/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-11-18 13:17:37,880 - INFO - Row #44: PASS - Expected Intent: 'OTHERS', Classified Intent: 'OTHERS'
+2024-11-18 13:17:38,185 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com//openai/deployments/vassar-text-ada002/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2024-11-18 13:17:38,206 - INFO - HTTP Request: POST http://localhost:8000/api/v1/collections/5f0bb24d-e4c1-4622-a3e7-f6f90181d5fe/query "HTTP/1.1 200 OK"
+2024-11-18 13:17:39,511 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com/openai/deployments/vassar-4o-mini/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-11-18 13:17:39,514 - INFO - Row #45: PASS - Expected Intent: 'OTHERS', Classified Intent: 'OTHERS'
+2024-11-18 13:17:39,792 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com//openai/deployments/vassar-text-ada002/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2024-11-18 13:17:39,819 - INFO - HTTP Request: POST http://localhost:8000/api/v1/collections/5f0bb24d-e4c1-4622-a3e7-f6f90181d5fe/query "HTTP/1.1 200 OK"
+2024-11-18 13:17:41,065 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com/openai/deployments/vassar-4o-mini/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-11-18 13:17:41,068 - INFO - Row #46: PASS - Expected Intent: 'OTHERS', Classified Intent: 'OTHERS'
+2024-11-18 13:17:42,600 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com//openai/deployments/vassar-text-ada002/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2024-11-18 13:17:42,624 - INFO - HTTP Request: POST http://localhost:8000/api/v1/collections/5f0bb24d-e4c1-4622-a3e7-f6f90181d5fe/query "HTTP/1.1 200 OK"
+2024-11-18 13:17:43,968 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com/openai/deployments/vassar-4o-mini/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-11-18 13:17:43,972 - INFO - Row #47: PASS - Expected Intent: 'OTHERS', Classified Intent: 'OTHERS'
+2024-11-18 13:17:44,536 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com//openai/deployments/vassar-text-ada002/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2024-11-18 13:17:44,560 - INFO - HTTP Request: POST http://localhost:8000/api/v1/collections/5f0bb24d-e4c1-4622-a3e7-f6f90181d5fe/query "HTTP/1.1 200 OK"
+2024-11-18 13:17:45,980 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com/openai/deployments/vassar-4o-mini/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-11-18 13:17:45,984 - INFO - Row #48: PASS - Expected Intent: 'OTHERS', Classified Intent: 'OTHERS'
+2024-11-18 13:17:46,231 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com//openai/deployments/vassar-text-ada002/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2024-11-18 13:17:46,253 - INFO - HTTP Request: POST http://localhost:8000/api/v1/collections/5f0bb24d-e4c1-4622-a3e7-f6f90181d5fe/query "HTTP/1.1 200 OK"
+2024-11-18 13:17:48,883 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com/openai/deployments/vassar-4o-mini/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-11-18 13:17:48,886 - INFO - Row #49: PASS - Expected Intent: 'OTHERS', Classified Intent: 'OTHERS'
+2024-11-18 13:17:49,248 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com//openai/deployments/vassar-text-ada002/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2024-11-18 13:17:49,272 - INFO - HTTP Request: POST http://localhost:8000/api/v1/collections/5f0bb24d-e4c1-4622-a3e7-f6f90181d5fe/query "HTTP/1.1 200 OK"
+2024-11-18 13:17:50,581 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com/openai/deployments/vassar-4o-mini/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-11-18 13:17:50,584 - INFO - Row #50: PASS - Expected Intent: 'OTHERS', Classified Intent: 'OTHERS'
+2024-11-18 13:17:50,886 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com//openai/deployments/vassar-text-ada002/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2024-11-18 13:17:50,907 - INFO - HTTP Request: POST http://localhost:8000/api/v1/collections/5f0bb24d-e4c1-4622-a3e7-f6f90181d5fe/query "HTTP/1.1 200 OK"
+2024-11-18 13:17:53,187 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com/openai/deployments/vassar-4o-mini/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-11-18 13:17:53,190 - INFO - Row #51: PASS - Expected Intent: 'OTHERS', Classified Intent: 'OTHERS'
+2024-11-18 13:17:53,444 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com//openai/deployments/vassar-text-ada002/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2024-11-18 13:17:53,550 - INFO - HTTP Request: POST http://localhost:8000/api/v1/collections/5f0bb24d-e4c1-4622-a3e7-f6f90181d5fe/query "HTTP/1.1 200 OK"
+2024-11-18 13:17:57,349 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com/openai/deployments/vassar-4o-mini/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-11-18 13:17:57,352 - INFO - Row #52: PASS - Expected Intent: 'OTHERS', Classified Intent: 'OTHERS'
+2024-11-18 13:17:57,648 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com//openai/deployments/vassar-text-ada002/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2024-11-18 13:17:57,668 - INFO - HTTP Request: POST http://localhost:8000/api/v1/collections/5f0bb24d-e4c1-4622-a3e7-f6f90181d5fe/query "HTTP/1.1 200 OK"
+2024-11-18 13:17:58,975 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com/openai/deployments/vassar-4o-mini/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-11-18 13:17:58,978 - INFO - Row #53: PASS - Expected Intent: 'OTHERS', Classified Intent: 'OTHERS'
+2024-11-18 13:17:59,281 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com//openai/deployments/vassar-text-ada002/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2024-11-18 13:17:59,302 - INFO - HTTP Request: POST http://localhost:8000/api/v1/collections/5f0bb24d-e4c1-4622-a3e7-f6f90181d5fe/query "HTTP/1.1 200 OK"
+2024-11-18 13:18:00,411 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com/openai/deployments/vassar-4o-mini/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-11-18 13:18:00,414 - INFO - Row #54: PASS - Expected Intent: 'OTHERS', Classified Intent: 'OTHERS'
+2024-11-18 13:18:00,657 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com//openai/deployments/vassar-text-ada002/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2024-11-18 13:18:00,679 - INFO - HTTP Request: POST http://localhost:8000/api/v1/collections/5f0bb24d-e4c1-4622-a3e7-f6f90181d5fe/query "HTTP/1.1 200 OK"
+2024-11-18 13:18:02,541 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com/openai/deployments/vassar-4o-mini/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-11-18 13:18:02,866 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com//openai/deployments/vassar-text-ada002/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2024-11-18 13:18:02,889 - INFO - HTTP Request: POST http://localhost:8000/api/v1/collections/5f0bb24d-e4c1-4622-a3e7-f6f90181d5fe/query "HTTP/1.1 200 OK"
+2024-11-18 13:18:04,545 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com/openai/deployments/vassar-4o-mini/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-11-18 13:18:04,548 - INFO - Row #55: PASS - Expected Intent: 'OTHERS', Classified Intent: 'OTHERS'
+2024-11-18 13:18:04,811 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com//openai/deployments/vassar-text-ada002/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2024-11-18 13:18:04,832 - INFO - HTTP Request: POST http://localhost:8000/api/v1/collections/5f0bb24d-e4c1-4622-a3e7-f6f90181d5fe/query "HTTP/1.1 200 OK"
+2024-11-18 13:18:07,368 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com/openai/deployments/vassar-4o-mini/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-11-18 13:18:07,622 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com//openai/deployments/vassar-text-ada002/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2024-11-18 13:18:07,639 - INFO - HTTP Request: POST http://localhost:8000/api/v1/collections/5f0bb24d-e4c1-4622-a3e7-f6f90181d5fe/query "HTTP/1.1 200 OK"
+2024-11-18 13:18:09,538 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com/openai/deployments/vassar-4o-mini/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-11-18 13:18:09,545 - INFO - Row #56: PASS - Expected Intent: 'OTHERS', Classified Intent: 'OTHERS'
+2024-11-18 13:18:09,829 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com//openai/deployments/vassar-text-ada002/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2024-11-18 13:18:09,850 - INFO - HTTP Request: POST http://localhost:8000/api/v1/collections/5f0bb24d-e4c1-4622-a3e7-f6f90181d5fe/query "HTTP/1.1 200 OK"
+2024-11-18 13:18:11,288 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com/openai/deployments/vassar-4o-mini/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-11-18 13:18:11,291 - INFO - Row #57: PASS - Expected Intent: 'OTHERS', Classified Intent: 'OTHERS'
+2024-11-18 13:18:11,542 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com//openai/deployments/vassar-text-ada002/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2024-11-18 13:18:11,566 - INFO - HTTP Request: POST http://localhost:8000/api/v1/collections/5f0bb24d-e4c1-4622-a3e7-f6f90181d5fe/query "HTTP/1.1 200 OK"
+2024-11-18 13:18:13,514 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com/openai/deployments/vassar-4o-mini/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-11-18 13:18:13,770 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com//openai/deployments/vassar-text-ada002/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2024-11-18 13:18:13,790 - INFO - HTTP Request: POST http://localhost:8000/api/v1/collections/5f0bb24d-e4c1-4622-a3e7-f6f90181d5fe/query "HTTP/1.1 200 OK"
+2024-11-18 13:18:15,541 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com/openai/deployments/vassar-4o-mini/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-11-18 13:18:15,544 - INFO - Row #58: PASS - Expected Intent: 'OTHERS', Classified Intent: 'OTHERS'
+2024-11-18 13:18:15,876 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com//openai/deployments/vassar-text-ada002/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2024-11-18 13:18:15,902 - INFO - HTTP Request: POST http://localhost:8000/api/v1/collections/5f0bb24d-e4c1-4622-a3e7-f6f90181d5fe/query "HTTP/1.1 200 OK"
+2024-11-18 13:18:17,711 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com/openai/deployments/vassar-4o-mini/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-11-18 13:18:18,027 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com//openai/deployments/vassar-text-ada002/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2024-11-18 13:18:18,046 - INFO - HTTP Request: POST http://localhost:8000/api/v1/collections/5f0bb24d-e4c1-4622-a3e7-f6f90181d5fe/query "HTTP/1.1 200 OK"
+2024-11-18 13:18:21,400 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com/openai/deployments/vassar-4o-mini/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-11-18 13:18:21,404 - INFO - Row #59: PASS - Expected Intent: 'DAMAGES', Classified Intent: 'DAMAGES'
+2024-11-18 13:18:21,646 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com//openai/deployments/vassar-text-ada002/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2024-11-18 13:18:21,669 - INFO - HTTP Request: POST http://localhost:8000/api/v1/collections/5f0bb24d-e4c1-4622-a3e7-f6f90181d5fe/query "HTTP/1.1 200 OK"
+2024-11-18 13:18:23,445 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com/openai/deployments/vassar-4o-mini/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-11-18 13:18:23,978 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com//openai/deployments/vassar-text-ada002/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2024-11-18 13:18:23,998 - INFO - HTTP Request: POST http://localhost:8000/api/v1/collections/5f0bb24d-e4c1-4622-a3e7-f6f90181d5fe/query "HTTP/1.1 200 OK"
+2024-11-18 13:18:26,219 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com/openai/deployments/vassar-4o-mini/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-11-18 13:18:26,222 - ERROR - Row #60: FAIL - Expected Intent: 'OTHERS', Classified Intent: 'ORDER_STATUS'
+email_history::User: Subject:Donna Fischer #296723 , Body: Where is My Order...? Bot: Hi Donna, We wanted to give you an update on your order #296723. Our manufacturer has 1 in stock and the now the estimated shipping date for the otherEverly Pendant will be January 2, 2025. Would you like us to ship the 1 now, or wait for them to ship together? Please let me know so we can take care of this for you. Sincerely, User: Subject:Donna Fischer #296723 , Body: Which item is this? Bot: the item which you have ordered back in december 
+
+ user_latest_email::User: Subject:Donna Fischer #296723, Body:Oh gosh. I need them before December I guess I’ll have to try to find them somewhere else 
+
+ intent_examples:: User message : I’ll be away on vacation. Please hold my entire order until I return on December 1st. - Intent Identified : ORDER_STATUS
+User message : Please hold the entire shipment until November 30th as I am out of town - Intent Identified : ORDER_STATUS
+User message : Can you hold the chairs from my order and ship the rest? I’ll need the chairs at a later date. - Intent Identified : ORDER_STATUS
+User message : Can you check if this product is available in New Jersey? I need it urgently, and I’d prefer to pick it up. - Intent Identified : PRODUCT_AVAILABILITY
+User message : Is there any way to rush my order? I need it before the weekend for a birthday gift, so an urgent delivery would be appreciated. - Intent Identified : ORDER_STATUS 
+
+ sub_intent_examples::User message : I'm following up on an order I placed for the Palladiana mirror (sorry I don't have the order number on hand). Can you tell me the shipping ETA? I believe it's in stock so thought it would have shipped by now. - Sub Intent Identified : SHIPPING UPDATES
+User message : Any update on my order 286699. The expected arrival to you was in march.  When I ordered the headboard in September I did not realize I would still not have it 7 months later. Thank you - Sub Intent Identified : SHIPPING UPDATES
+User message : can you give me update on my order #274543 - Sub Intent Identified : SHIPPING_UPDATES
+User message : Hi! I wanted to see if you had any update on my order? Either estimated ship or delivery date? It's for a nursery so I just wanted to plan! - Sub Intent Identified : SHIPPING UPDATES
+User message : I placed an order (#295527) on July 24 and have not received any information regarding anticipated ship date. Can someone please provide me with an update as to when I should expect to receive my items? - Sub Intent Identified : SHIPPING UPDATES
+2024-11-18 13:18:26,979 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com//openai/deployments/vassar-text-ada002/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2024-11-18 13:18:27,001 - INFO - HTTP Request: POST http://localhost:8000/api/v1/collections/5f0bb24d-e4c1-4622-a3e7-f6f90181d5fe/query "HTTP/1.1 200 OK"
+2024-11-18 13:18:29,543 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com/openai/deployments/vassar-4o-mini/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-11-18 13:18:29,985 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com//openai/deployments/vassar-text-ada002/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2024-11-18 13:18:30,005 - INFO - HTTP Request: POST http://localhost:8000/api/v1/collections/5f0bb24d-e4c1-4622-a3e7-f6f90181d5fe/query "HTTP/1.1 200 OK"
+2024-11-18 13:18:32,871 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com/openai/deployments/vassar-4o-mini/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-11-18 13:18:32,874 - INFO - Row #61: PASS - Expected Intent: 'OTHERS', Classified Intent: 'OTHERS'
+2024-11-18 13:18:33,175 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com//openai/deployments/vassar-text-ada002/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2024-11-18 13:18:33,197 - INFO - HTTP Request: POST http://localhost:8000/api/v1/collections/5f0bb24d-e4c1-4622-a3e7-f6f90181d5fe/query "HTTP/1.1 200 OK"
+2024-11-18 13:18:38,501 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com/openai/deployments/vassar-4o-mini/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-11-18 13:18:39,635 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com//openai/deployments/vassar-text-ada002/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2024-11-18 13:18:39,652 - INFO - HTTP Request: POST http://localhost:8000/api/v1/collections/5f0bb24d-e4c1-4622-a3e7-f6f90181d5fe/query "HTTP/1.1 200 OK"
+2024-11-18 13:18:50,178 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com/openai/deployments/vassar-4o-mini/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-11-18 13:18:50,181 - INFO - Row #62: PASS - Expected Intent: 'OTHERS', Classified Intent: 'OTHERS'
+2024-11-18 13:18:51,481 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com//openai/deployments/vassar-text-ada002/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2024-11-18 13:18:51,504 - INFO - HTTP Request: POST http://localhost:8000/api/v1/collections/5f0bb24d-e4c1-4622-a3e7-f6f90181d5fe/query "HTTP/1.1 200 OK"
+2024-11-18 13:18:52,953 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com/openai/deployments/vassar-4o-mini/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-11-18 13:18:53,249 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com//openai/deployments/vassar-text-ada002/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2024-11-18 13:18:53,268 - INFO - HTTP Request: POST http://localhost:8000/api/v1/collections/5f0bb24d-e4c1-4622-a3e7-f6f90181d5fe/query "HTTP/1.1 200 OK"
+2024-11-18 13:18:55,089 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com/openai/deployments/vassar-4o-mini/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-11-18 13:18:55,092 - INFO - Row #63: PASS - Expected Intent: 'Damages', Classified Intent: 'DAMAGES'
+2024-11-18 13:18:55,395 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com//openai/deployments/vassar-text-ada002/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2024-11-18 13:18:55,418 - INFO - HTTP Request: POST http://localhost:8000/api/v1/collections/5f0bb24d-e4c1-4622-a3e7-f6f90181d5fe/query "HTTP/1.1 200 OK"
+2024-11-18 13:18:57,543 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com/openai/deployments/vassar-4o-mini/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-11-18 13:18:57,546 - INFO - Row #64: PASS - Expected Intent: 'OTHERS', Classified Intent: 'OTHERS'
+2024-11-18 13:18:57,855 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com//openai/deployments/vassar-text-ada002/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2024-11-18 13:18:57,877 - INFO - HTTP Request: POST http://localhost:8000/api/v1/collections/5f0bb24d-e4c1-4622-a3e7-f6f90181d5fe/query "HTTP/1.1 200 OK"
+2024-11-18 13:18:59,153 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com/openai/deployments/vassar-4o-mini/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-11-18 13:18:59,407 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com//openai/deployments/vassar-text-ada002/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2024-11-18 13:18:59,428 - INFO - HTTP Request: POST http://localhost:8000/api/v1/collections/5f0bb24d-e4c1-4622-a3e7-f6f90181d5fe/query "HTTP/1.1 200 OK"
+2024-11-18 13:19:00,822 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com/openai/deployments/vassar-4o-mini/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-11-18 13:19:00,826 - INFO - Row #65: PASS - Expected Intent: 'PRODUCT_AVAILABILITY', Classified Intent: 'PRODUCT_AVAILABILITY'
+2024-11-18 13:19:01,128 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com//openai/deployments/vassar-text-ada002/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2024-11-18 13:19:01,149 - INFO - HTTP Request: POST http://localhost:8000/api/v1/collections/5f0bb24d-e4c1-4622-a3e7-f6f90181d5fe/query "HTTP/1.1 200 OK"
+2024-11-18 13:19:02,765 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com/openai/deployments/vassar-4o-mini/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-11-18 13:19:03,073 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com//openai/deployments/vassar-text-ada002/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2024-11-18 13:19:03,091 - INFO - HTTP Request: POST http://localhost:8000/api/v1/collections/5f0bb24d-e4c1-4622-a3e7-f6f90181d5fe/query "HTTP/1.1 200 OK"
+2024-11-18 13:19:04,304 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com/openai/deployments/vassar-4o-mini/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-11-18 13:19:04,308 - INFO - Row #66: PASS - Expected Intent: 'PRODUCT_AVAILABILITY', Classified Intent: 'PRODUCT_AVAILABILITY'
+2024-11-18 13:19:04,617 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com//openai/deployments/vassar-text-ada002/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2024-11-18 13:19:04,639 - INFO - HTTP Request: POST http://localhost:8000/api/v1/collections/5f0bb24d-e4c1-4622-a3e7-f6f90181d5fe/query "HTTP/1.1 200 OK"
+2024-11-18 13:19:05,786 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com/openai/deployments/vassar-4o-mini/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-11-18 13:19:06,034 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com//openai/deployments/vassar-text-ada002/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2024-11-18 13:19:06,053 - INFO - HTTP Request: POST http://localhost:8000/api/v1/collections/5f0bb24d-e4c1-4622-a3e7-f6f90181d5fe/query "HTTP/1.1 200 OK"
+2024-11-18 13:19:07,170 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com/openai/deployments/vassar-4o-mini/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-11-18 13:19:07,174 - INFO - Row #67: PASS - Expected Intent: 'PRODUCT_AVAILABILITY', Classified Intent: 'PRODUCT_AVAILABILITY'
+2024-11-18 13:19:07,479 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com//openai/deployments/vassar-text-ada002/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2024-11-18 13:19:07,502 - INFO - HTTP Request: POST http://localhost:8000/api/v1/collections/5f0bb24d-e4c1-4622-a3e7-f6f90181d5fe/query "HTTP/1.1 200 OK"
+2024-11-18 13:19:09,017 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com/openai/deployments/vassar-4o-mini/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-11-18 13:19:09,323 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com//openai/deployments/vassar-text-ada002/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2024-11-18 13:19:09,342 - INFO - HTTP Request: POST http://localhost:8000/api/v1/collections/5f0bb24d-e4c1-4622-a3e7-f6f90181d5fe/query "HTTP/1.1 200 OK"
+2024-11-18 13:19:10,754 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com/openai/deployments/vassar-4o-mini/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-11-18 13:19:10,757 - INFO - Row #68: PASS - Expected Intent: 'PRODUCT_AVAILABILITY', Classified Intent: 'PRODUCT_AVAILABILITY'
+2024-11-18 13:19:11,470 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com//openai/deployments/vassar-text-ada002/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2024-11-18 13:19:11,493 - INFO - HTTP Request: POST http://localhost:8000/api/v1/collections/5f0bb24d-e4c1-4622-a3e7-f6f90181d5fe/query "HTTP/1.1 200 OK"
+2024-11-18 13:19:12,598 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com/openai/deployments/vassar-4o-mini/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-11-18 13:19:12,905 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com//openai/deployments/vassar-text-ada002/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2024-11-18 13:19:12,924 - INFO - HTTP Request: POST http://localhost:8000/api/v1/collections/5f0bb24d-e4c1-4622-a3e7-f6f90181d5fe/query "HTTP/1.1 200 OK"
+2024-11-18 13:19:14,145 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com/openai/deployments/vassar-4o-mini/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-11-18 13:19:14,149 - INFO - Row #69: PASS - Expected Intent: 'OTHERS', Classified Intent: 'OTHERS'
+2024-11-18 13:19:15,467 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com//openai/deployments/vassar-text-ada002/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2024-11-18 13:19:15,490 - INFO - HTTP Request: POST http://localhost:8000/api/v1/collections/5f0bb24d-e4c1-4622-a3e7-f6f90181d5fe/query "HTTP/1.1 200 OK"
+2024-11-18 13:19:16,692 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com/openai/deployments/vassar-4o-mini/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-11-18 13:19:16,954 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com//openai/deployments/vassar-text-ada002/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2024-11-18 13:19:16,973 - INFO - HTTP Request: POST http://localhost:8000/api/v1/collections/5f0bb24d-e4c1-4622-a3e7-f6f90181d5fe/query "HTTP/1.1 200 OK"
+2024-11-18 13:19:18,437 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com/openai/deployments/vassar-4o-mini/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-11-18 13:19:18,440 - INFO - Row #70: PASS - Expected Intent: 'RETURNS', Classified Intent: 'RETURNS'
+2024-11-18 13:19:18,685 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com//openai/deployments/vassar-text-ada002/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2024-11-18 13:19:18,707 - INFO - HTTP Request: POST http://localhost:8000/api/v1/collections/5f0bb24d-e4c1-4622-a3e7-f6f90181d5fe/query "HTTP/1.1 200 OK"
+2024-11-18 13:19:20,287 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com/openai/deployments/vassar-4o-mini/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-11-18 13:19:20,588 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com//openai/deployments/vassar-text-ada002/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2024-11-18 13:19:20,609 - INFO - HTTP Request: POST http://localhost:8000/api/v1/collections/5f0bb24d-e4c1-4622-a3e7-f6f90181d5fe/query "HTTP/1.1 200 OK"
+2024-11-18 13:19:21,625 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com/openai/deployments/vassar-4o-mini/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-11-18 13:19:21,628 - ERROR - Row #71: FAIL - Expected Intent: 'ORDER_STATUS', Classified Intent: 'OTHERS'
+email_history::User: Subject: Assistance with Order #26262 Body: Hi, please confirm if this is a valid order number. I placed this order last month. I want to know the order status Bot: Hi, the order number provided doesn’t match our format. Could you double-check the details? 
+
+ user_latest_email::User: Subject: Assistance with Order #26262, Body: My mistake! Here’s the correct order number: #262626. 
+
+ intent_examples:: User message : can you give me update on my order #274543 - Intent Identified : ORDER_STATUS
+User message : Hi there, I just placed an order but accidentally entered the wrong shipping address. Confirmation #8EILTXUCW  Is it possible to change the address - Intent Identified : OTHERS
+User message : I need to return this order. #295108. Please let men know how to proceed. - Intent Identified : RETURNS
+User message : I received the wrong color; I got black instead of brown. I need a pickup and a replacement order. - Intent Identified : OTHERS
+User message : Hi, I ordered this at the end of May. I haven't received it. What is the timing on this, or is it not available? Have you charged me for it? Order #294574 - Intent Identified : ORDER_STATUS 
+
+ sub_intent_examples::User message : can you give me update on my order #274543 - Sub Intent Identified : SHIPPING_UPDATES
+User message : I am checking on my order from August 30, 2024, confirmation of which is attached but did not include an order number. My American Express card was charged on the same day.I am checking to see where we are in the process and when I may expect shipment and would like to know what the order number is that is assigned to this order. - Sub Intent Identified : SHIPPING UPDATES
+User message : I ordered and paid for a coffee table (SKU: 110111139) on 5/22/24 and received confirmation number 66KYIKGMX. I was advised we could expect delivery in late August but have not heard anything since. Could you please provide an update on the status?  - Sub Intent Identified : SHIPPING UPDATES
+User message : Hello, Can I get an update on the order below? Thanks - Sub Intent Identified : SHIPPING UPDATES
+User message : Hi, I ordered this at the end of May. I haven't received it. What is the timing on this, or is it not available? Have you charged me for it? Order #294574 - Sub Intent Identified : SHIPPING UPDATES
+2024-11-18 13:19:21,872 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com//openai/deployments/vassar-text-ada002/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2024-11-18 13:19:21,895 - INFO - HTTP Request: POST http://localhost:8000/api/v1/collections/5f0bb24d-e4c1-4622-a3e7-f6f90181d5fe/query "HTTP/1.1 200 OK"
+2024-11-18 13:19:23,356 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com/openai/deployments/vassar-4o-mini/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-11-18 13:19:23,360 - INFO - Row #72: PASS - Expected Intent: 'OTHERS', Classified Intent: 'OTHERS'
+2024-11-18 13:19:23,659 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com//openai/deployments/vassar-text-ada002/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2024-11-18 13:19:23,683 - INFO - HTTP Request: POST http://localhost:8000/api/v1/collections/5f0bb24d-e4c1-4622-a3e7-f6f90181d5fe/query "HTTP/1.1 200 OK"
+2024-11-18 13:19:24,575 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com/openai/deployments/vassar-4o-mini/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-11-18 13:19:24,578 - INFO - Row #73: PASS - Expected Intent: 'BANTER', Classified Intent: 'BANTER'
+2024-11-18 13:19:24,818 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com//openai/deployments/vassar-text-ada002/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2024-11-18 13:19:24,841 - INFO - HTTP Request: POST http://localhost:8000/api/v1/collections/5f0bb24d-e4c1-4622-a3e7-f6f90181d5fe/query "HTTP/1.1 200 OK"
+2024-11-18 13:19:26,637 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com/openai/deployments/vassar-4o-mini/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-11-18 13:19:26,641 - INFO - Row #74: PASS - Expected Intent: 'OTHERS', Classified Intent: 'OTHERS'
+2024-11-18 13:19:26,931 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com//openai/deployments/vassar-text-ada002/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2024-11-18 13:19:26,955 - INFO - HTTP Request: POST http://localhost:8000/api/v1/collections/5f0bb24d-e4c1-4622-a3e7-f6f90181d5fe/query "HTTP/1.1 200 OK"
+2024-11-18 13:19:29,089 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com/openai/deployments/vassar-4o-mini/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-11-18 13:19:29,332 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com//openai/deployments/vassar-text-ada002/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2024-11-18 13:19:29,353 - INFO - HTTP Request: POST http://localhost:8000/api/v1/collections/5f0bb24d-e4c1-4622-a3e7-f6f90181d5fe/query "HTTP/1.1 200 OK"
+2024-11-18 13:19:30,935 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com/openai/deployments/vassar-4o-mini/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-11-18 13:19:30,938 - INFO - Row #75: PASS - Expected Intent: 'PRODUCT_AVAILABILITY', Classified Intent: 'PRODUCT_AVAILABILITY'
+2024-11-18 13:19:31,232 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com//openai/deployments/vassar-text-ada002/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2024-11-18 13:19:31,254 - INFO - HTTP Request: POST http://localhost:8000/api/v1/collections/5f0bb24d-e4c1-4622-a3e7-f6f90181d5fe/query "HTTP/1.1 200 OK"
+2024-11-18 13:19:32,872 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com/openai/deployments/vassar-4o-mini/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-11-18 13:19:32,876 - INFO - Row #76: PASS - Expected Intent: 'OTHERS', Classified Intent: 'OTHERS'
+2024-11-18 13:19:33,178 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com//openai/deployments/vassar-text-ada002/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2024-11-18 13:19:33,200 - INFO - HTTP Request: POST http://localhost:8000/api/v1/collections/5f0bb24d-e4c1-4622-a3e7-f6f90181d5fe/query "HTTP/1.1 200 OK"
+2024-11-18 13:19:38,200 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com/openai/deployments/vassar-4o-mini/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-11-18 13:19:38,203 - INFO - Row #77: PASS - Expected Intent: 'OTHERS', Classified Intent: 'OTHERS'
+2024-11-18 13:19:39,424 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com//openai/deployments/vassar-text-ada002/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2024-11-18 13:19:39,446 - INFO - HTTP Request: POST http://localhost:8000/api/v1/collections/5f0bb24d-e4c1-4622-a3e7-f6f90181d5fe/query "HTTP/1.1 200 OK"
+2024-11-18 13:19:43,012 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com/openai/deployments/vassar-4o-mini/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-11-18 13:19:43,016 - INFO - Row #78: PASS - Expected Intent: 'OTHERS', Classified Intent: 'OTHERS'
+2024-11-18 13:19:43,315 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com//openai/deployments/vassar-text-ada002/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2024-11-18 13:19:43,337 - INFO - HTTP Request: POST http://localhost:8000/api/v1/collections/5f0bb24d-e4c1-4622-a3e7-f6f90181d5fe/query "HTTP/1.1 200 OK"
+2024-11-18 13:19:44,683 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com/openai/deployments/vassar-4o-mini/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-11-18 13:19:44,958 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com//openai/deployments/vassar-text-ada002/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2024-11-18 13:19:44,978 - INFO - HTTP Request: POST http://localhost:8000/api/v1/collections/5f0bb24d-e4c1-4622-a3e7-f6f90181d5fe/query "HTTP/1.1 200 OK"
+2024-11-18 13:19:46,802 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com/openai/deployments/vassar-4o-mini/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-11-18 13:19:46,806 - INFO - Row #79: PASS - Expected Intent: 'RETURNS', Classified Intent: 'RETURNS'
+2024-11-18 13:19:47,108 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com//openai/deployments/vassar-text-ada002/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2024-11-18 13:19:47,130 - INFO - HTTP Request: POST http://localhost:8000/api/v1/collections/5f0bb24d-e4c1-4622-a3e7-f6f90181d5fe/query "HTTP/1.1 200 OK"
+2024-11-18 13:19:48,854 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com/openai/deployments/vassar-4o-mini/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-11-18 13:19:48,857 - INFO - Row #80: PASS - Expected Intent: 'OTHERS', Classified Intent: 'OTHERS'
+2024-11-18 13:19:49,169 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com//openai/deployments/vassar-text-ada002/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2024-11-18 13:19:49,193 - INFO - HTTP Request: POST http://localhost:8000/api/v1/collections/5f0bb24d-e4c1-4622-a3e7-f6f90181d5fe/query "HTTP/1.1 200 OK"
+2024-11-18 13:19:50,577 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com/openai/deployments/vassar-4o-mini/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-11-18 13:19:50,581 - INFO - Row #81: PASS - Expected Intent: 'OTHERS', Classified Intent: 'OTHERS'
+2024-11-18 13:19:50,893 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com//openai/deployments/vassar-text-ada002/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2024-11-18 13:19:50,916 - INFO - HTTP Request: POST http://localhost:8000/api/v1/collections/5f0bb24d-e4c1-4622-a3e7-f6f90181d5fe/query "HTTP/1.1 200 OK"
+2024-11-18 13:19:52,540 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com/openai/deployments/vassar-4o-mini/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-11-18 13:19:52,850 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com//openai/deployments/vassar-text-ada002/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2024-11-18 13:19:52,869 - INFO - HTTP Request: POST http://localhost:8000/api/v1/collections/5f0bb24d-e4c1-4622-a3e7-f6f90181d5fe/query "HTTP/1.1 200 OK"
+2024-11-18 13:19:54,562 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com/openai/deployments/vassar-4o-mini/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-11-18 13:19:54,565 - INFO - Row #82: PASS - Expected Intent: 'OTHERS', Classified Intent: 'OTHERS'
+2024-11-18 13:19:54,889 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com//openai/deployments/vassar-text-ada002/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2024-11-18 13:19:54,911 - INFO - HTTP Request: POST http://localhost:8000/api/v1/collections/5f0bb24d-e4c1-4622-a3e7-f6f90181d5fe/query "HTTP/1.1 200 OK"
+2024-11-18 13:19:56,427 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com/openai/deployments/vassar-4o-mini/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-11-18 13:19:56,431 - INFO - Row #83: PASS - Expected Intent: 'OTHERS', Classified Intent: 'OTHERS'
+2024-11-18 13:19:56,739 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com//openai/deployments/vassar-text-ada002/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2024-11-18 13:19:56,762 - INFO - HTTP Request: POST http://localhost:8000/api/v1/collections/5f0bb24d-e4c1-4622-a3e7-f6f90181d5fe/query "HTTP/1.1 200 OK"
+2024-11-18 13:19:58,679 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com/openai/deployments/vassar-4o-mini/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-11-18 13:19:58,682 - INFO - Row #84: PASS - Expected Intent: 'BANTER', Classified Intent: 'BANTER'
+2024-11-18 13:19:58,990 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com//openai/deployments/vassar-text-ada002/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2024-11-18 13:19:59,012 - INFO - HTTP Request: POST http://localhost:8000/api/v1/collections/5f0bb24d-e4c1-4622-a3e7-f6f90181d5fe/query "HTTP/1.1 200 OK"
+2024-11-18 13:20:01,137 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com/openai/deployments/vassar-4o-mini/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-11-18 13:20:01,141 - INFO - Row #85: PASS - Expected Intent: 'OTHERS', Classified Intent: 'OTHERS'
+2024-11-18 13:20:01,448 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com//openai/deployments/vassar-text-ada002/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2024-11-18 13:20:01,470 - INFO - HTTP Request: POST http://localhost:8000/api/v1/collections/5f0bb24d-e4c1-4622-a3e7-f6f90181d5fe/query "HTTP/1.1 200 OK"
+2024-11-18 13:20:03,544 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com/openai/deployments/vassar-4o-mini/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-11-18 13:20:03,548 - INFO - Row #86: PASS - Expected Intent: 'OTHERS', Classified Intent: 'OTHERS'
+2024-11-18 13:20:03,801 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com//openai/deployments/vassar-text-ada002/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2024-11-18 13:20:03,823 - INFO - HTTP Request: POST http://localhost:8000/api/v1/collections/5f0bb24d-e4c1-4622-a3e7-f6f90181d5fe/query "HTTP/1.1 200 OK"
+2024-11-18 13:20:06,054 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com/openai/deployments/vassar-4o-mini/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-11-18 13:20:06,301 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com//openai/deployments/vassar-text-ada002/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2024-11-18 13:20:06,320 - INFO - HTTP Request: POST http://localhost:8000/api/v1/collections/5f0bb24d-e4c1-4622-a3e7-f6f90181d5fe/query "HTTP/1.1 200 OK"
+2024-11-18 13:20:08,300 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com/openai/deployments/vassar-4o-mini/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-11-18 13:20:08,304 - ERROR - Row #87: FAIL - Expected Intent: 'RETURNS', Classified Intent: 'OTHERS'
+email_history::User: Subject:Return #295938, Body: I want to know the return eligibility of my order can I know it
+Bot: yes you can return it. may i know the reason 
+
+ user_latest_email::User: Subject:Return #295938, Body: I want to return your product because of the delay in the delivery time i am not going to order any of the product from your company and the last thing due to your delivery issue i missed the order and not able to gift it to my Friend wedding 
+
+ intent_examples:: User message : The order is taking too long to arrive. Can you return it to the sender instead of delivering it? - Intent Identified : RETURNS
+User message : ’d like to start the return process for my most recent order. The product wasn’t what I expected, and I’d like to send it back  - Intent Identified : RETURNS
+User message : Could you confirm when my order will be delivered? I’d like to return it if there’s any delay in shipping. - Intent Identified : ORDER_STATUS
+User message : Can you update me on the status of my order? If it’s delayed, I’d like to return the item. - Intent Identified : ORDER_STATUS
+User message : I’m checking on the delivery status. If there’s an issue or delay, I’d like to initiate a return. - Intent Identified : ORDER_STATUS 
+
+ sub_intent_examples::User message : I need to return this order. #295108. Please let men know how to proceed. - Sub Intent Identified : QUERIES
+User message : The order is taking too long to arrive. Can you return it to the sender instead of delivering it? - Sub Intent Identified : RETURNING_UNDELIVERED_ORDER
+User message : ’d like to start the return process for my most recent order. The product wasn’t what I expected, and I’d like to send it back  - Sub Intent Identified : RETURNS_PROCESSING
+User message : I’d like to return my order before it gets delivered. Can you process the return for me? - Sub Intent Identified : RETURNING_UNDELIVERED_ORDER
+User message : I’d like to return the order I placed last week. It hasn’t been used, and I want to know the steps for sending it back. - Sub Intent Identified : RETURNS_PROCESSING
+2024-11-18 13:20:08,555 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com//openai/deployments/vassar-text-ada002/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2024-11-18 13:20:08,580 - INFO - HTTP Request: POST http://localhost:8000/api/v1/collections/5f0bb24d-e4c1-4622-a3e7-f6f90181d5fe/query "HTTP/1.1 200 OK"
+2024-11-18 13:20:12,130 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com/openai/deployments/vassar-4o-mini/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-11-18 13:20:12,396 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com//openai/deployments/vassar-text-ada002/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2024-11-18 13:20:12,416 - INFO - HTTP Request: POST http://localhost:8000/api/v1/collections/5f0bb24d-e4c1-4622-a3e7-f6f90181d5fe/query "HTTP/1.1 200 OK"
+2024-11-18 13:20:14,138 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com/openai/deployments/vassar-4o-mini/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-11-18 13:20:14,142 - INFO - Row #88: PASS - Expected Intent: 'OTHERS', Classified Intent: 'OTHERS'
+2024-11-18 13:20:14,446 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com//openai/deployments/vassar-text-ada002/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2024-11-18 13:20:14,470 - INFO - HTTP Request: POST http://localhost:8000/api/v1/collections/5f0bb24d-e4c1-4622-a3e7-f6f90181d5fe/query "HTTP/1.1 200 OK"
+2024-11-18 13:20:16,191 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com/openai/deployments/vassar-4o-mini/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-11-18 13:20:16,194 - ERROR - Row #89: FAIL - Expected Intent: 'OTHERS', Classified Intent: 'BANTER'
+email_history::User: Bot: 
+
+ user_latest_email::User: Subject:,Body: jhsbfishlfsuigifosl8ghsaeghaepgh 
+
+ intent_examples:: User message : hello - Intent Identified : BANTER
+User message : hello?? - Intent Identified : BANTER
+User message : good afternoon - Intent Identified : BANTER
+User message : good morning - Intent Identified : BANTER
+User message : thank you - Intent Identified : BANTER 
+
+ sub_intent_examples::
+2024-11-18 13:20:16,495 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com//openai/deployments/vassar-text-ada002/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2024-11-18 13:20:16,518 - INFO - HTTP Request: POST http://localhost:8000/api/v1/collections/5f0bb24d-e4c1-4622-a3e7-f6f90181d5fe/query "HTTP/1.1 200 OK"
+2024-11-18 13:20:17,845 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com/openai/deployments/vassar-4o-mini/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-11-18 13:20:17,849 - INFO - Row #90: PASS - Expected Intent: 'OTHERS', Classified Intent: 'OTHERS'
+2024-11-18 13:20:18,097 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com//openai/deployments/vassar-text-ada002/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2024-11-18 13:20:18,120 - INFO - HTTP Request: POST http://localhost:8000/api/v1/collections/5f0bb24d-e4c1-4622-a3e7-f6f90181d5fe/query "HTTP/1.1 200 OK"
+2024-11-18 13:20:21,319 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com/openai/deployments/vassar-4o-mini/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-11-18 13:20:21,322 - INFO - Row #91: PASS - Expected Intent: 'OTHERS', Classified Intent: 'OTHERS'
+2024-11-18 13:20:21,567 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com//openai/deployments/vassar-text-ada002/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2024-11-18 13:20:21,589 - INFO - HTTP Request: POST http://localhost:8000/api/v1/collections/5f0bb24d-e4c1-4622-a3e7-f6f90181d5fe/query "HTTP/1.1 200 OK"
+2024-11-18 13:20:23,762 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com/openai/deployments/vassar-4o-mini/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-11-18 13:20:24,073 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com//openai/deployments/vassar-text-ada002/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2024-11-18 13:20:24,092 - INFO - HTTP Request: POST http://localhost:8000/api/v1/collections/5f0bb24d-e4c1-4622-a3e7-f6f90181d5fe/query "HTTP/1.1 200 OK"
+2024-11-18 13:20:26,231 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com/openai/deployments/vassar-4o-mini/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-11-18 13:20:26,235 - INFO - Row #92: PASS - Expected Intent: 'OTHERS', Classified Intent: 'OTHERS'
+2024-11-18 13:20:26,531 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com//openai/deployments/vassar-text-ada002/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2024-11-18 13:20:26,556 - INFO - HTTP Request: POST http://localhost:8000/api/v1/collections/5f0bb24d-e4c1-4622-a3e7-f6f90181d5fe/query "HTTP/1.1 200 OK"
+2024-11-18 13:20:28,476 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com/openai/deployments/vassar-4o-mini/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-11-18 13:20:28,781 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com//openai/deployments/vassar-text-ada002/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2024-11-18 13:20:28,800 - INFO - HTTP Request: POST http://localhost:8000/api/v1/collections/5f0bb24d-e4c1-4622-a3e7-f6f90181d5fe/query "HTTP/1.1 200 OK"
+2024-11-18 13:20:30,631 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com/openai/deployments/vassar-4o-mini/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-11-18 13:20:30,635 - INFO - Row #93: PASS - Expected Intent: 'OTHERS', Classified Intent: 'OTHERS'
+2024-11-18 13:20:30,883 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com//openai/deployments/vassar-text-ada002/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2024-11-18 13:20:30,907 - INFO - HTTP Request: POST http://localhost:8000/api/v1/collections/5f0bb24d-e4c1-4622-a3e7-f6f90181d5fe/query "HTTP/1.1 200 OK"
+2024-11-18 13:20:35,032 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com/openai/deployments/vassar-4o-mini/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-11-18 13:20:35,333 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com//openai/deployments/vassar-text-ada002/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2024-11-18 13:20:35,348 - INFO - HTTP Request: POST http://localhost:8000/api/v1/collections/5f0bb24d-e4c1-4622-a3e7-f6f90181d5fe/query "HTTP/1.1 200 OK"
+2024-11-18 13:20:37,091 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com/openai/deployments/vassar-4o-mini/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-11-18 13:20:37,095 - INFO - Row #94: PASS - Expected Intent: 'RETURNS', Classified Intent: 'RETURNS'
+2024-11-18 13:20:37,388 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com//openai/deployments/vassar-text-ada002/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2024-11-18 13:20:37,411 - INFO - HTTP Request: POST http://localhost:8000/api/v1/collections/5f0bb24d-e4c1-4622-a3e7-f6f90181d5fe/query "HTTP/1.1 200 OK"
+2024-11-18 13:20:38,620 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com/openai/deployments/vassar-4o-mini/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-11-18 13:20:38,869 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com//openai/deployments/vassar-text-ada002/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2024-11-18 13:20:38,888 - INFO - HTTP Request: POST http://localhost:8000/api/v1/collections/5f0bb24d-e4c1-4622-a3e7-f6f90181d5fe/query "HTTP/1.1 200 OK"
+2024-11-18 13:20:40,458 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com/openai/deployments/vassar-4o-mini/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-11-18 13:20:40,461 - INFO - Row #95: PASS - Expected Intent: 'OTHERS', Classified Intent: 'OTHERS'
+2024-11-18 13:20:40,762 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com//openai/deployments/vassar-text-ada002/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2024-11-18 13:20:40,785 - INFO - HTTP Request: POST http://localhost:8000/api/v1/collections/5f0bb24d-e4c1-4622-a3e7-f6f90181d5fe/query "HTTP/1.1 200 OK"
+2024-11-18 13:20:42,548 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com/openai/deployments/vassar-4o-mini/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-11-18 13:20:42,800 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com//openai/deployments/vassar-text-ada002/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2024-11-18 13:20:42,820 - INFO - HTTP Request: POST http://localhost:8000/api/v1/collections/5f0bb24d-e4c1-4622-a3e7-f6f90181d5fe/query "HTTP/1.1 200 OK"
+2024-11-18 13:20:44,247 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com/openai/deployments/vassar-4o-mini/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-11-18 13:20:44,251 - INFO - Row #96: PASS - Expected Intent: 'ORDER_STATUS', Classified Intent: 'ORDER_STATUS'
+2024-11-18 13:20:44,506 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com//openai/deployments/vassar-text-ada002/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2024-11-18 13:20:44,531 - INFO - HTTP Request: POST http://localhost:8000/api/v1/collections/5f0bb24d-e4c1-4622-a3e7-f6f90181d5fe/query "HTTP/1.1 200 OK"
+2024-11-18 13:20:45,970 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com/openai/deployments/vassar-4o-mini/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-11-18 13:20:46,292 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com//openai/deployments/vassar-text-ada002/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2024-11-18 13:20:46,311 - INFO - HTTP Request: POST http://localhost:8000/api/v1/collections/5f0bb24d-e4c1-4622-a3e7-f6f90181d5fe/query "HTTP/1.1 200 OK"
+2024-11-18 13:20:47,419 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com/openai/deployments/vassar-4o-mini/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-11-18 13:20:47,423 - INFO - Row #97: PASS - Expected Intent: 'OTHERS', Classified Intent: 'OTHERS'
+2024-11-18 13:20:47,725 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com//openai/deployments/vassar-text-ada002/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2024-11-18 13:20:47,748 - INFO - HTTP Request: POST http://localhost:8000/api/v1/collections/5f0bb24d-e4c1-4622-a3e7-f6f90181d5fe/query "HTTP/1.1 200 OK"
+2024-11-18 13:20:50,172 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com/openai/deployments/vassar-4o-mini/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-11-18 13:20:50,660 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com//openai/deployments/vassar-text-ada002/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2024-11-18 13:20:50,678 - INFO - HTTP Request: POST http://localhost:8000/api/v1/collections/5f0bb24d-e4c1-4622-a3e7-f6f90181d5fe/query "HTTP/1.1 200 OK"
+2024-11-18 13:20:53,361 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com/openai/deployments/vassar-4o-mini/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-11-18 13:20:53,366 - INFO - Row #98: PASS - Expected Intent: 'ORDER_STATUS', Classified Intent: 'ORDER_STATUS'
+2024-11-18 13:20:53,621 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com//openai/deployments/vassar-text-ada002/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2024-11-18 13:20:53,648 - INFO - HTTP Request: POST http://localhost:8000/api/v1/collections/5f0bb24d-e4c1-4622-a3e7-f6f90181d5fe/query "HTTP/1.1 200 OK"
+2024-11-18 13:20:58,393 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com/openai/deployments/vassar-4o-mini/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-11-18 13:20:58,397 - INFO - Row #99: PASS - Expected Intent: 'OTHERS', Classified Intent: 'OTHERS'
+2024-11-18 13:20:58,681 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com//openai/deployments/vassar-text-ada002/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2024-11-18 13:20:58,704 - INFO - HTTP Request: POST http://localhost:8000/api/v1/collections/5f0bb24d-e4c1-4622-a3e7-f6f90181d5fe/query "HTTP/1.1 200 OK"
+2024-11-18 13:20:59,909 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com/openai/deployments/vassar-4o-mini/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-11-18 13:20:59,912 - INFO - Row #100: PASS - Expected Intent: 'BANTER', Classified Intent: 'BANTER'
+2024-11-18 13:21:00,217 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com//openai/deployments/vassar-text-ada002/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2024-11-18 13:21:00,242 - INFO - HTTP Request: POST http://localhost:8000/api/v1/collections/5f0bb24d-e4c1-4622-a3e7-f6f90181d5fe/query "HTTP/1.1 200 OK"
+2024-11-18 13:21:01,548 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com/openai/deployments/vassar-4o-mini/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-11-18 13:21:01,551 - INFO - Row #101: PASS - Expected Intent: 'BANTER', Classified Intent: 'BANTER'
+2024-11-18 13:21:01,855 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com//openai/deployments/vassar-text-ada002/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2024-11-18 13:21:01,877 - INFO - HTTP Request: POST http://localhost:8000/api/v1/collections/5f0bb24d-e4c1-4622-a3e7-f6f90181d5fe/query "HTTP/1.1 200 OK"
+2024-11-18 13:21:03,607 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com/openai/deployments/vassar-4o-mini/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-11-18 13:21:03,902 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com//openai/deployments/vassar-text-ada002/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2024-11-18 13:21:03,922 - INFO - HTTP Request: POST http://localhost:8000/api/v1/collections/5f0bb24d-e4c1-4622-a3e7-f6f90181d5fe/query "HTTP/1.1 200 OK"
+2024-11-18 13:21:05,237 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com/openai/deployments/vassar-4o-mini/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-11-18 13:21:05,240 - INFO - Row #102: PASS - Expected Intent: 'OTHERS', Classified Intent: 'OTHERS'
+2024-11-18 13:21:05,541 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com//openai/deployments/vassar-text-ada002/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2024-11-18 13:21:05,565 - INFO - HTTP Request: POST http://localhost:8000/api/v1/collections/5f0bb24d-e4c1-4622-a3e7-f6f90181d5fe/query "HTTP/1.1 200 OK"
+2024-11-18 13:21:07,487 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com/openai/deployments/vassar-4o-mini/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-11-18 13:21:07,799 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com//openai/deployments/vassar-text-ada002/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2024-11-18 13:21:07,818 - INFO - HTTP Request: POST http://localhost:8000/api/v1/collections/5f0bb24d-e4c1-4622-a3e7-f6f90181d5fe/query "HTTP/1.1 200 OK"
+2024-11-18 13:21:10,276 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com/openai/deployments/vassar-4o-mini/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-11-18 13:21:10,279 - INFO - Row #103: PASS - Expected Intent: 'OTHERS', Classified Intent: 'OTHERS'
+2024-11-18 13:21:10,545 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com//openai/deployments/vassar-text-ada002/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2024-11-18 13:21:10,570 - INFO - HTTP Request: POST http://localhost:8000/api/v1/collections/5f0bb24d-e4c1-4622-a3e7-f6f90181d5fe/query "HTTP/1.1 200 OK"
+2024-11-18 13:21:14,588 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com/openai/deployments/vassar-4o-mini/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-11-18 13:21:14,592 - INFO - Row #104: PASS - Expected Intent: 'OTHERS', Classified Intent: 'OTHERS'
+2024-11-18 13:21:14,860 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com//openai/deployments/vassar-text-ada002/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2024-11-18 13:21:14,884 - INFO - HTTP Request: POST http://localhost:8000/api/v1/collections/5f0bb24d-e4c1-4622-a3e7-f6f90181d5fe/query "HTTP/1.1 200 OK"
+2024-11-18 13:21:17,214 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com/openai/deployments/vassar-4o-mini/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-11-18 13:21:17,523 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com//openai/deployments/vassar-text-ada002/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2024-11-18 13:21:17,544 - INFO - HTTP Request: POST http://localhost:8000/api/v1/collections/5f0bb24d-e4c1-4622-a3e7-f6f90181d5fe/query "HTTP/1.1 200 OK"
+2024-11-18 13:21:20,082 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com/openai/deployments/vassar-4o-mini/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-11-18 13:21:20,086 - INFO - Row #105: PASS - Expected Intent: 'OTHERS', Classified Intent: 'OTHERS'
+2024-11-18 13:21:20,390 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com//openai/deployments/vassar-text-ada002/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2024-11-18 13:21:20,415 - INFO - HTTP Request: POST http://localhost:8000/api/v1/collections/5f0bb24d-e4c1-4622-a3e7-f6f90181d5fe/query "HTTP/1.1 200 OK"
+2024-11-18 13:21:24,283 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com/openai/deployments/vassar-4o-mini/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-11-18 13:21:24,587 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com//openai/deployments/vassar-text-ada002/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2024-11-18 13:21:24,607 - INFO - HTTP Request: POST http://localhost:8000/api/v1/collections/5f0bb24d-e4c1-4622-a3e7-f6f90181d5fe/query "HTTP/1.1 200 OK"
+2024-11-18 13:21:27,464 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com/openai/deployments/vassar-4o-mini/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-11-18 13:21:27,468 - INFO - Row #106: PASS - Expected Intent: 'OTHERS', Classified Intent: 'OTHERS'
+2024-11-18 13:21:27,713 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com//openai/deployments/vassar-text-ada002/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2024-11-18 13:21:27,736 - INFO - HTTP Request: POST http://localhost:8000/api/v1/collections/5f0bb24d-e4c1-4622-a3e7-f6f90181d5fe/query "HTTP/1.1 200 OK"
+2024-11-18 13:21:29,503 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com/openai/deployments/vassar-4o-mini/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-11-18 13:21:29,813 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com//openai/deployments/vassar-text-ada002/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2024-11-18 13:21:29,834 - INFO - HTTP Request: POST http://localhost:8000/api/v1/collections/5f0bb24d-e4c1-4622-a3e7-f6f90181d5fe/query "HTTP/1.1 200 OK"
+2024-11-18 13:21:31,760 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com/openai/deployments/vassar-4o-mini/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-11-18 13:21:31,764 - INFO - Row #107: PASS - Expected Intent: 'OTHERS', Classified Intent: 'OTHERS'
+2024-11-18 13:21:32,006 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com//openai/deployments/vassar-text-ada002/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2024-11-18 13:21:32,028 - INFO - HTTP Request: POST http://localhost:8000/api/v1/collections/5f0bb24d-e4c1-4622-a3e7-f6f90181d5fe/query "HTTP/1.1 200 OK"
+2024-11-18 13:21:33,558 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com/openai/deployments/vassar-4o-mini/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-11-18 13:21:33,804 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com//openai/deployments/vassar-text-ada002/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2024-11-18 13:21:33,823 - INFO - HTTP Request: POST http://localhost:8000/api/v1/collections/5f0bb24d-e4c1-4622-a3e7-f6f90181d5fe/query "HTTP/1.1 200 OK"
+2024-11-18 13:21:35,592 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com/openai/deployments/vassar-4o-mini/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-11-18 13:21:35,596 - INFO - Row #108: PASS - Expected Intent: 'OTHERS', Classified Intent: 'OTHERS'
+2024-11-18 13:21:35,851 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com//openai/deployments/vassar-text-ada002/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2024-11-18 13:21:35,876 - INFO - HTTP Request: POST http://localhost:8000/api/v1/collections/5f0bb24d-e4c1-4622-a3e7-f6f90181d5fe/query "HTTP/1.1 200 OK"
+2024-11-18 13:21:37,899 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com/openai/deployments/vassar-4o-mini/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-11-18 13:21:38,210 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com//openai/deployments/vassar-text-ada002/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2024-11-18 13:21:38,229 - INFO - HTTP Request: POST http://localhost:8000/api/v1/collections/5f0bb24d-e4c1-4622-a3e7-f6f90181d5fe/query "HTTP/1.1 200 OK"
+2024-11-18 13:21:39,753 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com/openai/deployments/vassar-4o-mini/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-11-18 13:21:39,756 - INFO - Row #109: PASS - Expected Intent: 'Damages', Classified Intent: 'DAMAGES'
+2024-11-18 13:21:40,053 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com//openai/deployments/vassar-text-ada002/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2024-11-18 13:21:40,075 - INFO - HTTP Request: POST http://localhost:8000/api/v1/collections/5f0bb24d-e4c1-4622-a3e7-f6f90181d5fe/query "HTTP/1.1 200 OK"
+2024-11-18 13:21:42,211 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com/openai/deployments/vassar-4o-mini/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-11-18 13:21:42,509 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com//openai/deployments/vassar-text-ada002/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2024-11-18 13:21:42,528 - INFO - HTTP Request: POST http://localhost:8000/api/v1/collections/5f0bb24d-e4c1-4622-a3e7-f6f90181d5fe/query "HTTP/1.1 200 OK"
+2024-11-18 13:21:44,355 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com/openai/deployments/vassar-4o-mini/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-11-18 13:21:44,358 - INFO - Row #110: PASS - Expected Intent: 'OTHERS', Classified Intent: 'OTHERS'
+2024-11-18 13:21:44,606 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com//openai/deployments/vassar-text-ada002/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2024-11-18 13:21:44,630 - INFO - HTTP Request: POST http://localhost:8000/api/v1/collections/5f0bb24d-e4c1-4622-a3e7-f6f90181d5fe/query "HTTP/1.1 200 OK"
+2024-11-18 13:21:45,988 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com/openai/deployments/vassar-4o-mini/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-11-18 13:21:46,252 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com//openai/deployments/vassar-text-ada002/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2024-11-18 13:21:46,272 - INFO - HTTP Request: POST http://localhost:8000/api/v1/collections/5f0bb24d-e4c1-4622-a3e7-f6f90181d5fe/query "HTTP/1.1 200 OK"
+2024-11-18 13:21:50,194 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com/openai/deployments/vassar-4o-mini/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-11-18 13:21:50,197 - INFO - Row #111: PASS - Expected Intent: 'OTHERS', Classified Intent: 'OTHERS'
+2024-11-18 13:21:50,542 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com//openai/deployments/vassar-text-ada002/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2024-11-18 13:21:50,566 - INFO - HTTP Request: POST http://localhost:8000/api/v1/collections/5f0bb24d-e4c1-4622-a3e7-f6f90181d5fe/query "HTTP/1.1 200 OK"
+2024-11-18 13:21:51,881 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com/openai/deployments/vassar-4o-mini/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-11-18 13:21:52,132 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com//openai/deployments/vassar-text-ada002/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2024-11-18 13:21:52,151 - INFO - HTTP Request: POST http://localhost:8000/api/v1/collections/5f0bb24d-e4c1-4622-a3e7-f6f90181d5fe/query "HTTP/1.1 200 OK"
+2024-11-18 13:21:53,651 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com/openai/deployments/vassar-4o-mini/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-11-18 13:21:53,655 - INFO - Row #112: PASS - Expected Intent: 'OTHERS', Classified Intent: 'OTHERS'
+2024-11-18 13:21:53,975 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com//openai/deployments/vassar-text-ada002/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2024-11-18 13:21:53,997 - INFO - HTTP Request: POST http://localhost:8000/api/v1/collections/5f0bb24d-e4c1-4622-a3e7-f6f90181d5fe/query "HTTP/1.1 200 OK"
+2024-11-18 13:21:55,205 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com/openai/deployments/vassar-4o-mini/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-11-18 13:21:55,512 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com//openai/deployments/vassar-text-ada002/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2024-11-18 13:21:55,532 - INFO - HTTP Request: POST http://localhost:8000/api/v1/collections/5f0bb24d-e4c1-4622-a3e7-f6f90181d5fe/query "HTTP/1.1 200 OK"
+2024-11-18 13:21:56,749 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com/openai/deployments/vassar-4o-mini/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-11-18 13:21:56,753 - INFO - Row #113: PASS - Expected Intent: 'PRODUCT_AVAILABILITY', Classified Intent: 'PRODUCT_AVAILABILITY'
+2024-11-18 13:21:57,050 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com//openai/deployments/vassar-text-ada002/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2024-11-18 13:21:57,073 - INFO - HTTP Request: POST http://localhost:8000/api/v1/collections/5f0bb24d-e4c1-4622-a3e7-f6f90181d5fe/query "HTTP/1.1 200 OK"
+2024-11-18 13:21:58,891 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com/openai/deployments/vassar-4o-mini/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-11-18 13:21:59,136 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com//openai/deployments/vassar-text-ada002/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2024-11-18 13:21:59,155 - INFO - HTTP Request: POST http://localhost:8000/api/v1/collections/5f0bb24d-e4c1-4622-a3e7-f6f90181d5fe/query "HTTP/1.1 200 OK"
+2024-11-18 13:22:00,654 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com/openai/deployments/vassar-4o-mini/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-11-18 13:22:00,657 - INFO - Row #114: PASS - Expected Intent: 'OTHERS', Classified Intent: 'OTHERS'
+2024-11-18 13:22:00,897 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com//openai/deployments/vassar-text-ada002/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2024-11-18 13:22:00,920 - INFO - HTTP Request: POST http://localhost:8000/api/v1/collections/5f0bb24d-e4c1-4622-a3e7-f6f90181d5fe/query "HTTP/1.1 200 OK"
+2024-11-18 13:22:02,480 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com/openai/deployments/vassar-4o-mini/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-11-18 13:22:02,789 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com//openai/deployments/vassar-text-ada002/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2024-11-18 13:22:02,810 - INFO - HTTP Request: POST http://localhost:8000/api/v1/collections/5f0bb24d-e4c1-4622-a3e7-f6f90181d5fe/query "HTTP/1.1 200 OK"
+2024-11-18 13:22:04,948 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com/openai/deployments/vassar-4o-mini/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-11-18 13:22:04,952 - INFO - Row #115: PASS - Expected Intent: 'Damages', Classified Intent: 'DAMAGES'
+2024-11-18 13:22:05,240 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com//openai/deployments/vassar-text-ada002/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2024-11-18 13:22:05,262 - INFO - HTTP Request: POST http://localhost:8000/api/v1/collections/5f0bb24d-e4c1-4622-a3e7-f6f90181d5fe/query "HTTP/1.1 200 OK"
+2024-11-18 13:22:06,590 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com/openai/deployments/vassar-4o-mini/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-11-18 13:22:06,882 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com//openai/deployments/vassar-text-ada002/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2024-11-18 13:22:06,901 - INFO - HTTP Request: POST http://localhost:8000/api/v1/collections/5f0bb24d-e4c1-4622-a3e7-f6f90181d5fe/query "HTTP/1.1 200 OK"
+2024-11-18 13:22:08,226 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com/openai/deployments/vassar-4o-mini/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-11-18 13:22:08,230 - INFO - Row #116: PASS - Expected Intent: 'Returns', Classified Intent: 'RETURNS'
+2024-11-18 13:22:08,516 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com//openai/deployments/vassar-text-ada002/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2024-11-18 13:22:08,541 - INFO - HTTP Request: POST http://localhost:8000/api/v1/collections/5f0bb24d-e4c1-4622-a3e7-f6f90181d5fe/query "HTTP/1.1 200 OK"
+2024-11-18 13:22:09,608 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com/openai/deployments/vassar-4o-mini/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-11-18 13:22:09,853 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com//openai/deployments/vassar-text-ada002/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2024-11-18 13:22:09,872 - INFO - HTTP Request: POST http://localhost:8000/api/v1/collections/5f0bb24d-e4c1-4622-a3e7-f6f90181d5fe/query "HTTP/1.1 200 OK"
+2024-11-18 13:22:11,337 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com/openai/deployments/vassar-4o-mini/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-11-18 13:22:11,340 - INFO - Row #117: PASS - Expected Intent: 'TRADE_APPLICATION', Classified Intent: 'TRADE_APPLICATION'
+2024-11-18 13:22:11,590 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com//openai/deployments/vassar-text-ada002/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2024-11-18 13:22:11,614 - INFO - HTTP Request: POST http://localhost:8000/api/v1/collections/5f0bb24d-e4c1-4622-a3e7-f6f90181d5fe/query "HTTP/1.1 200 OK"
+2024-11-18 13:22:14,252 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com/openai/deployments/vassar-4o-mini/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-11-18 13:22:14,558 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com//openai/deployments/vassar-text-ada002/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2024-11-18 13:22:14,576 - INFO - HTTP Request: POST http://localhost:8000/api/v1/collections/5f0bb24d-e4c1-4622-a3e7-f6f90181d5fe/query "HTTP/1.1 200 OK"
+2024-11-18 13:22:16,654 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com/openai/deployments/vassar-4o-mini/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-11-18 13:22:16,657 - INFO - Row #118: PASS - Expected Intent: 'TRADE_APPLICATION', Classified Intent: 'TRADE_APPLICATION'
+2024-11-18 13:22:16,940 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com//openai/deployments/vassar-text-ada002/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2024-11-18 13:22:16,969 - INFO - HTTP Request: POST http://localhost:8000/api/v1/collections/5f0bb24d-e4c1-4622-a3e7-f6f90181d5fe/query "HTTP/1.1 200 OK"
+2024-11-18 13:22:18,354 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com/openai/deployments/vassar-4o-mini/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-11-18 13:22:18,653 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com//openai/deployments/vassar-text-ada002/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2024-11-18 13:22:18,673 - INFO - HTTP Request: POST http://localhost:8000/api/v1/collections/5f0bb24d-e4c1-4622-a3e7-f6f90181d5fe/query "HTTP/1.1 200 OK"
+2024-11-18 13:22:20,322 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com/openai/deployments/vassar-4o-mini/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-11-18 13:22:20,325 - INFO - Row #119: PASS - Expected Intent: 'ORDER_STATUS', Classified Intent: 'ORDER_STATUS'
+2024-11-18 13:22:20,608 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com//openai/deployments/vassar-text-ada002/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2024-11-18 13:22:20,632 - INFO - HTTP Request: POST http://localhost:8000/api/v1/collections/5f0bb24d-e4c1-4622-a3e7-f6f90181d5fe/query "HTTP/1.1 200 OK"
+2024-11-18 13:22:21,848 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com/openai/deployments/vassar-4o-mini/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-11-18 13:22:22,142 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com//openai/deployments/vassar-text-ada002/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2024-11-18 13:22:22,161 - INFO - HTTP Request: POST http://localhost:8000/api/v1/collections/5f0bb24d-e4c1-4622-a3e7-f6f90181d5fe/query "HTTP/1.1 200 OK"
+2024-11-18 13:22:23,679 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com/openai/deployments/vassar-4o-mini/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-11-18 13:22:23,686 - INFO - Row #120: PASS - Expected Intent: 'ORDER_STATUS', Classified Intent: 'ORDER_STATUS'
+2024-11-18 13:22:23,993 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com//openai/deployments/vassar-text-ada002/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2024-11-18 13:22:24,023 - INFO - HTTP Request: POST http://localhost:8000/api/v1/collections/5f0bb24d-e4c1-4622-a3e7-f6f90181d5fe/query "HTTP/1.1 200 OK"
+2024-11-18 13:22:25,726 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com/openai/deployments/vassar-4o-mini/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-11-18 13:22:25,980 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com//openai/deployments/vassar-text-ada002/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2024-11-18 13:22:25,999 - INFO - HTTP Request: POST http://localhost:8000/api/v1/collections/5f0bb24d-e4c1-4622-a3e7-f6f90181d5fe/query "HTTP/1.1 200 OK"
+2024-11-18 13:22:27,363 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com/openai/deployments/vassar-4o-mini/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-11-18 13:22:27,366 - INFO - Row #121: PASS - Expected Intent: 'ORDER_STATUS', Classified Intent: 'ORDER_STATUS'
+2024-11-18 13:22:27,618 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com//openai/deployments/vassar-text-ada002/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2024-11-18 13:22:27,633 - INFO - HTTP Request: POST http://localhost:8000/api/v1/collections/5f0bb24d-e4c1-4622-a3e7-f6f90181d5fe/query "HTTP/1.1 200 OK"
+2024-11-18 13:22:29,302 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com/openai/deployments/vassar-4o-mini/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-11-18 13:22:29,546 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com//openai/deployments/vassar-text-ada002/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2024-11-18 13:22:29,568 - INFO - HTTP Request: POST http://localhost:8000/api/v1/collections/5f0bb24d-e4c1-4622-a3e7-f6f90181d5fe/query "HTTP/1.1 200 OK"
+2024-11-18 13:22:30,738 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com/openai/deployments/vassar-4o-mini/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-11-18 13:22:30,742 - INFO - Row #122: PASS - Expected Intent: 'ORDER_STATUS', Classified Intent: 'ORDER_STATUS'
+2024-11-18 13:22:31,049 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com//openai/deployments/vassar-text-ada002/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2024-11-18 13:22:31,076 - INFO - HTTP Request: POST http://localhost:8000/api/v1/collections/5f0bb24d-e4c1-4622-a3e7-f6f90181d5fe/query "HTTP/1.1 200 OK"
+2024-11-18 13:22:32,894 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com/openai/deployments/vassar-4o-mini/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-11-18 13:22:33,196 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com//openai/deployments/vassar-text-ada002/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2024-11-18 13:22:33,219 - INFO - HTTP Request: POST http://localhost:8000/api/v1/collections/5f0bb24d-e4c1-4622-a3e7-f6f90181d5fe/query "HTTP/1.1 200 OK"
+2024-11-18 13:22:34,429 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com/openai/deployments/vassar-4o-mini/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-11-18 13:22:34,432 - INFO - Row #123: PASS - Expected Intent: 'ORDER_STATUS', Classified Intent: 'ORDER_STATUS'
+2024-11-18 13:22:34,735 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com//openai/deployments/vassar-text-ada002/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2024-11-18 13:22:34,759 - INFO - HTTP Request: POST http://localhost:8000/api/v1/collections/5f0bb24d-e4c1-4622-a3e7-f6f90181d5fe/query "HTTP/1.1 200 OK"
+2024-11-18 13:22:35,614 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com/openai/deployments/vassar-4o-mini/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-11-18 13:22:35,866 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com//openai/deployments/vassar-text-ada002/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2024-11-18 13:22:35,887 - INFO - HTTP Request: POST http://localhost:8000/api/v1/collections/5f0bb24d-e4c1-4622-a3e7-f6f90181d5fe/query "HTTP/1.1 200 OK"
+2024-11-18 13:22:37,498 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com/openai/deployments/vassar-4o-mini/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-11-18 13:22:37,501 - INFO - Row #124: PASS - Expected Intent: 'PRODUCT_AVAILABILITY', Classified Intent: 'PRODUCT_AVAILABILITY'
+2024-11-18 13:22:37,805 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com//openai/deployments/vassar-text-ada002/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2024-11-18 13:22:37,827 - INFO - HTTP Request: POST http://localhost:8000/api/v1/collections/5f0bb24d-e4c1-4622-a3e7-f6f90181d5fe/query "HTTP/1.1 200 OK"
+2024-11-18 13:22:39,031 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com/openai/deployments/vassar-4o-mini/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-11-18 13:22:39,341 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com//openai/deployments/vassar-text-ada002/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2024-11-18 13:22:39,360 - INFO - HTTP Request: POST http://localhost:8000/api/v1/collections/5f0bb24d-e4c1-4622-a3e7-f6f90181d5fe/query "HTTP/1.1 200 OK"
+2024-11-18 13:22:40,669 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com/openai/deployments/vassar-4o-mini/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-11-18 13:22:40,672 - INFO - Row #125: PASS - Expected Intent: 'PRODUCT_AVAILABILITY', Classified Intent: 'PRODUCT_AVAILABILITY'
+2024-11-18 13:22:40,976 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com//openai/deployments/vassar-text-ada002/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2024-11-18 13:22:40,999 - INFO - HTTP Request: POST http://localhost:8000/api/v1/collections/5f0bb24d-e4c1-4622-a3e7-f6f90181d5fe/query "HTTP/1.1 200 OK"
+2024-11-18 13:22:42,411 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com/openai/deployments/vassar-4o-mini/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-11-18 13:22:42,658 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com//openai/deployments/vassar-text-ada002/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2024-11-18 13:22:42,677 - INFO - HTTP Request: POST http://localhost:8000/api/v1/collections/5f0bb24d-e4c1-4622-a3e7-f6f90181d5fe/query "HTTP/1.1 200 OK"
+2024-11-18 13:22:43,796 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com/openai/deployments/vassar-4o-mini/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-11-18 13:22:43,800 - INFO - Row #126: PASS - Expected Intent: 'PRODUCT_AVAILABILITY', Classified Intent: 'PRODUCT_AVAILABILITY'
+2024-11-18 13:22:44,050 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com//openai/deployments/vassar-text-ada002/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2024-11-18 13:22:44,073 - INFO - HTTP Request: POST http://localhost:8000/api/v1/collections/5f0bb24d-e4c1-4622-a3e7-f6f90181d5fe/query "HTTP/1.1 200 OK"
+2024-11-18 13:22:45,075 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com/openai/deployments/vassar-4o-mini/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-11-18 13:22:45,381 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com//openai/deployments/vassar-text-ada002/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2024-11-18 13:22:45,401 - INFO - HTTP Request: POST http://localhost:8000/api/v1/collections/5f0bb24d-e4c1-4622-a3e7-f6f90181d5fe/query "HTTP/1.1 200 OK"
+2024-11-18 13:22:46,505 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com/openai/deployments/vassar-4o-mini/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-11-18 13:22:46,508 - INFO - Row #127: PASS - Expected Intent: 'PRODUCT_AVAILABILITY', Classified Intent: 'PRODUCT_AVAILABILITY'
+2024-11-18 13:22:46,821 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com//openai/deployments/vassar-text-ada002/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2024-11-18 13:22:46,844 - INFO - HTTP Request: POST http://localhost:8000/api/v1/collections/5f0bb24d-e4c1-4622-a3e7-f6f90181d5fe/query "HTTP/1.1 200 OK"
+2024-11-18 13:22:48,011 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com/openai/deployments/vassar-4o-mini/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-11-18 13:22:48,262 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com//openai/deployments/vassar-text-ada002/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2024-11-18 13:22:48,281 - INFO - HTTP Request: POST http://localhost:8000/api/v1/collections/5f0bb24d-e4c1-4622-a3e7-f6f90181d5fe/query "HTTP/1.1 200 OK"
+2024-11-18 13:22:49,489 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com/openai/deployments/vassar-4o-mini/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-11-18 13:22:49,493 - INFO - Row #128: PASS - Expected Intent: 'PRODUCT_AVAILABILITY', Classified Intent: 'PRODUCT_AVAILABILITY'
+2024-11-18 13:22:49,783 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com//openai/deployments/vassar-text-ada002/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2024-11-18 13:22:49,805 - INFO - HTTP Request: POST http://localhost:8000/api/v1/collections/5f0bb24d-e4c1-4622-a3e7-f6f90181d5fe/query "HTTP/1.1 200 OK"
+2024-11-18 13:22:51,262 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com/openai/deployments/vassar-4o-mini/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-11-18 13:22:51,526 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com//openai/deployments/vassar-text-ada002/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2024-11-18 13:22:51,542 - INFO - HTTP Request: POST http://localhost:8000/api/v1/collections/5f0bb24d-e4c1-4622-a3e7-f6f90181d5fe/query "HTTP/1.1 200 OK"
+2024-11-18 13:22:52,975 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com/openai/deployments/vassar-4o-mini/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-11-18 13:22:52,978 - INFO - Row #129: PASS - Expected Intent: 'Damages', Classified Intent: 'DAMAGES'
+2024-11-18 13:22:53,266 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com//openai/deployments/vassar-text-ada002/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2024-11-18 13:22:53,289 - INFO - HTTP Request: POST http://localhost:8000/api/v1/collections/5f0bb24d-e4c1-4622-a3e7-f6f90181d5fe/query "HTTP/1.1 200 OK"
+2024-11-18 13:22:54,543 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com/openai/deployments/vassar-4o-mini/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-11-18 13:22:54,800 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com//openai/deployments/vassar-text-ada002/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2024-11-18 13:22:54,820 - INFO - HTTP Request: POST http://localhost:8000/api/v1/collections/5f0bb24d-e4c1-4622-a3e7-f6f90181d5fe/query "HTTP/1.1 200 OK"
+2024-11-18 13:22:56,851 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com/openai/deployments/vassar-4o-mini/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-11-18 13:22:56,856 - INFO - Row #130: PASS - Expected Intent: 'Damages', Classified Intent: 'DAMAGES'
+2024-11-18 13:22:57,156 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com//openai/deployments/vassar-text-ada002/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2024-11-18 13:22:57,177 - INFO - HTTP Request: POST http://localhost:8000/api/v1/collections/5f0bb24d-e4c1-4622-a3e7-f6f90181d5fe/query "HTTP/1.1 200 OK"
+2024-11-18 13:22:58,623 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com/openai/deployments/vassar-4o-mini/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-11-18 13:22:58,873 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com//openai/deployments/vassar-text-ada002/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2024-11-18 13:22:58,892 - INFO - HTTP Request: POST http://localhost:8000/api/v1/collections/5f0bb24d-e4c1-4622-a3e7-f6f90181d5fe/query "HTTP/1.1 200 OK"
+2024-11-18 13:23:01,165 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com/openai/deployments/vassar-4o-mini/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-11-18 13:23:01,168 - INFO - Row #131: PASS - Expected Intent: 'Damages', Classified Intent: 'DAMAGES'
+2024-11-18 13:23:01,458 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com//openai/deployments/vassar-text-ada002/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2024-11-18 13:23:01,481 - INFO - HTTP Request: POST http://localhost:8000/api/v1/collections/5f0bb24d-e4c1-4622-a3e7-f6f90181d5fe/query "HTTP/1.1 200 OK"
+2024-11-18 13:23:02,690 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com/openai/deployments/vassar-4o-mini/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-11-18 13:23:02,995 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com//openai/deployments/vassar-text-ada002/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2024-11-18 13:23:03,014 - INFO - HTTP Request: POST http://localhost:8000/api/v1/collections/5f0bb24d-e4c1-4622-a3e7-f6f90181d5fe/query "HTTP/1.1 200 OK"
+2024-11-18 13:23:04,222 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com/openai/deployments/vassar-4o-mini/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-11-18 13:23:04,225 - INFO - Row #132: PASS - Expected Intent: 'Returns', Classified Intent: 'RETURNS'
+2024-11-18 13:23:04,542 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com//openai/deployments/vassar-text-ada002/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2024-11-18 13:23:04,565 - INFO - HTTP Request: POST http://localhost:8000/api/v1/collections/5f0bb24d-e4c1-4622-a3e7-f6f90181d5fe/query "HTTP/1.1 200 OK"
+2024-11-18 13:23:08,522 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com/openai/deployments/vassar-4o-mini/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-11-18 13:23:08,830 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com//openai/deployments/vassar-text-ada002/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2024-11-18 13:23:08,851 - INFO - HTTP Request: POST http://localhost:8000/api/v1/collections/5f0bb24d-e4c1-4622-a3e7-f6f90181d5fe/query "HTTP/1.1 200 OK"
+2024-11-18 13:23:09,855 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com/openai/deployments/vassar-4o-mini/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-11-18 13:23:09,858 - INFO - Row #133: PASS - Expected Intent: 'OTHERS', Classified Intent: 'OTHERS'
+2024-11-18 13:23:10,159 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com//openai/deployments/vassar-text-ada002/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2024-11-18 13:23:10,181 - INFO - HTTP Request: POST http://localhost:8000/api/v1/collections/5f0bb24d-e4c1-4622-a3e7-f6f90181d5fe/query "HTTP/1.1 200 OK"
+2024-11-18 13:23:11,901 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com/openai/deployments/vassar-4o-mini/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-11-18 13:23:12,210 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com//openai/deployments/vassar-text-ada002/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2024-11-18 13:23:12,229 - INFO - HTTP Request: POST http://localhost:8000/api/v1/collections/5f0bb24d-e4c1-4622-a3e7-f6f90181d5fe/query "HTTP/1.1 200 OK"
+2024-11-18 13:23:13,549 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com/openai/deployments/vassar-4o-mini/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-11-18 13:23:13,552 - INFO - Row #134: PASS - Expected Intent: 'TRADE_APPLICATION', Classified Intent: 'TRADE_APPLICATION'
+2024-11-18 13:23:13,848 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com//openai/deployments/vassar-text-ada002/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2024-11-18 13:23:13,870 - INFO - HTTP Request: POST http://localhost:8000/api/v1/collections/5f0bb24d-e4c1-4622-a3e7-f6f90181d5fe/query "HTTP/1.1 200 OK"
+2024-11-18 13:23:14,754 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com/openai/deployments/vassar-4o-mini/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-11-18 13:23:14,757 - INFO - Row #135: PASS - Expected Intent: 'BANTER', Classified Intent: 'BANTER'
+2024-11-18 13:23:15,076 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com//openai/deployments/vassar-text-ada002/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2024-11-18 13:23:15,098 - INFO - HTTP Request: POST http://localhost:8000/api/v1/collections/5f0bb24d-e4c1-4622-a3e7-f6f90181d5fe/query "HTTP/1.1 200 OK"
+2024-11-18 13:23:16,802 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com/openai/deployments/vassar-4o-mini/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-11-18 13:23:17,139 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com//openai/deployments/vassar-text-ada002/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2024-11-18 13:23:17,159 - INFO - HTTP Request: POST http://localhost:8000/api/v1/collections/5f0bb24d-e4c1-4622-a3e7-f6f90181d5fe/query "HTTP/1.1 200 OK"
+2024-11-18 13:23:18,555 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com/openai/deployments/vassar-4o-mini/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-11-18 13:23:18,559 - ERROR - Row #136: FAIL - Expected Intent: 'ORDER_STATUS', Classified Intent: 'OTHERS'
+email_history::User: Subject: Where’s my order?, Body: I ordered two weeks ago, and it hasn’t arrived. Can I get a refund if it’s delayed?
+Bot: Your order is scheduled to ship on 12/02/2024. 
+
+ user_latest_email::User: Subject: Where’s my order?, Body: Will it arrive soon or can I cancel? 
+
+ intent_examples:: User message : What’s the current status of my order? If it isn’t arriving soon, I would prefer to return it. - Intent Identified : ORDER_STATUS
+User message : I am still waiting to hear when my pot will be delivered. If there is a long delay, I may need to cancel the order. - Intent Identified : ORDER_STATUS
+User message : Could you confirm when my order will be delivered? I’d like to return it if there’s any delay in shipping. - Intent Identified : ORDER_STATUS
+User message : Hi, Hope youre having a nice weekend. This item below was ordered months ago, every month I am told it will arrive the following month. What is the status? Do we need to cancel this order and issue a refund? - Intent Identified : ORDER_STATUS
+User message : The order is taking too long to arrive. Can you return it to the sender instead of delivering it? - Intent Identified : RETURNS 
+
+ sub_intent_examples::User message : Hi, Hope youre having a nice weekend. This item below was ordered months ago, every month I am told it will arrive the following month. What is the status? Do we need to cancel this order and issue a refund? - Sub Intent Identified : SHIPPING UPDATES
+User message : Could you confirm when my order will be delivered? I’d like to return it if there’s any delay in shipping. - Sub Intent Identified : SHIPPING_UPDATES
+User message : Can you update me on the status of my order? If it’s delayed, I’d like to return the item. - Sub Intent Identified : SHIPPING_UPDATES
+User message : What’s the current status of my order? If it isn’t arriving soon, I would prefer to return it. - Sub Intent Identified : SHIPPING_UPDATES
+User message : What is the status on this order? It's unacceptable that I ordered this at the end of MAY 2024 & still don't have it. This order needs to be cancelled and a refund issued if it is not shipping to my house in the next 4 business days. Thank you - Sub Intent Identified : SHIPPING UPDATES
+2024-11-18 13:23:18,866 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com//openai/deployments/vassar-text-ada002/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2024-11-18 13:23:18,888 - INFO - HTTP Request: POST http://localhost:8000/api/v1/collections/5f0bb24d-e4c1-4622-a3e7-f6f90181d5fe/query "HTTP/1.1 200 OK"
+2024-11-18 13:23:19,930 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com/openai/deployments/vassar-4o-mini/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-11-18 13:23:20,202 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com//openai/deployments/vassar-text-ada002/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2024-11-18 13:23:20,221 - INFO - HTTP Request: POST http://localhost:8000/api/v1/collections/5f0bb24d-e4c1-4622-a3e7-f6f90181d5fe/query "HTTP/1.1 200 OK"
+2024-11-18 13:23:21,937 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com/openai/deployments/vassar-4o-mini/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-11-18 13:23:21,941 - INFO - Row #137: PASS - Expected Intent: 'ORDER_STATUS', Classified Intent: 'ORDER_STATUS'
+2024-11-18 13:23:22,245 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com//openai/deployments/vassar-text-ada002/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2024-11-18 13:23:22,268 - INFO - HTTP Request: POST http://localhost:8000/api/v1/collections/5f0bb24d-e4c1-4622-a3e7-f6f90181d5fe/query "HTTP/1.1 200 OK"
+2024-11-18 13:23:23,573 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com/openai/deployments/vassar-4o-mini/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-11-18 13:23:23,884 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com//openai/deployments/vassar-text-ada002/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2024-11-18 13:23:23,906 - INFO - HTTP Request: POST http://localhost:8000/api/v1/collections/5f0bb24d-e4c1-4622-a3e7-f6f90181d5fe/query "HTTP/1.1 200 OK"
+2024-11-18 13:23:25,317 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com/openai/deployments/vassar-4o-mini/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-11-18 13:23:25,320 - INFO - Row #138: PASS - Expected Intent: 'ORDER_STATUS', Classified Intent: 'ORDER_STATUS'
+2024-11-18 13:23:25,578 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com//openai/deployments/vassar-text-ada002/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2024-11-18 13:23:25,600 - INFO - HTTP Request: POST http://localhost:8000/api/v1/collections/5f0bb24d-e4c1-4622-a3e7-f6f90181d5fe/query "HTTP/1.1 200 OK"
+2024-11-18 13:23:26,749 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com/openai/deployments/vassar-4o-mini/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-11-18 13:23:27,066 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com//openai/deployments/vassar-text-ada002/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2024-11-18 13:23:27,085 - INFO - HTTP Request: POST http://localhost:8000/api/v1/collections/5f0bb24d-e4c1-4622-a3e7-f6f90181d5fe/query "HTTP/1.1 200 OK"
+2024-11-18 13:23:28,389 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com/openai/deployments/vassar-4o-mini/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-11-18 13:23:28,392 - INFO - Row #139: PASS - Expected Intent: 'ORDER_STATUS', Classified Intent: 'ORDER_STATUS'
+2024-11-18 13:23:28,694 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com//openai/deployments/vassar-text-ada002/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2024-11-18 13:23:28,716 - INFO - HTTP Request: POST http://localhost:8000/api/v1/collections/5f0bb24d-e4c1-4622-a3e7-f6f90181d5fe/query "HTTP/1.1 200 OK"
+2024-11-18 13:23:30,538 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com/openai/deployments/vassar-4o-mini/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-11-18 13:23:30,792 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com//openai/deployments/vassar-text-ada002/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2024-11-18 13:23:30,811 - INFO - HTTP Request: POST http://localhost:8000/api/v1/collections/5f0bb24d-e4c1-4622-a3e7-f6f90181d5fe/query "HTTP/1.1 200 OK"
+2024-11-18 13:23:31,795 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com/openai/deployments/vassar-4o-mini/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-11-18 13:23:31,798 - INFO - Row #140: PASS - Expected Intent: 'ORDER_STATUS', Classified Intent: 'ORDER_STATUS'
+2024-11-18 13:23:32,074 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com//openai/deployments/vassar-text-ada002/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2024-11-18 13:23:32,096 - INFO - HTTP Request: POST http://localhost:8000/api/v1/collections/5f0bb24d-e4c1-4622-a3e7-f6f90181d5fe/query "HTTP/1.1 200 OK"
+2024-11-18 13:23:33,371 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com/openai/deployments/vassar-4o-mini/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-11-18 13:23:33,643 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com//openai/deployments/vassar-text-ada002/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2024-11-18 13:23:33,662 - INFO - HTTP Request: POST http://localhost:8000/api/v1/collections/5f0bb24d-e4c1-4622-a3e7-f6f90181d5fe/query "HTTP/1.1 200 OK"
+2024-11-18 13:23:34,755 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com/openai/deployments/vassar-4o-mini/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-11-18 13:23:34,759 - INFO - Row #141: PASS - Expected Intent: 'OTHERS', Classified Intent: 'OTHERS'
+2024-11-18 13:23:35,013 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com//openai/deployments/vassar-text-ada002/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2024-11-18 13:23:35,035 - INFO - HTTP Request: POST http://localhost:8000/api/v1/collections/5f0bb24d-e4c1-4622-a3e7-f6f90181d5fe/query "HTTP/1.1 200 OK"
+2024-11-18 13:23:36,174 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com/openai/deployments/vassar-4o-mini/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-11-18 13:23:36,419 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com//openai/deployments/vassar-text-ada002/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2024-11-18 13:23:36,438 - INFO - HTTP Request: POST http://localhost:8000/api/v1/collections/5f0bb24d-e4c1-4622-a3e7-f6f90181d5fe/query "HTTP/1.1 200 OK"
+2024-11-18 13:23:38,326 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com/openai/deployments/vassar-4o-mini/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-11-18 13:23:38,330 - INFO - Row #142: PASS - Expected Intent: 'PRODUCT_AVAILABILITY', Classified Intent: 'PRODUCT_AVAILABILITY'
+2024-11-18 13:23:38,639 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com//openai/deployments/vassar-text-ada002/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2024-11-18 13:23:38,664 - INFO - HTTP Request: POST http://localhost:8000/api/v1/collections/5f0bb24d-e4c1-4622-a3e7-f6f90181d5fe/query "HTTP/1.1 200 OK"
+2024-11-18 13:23:39,958 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com/openai/deployments/vassar-4o-mini/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-11-18 13:23:40,264 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com//openai/deployments/vassar-text-ada002/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2024-11-18 13:23:40,283 - INFO - HTTP Request: POST http://localhost:8000/api/v1/collections/5f0bb24d-e4c1-4622-a3e7-f6f90181d5fe/query "HTTP/1.1 200 OK"
+2024-11-18 13:23:41,709 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com/openai/deployments/vassar-4o-mini/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-11-18 13:23:41,713 - INFO - Row #143: PASS - Expected Intent: 'PRODUCT_AVAILABILITY', Classified Intent: 'PRODUCT_AVAILABILITY'
+2024-11-18 13:23:41,955 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com//openai/deployments/vassar-text-ada002/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2024-11-18 13:23:41,979 - INFO - HTTP Request: POST http://localhost:8000/api/v1/collections/5f0bb24d-e4c1-4622-a3e7-f6f90181d5fe/query "HTTP/1.1 200 OK"
+2024-11-18 13:23:43,241 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com/openai/deployments/vassar-4o-mini/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-11-18 13:23:43,543 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com//openai/deployments/vassar-text-ada002/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2024-11-18 13:23:43,560 - INFO - HTTP Request: POST http://localhost:8000/api/v1/collections/5f0bb24d-e4c1-4622-a3e7-f6f90181d5fe/query "HTTP/1.1 200 OK"
+2024-11-18 13:23:46,011 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com/openai/deployments/vassar-4o-mini/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-11-18 13:23:46,015 - INFO - Row #144: PASS - Expected Intent: 'PRODUCT_AVAILABILITY', Classified Intent: 'PRODUCT_AVAILABILITY'
+2024-11-18 13:23:46,257 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com//openai/deployments/vassar-text-ada002/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2024-11-18 13:23:46,280 - INFO - HTTP Request: POST http://localhost:8000/api/v1/collections/5f0bb24d-e4c1-4622-a3e7-f6f90181d5fe/query "HTTP/1.1 200 OK"
+2024-11-18 13:23:47,535 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com/openai/deployments/vassar-4o-mini/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-11-18 13:23:47,842 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com//openai/deployments/vassar-text-ada002/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2024-11-18 13:23:47,863 - INFO - HTTP Request: POST http://localhost:8000/api/v1/collections/5f0bb24d-e4c1-4622-a3e7-f6f90181d5fe/query "HTTP/1.1 200 OK"
+2024-11-18 13:23:49,053 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com/openai/deployments/vassar-4o-mini/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-11-18 13:23:49,056 - INFO - Row #145: PASS - Expected Intent: 'PRODUCT_AVAILABILITY', Classified Intent: 'PRODUCT_AVAILABILITY'
+2024-11-18 13:23:49,302 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com//openai/deployments/vassar-text-ada002/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2024-11-18 13:23:49,325 - INFO - HTTP Request: POST http://localhost:8000/api/v1/collections/5f0bb24d-e4c1-4622-a3e7-f6f90181d5fe/query "HTTP/1.1 200 OK"
+2024-11-18 13:23:50,618 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com/openai/deployments/vassar-4o-mini/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-11-18 13:23:50,916 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com//openai/deployments/vassar-text-ada002/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2024-11-18 13:23:50,936 - INFO - HTTP Request: POST http://localhost:8000/api/v1/collections/5f0bb24d-e4c1-4622-a3e7-f6f90181d5fe/query "HTTP/1.1 200 OK"
+2024-11-18 13:23:52,264 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com/openai/deployments/vassar-4o-mini/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-11-18 13:23:52,267 - INFO - Row #146: PASS - Expected Intent: 'Damages', Classified Intent: 'DAMAGES'
+2024-11-18 13:23:52,601 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com//openai/deployments/vassar-text-ada002/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2024-11-18 13:23:52,623 - INFO - HTTP Request: POST http://localhost:8000/api/v1/collections/5f0bb24d-e4c1-4622-a3e7-f6f90181d5fe/query "HTTP/1.1 200 OK"
+2024-11-18 13:23:53,788 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com/openai/deployments/vassar-4o-mini/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-11-18 13:23:54,089 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com//openai/deployments/vassar-text-ada002/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2024-11-18 13:23:54,108 - INFO - HTTP Request: POST http://localhost:8000/api/v1/collections/5f0bb24d-e4c1-4622-a3e7-f6f90181d5fe/query "HTTP/1.1 200 OK"
+2024-11-18 13:23:55,549 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com/openai/deployments/vassar-4o-mini/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-11-18 13:23:55,552 - ERROR - Row #147: FAIL - Expected Intent: 'Damages', Classified Intent: 'OTHERS'
+email_history::User: Subject: Broken product, Body: The item was cracked during shipping. Can I get a replacement, or do I need to return it?
+Bot: We’ll process the return for your damaged item. 
+
+ user_latest_email::User: Subject: Broken product, Body: I need help with my damaged product. 
+
+ intent_examples:: User message : The package I received was severely damaged during shipping, and the product inside is broken. I need assistance with returning this defective item. - Intent Identified : DAMAGES
+User message : Can someone contact me urgently? The product arrived damaged, and I need immediate assistance to sort out a return or replacement. - Intent Identified : DAMAGES
+User message : Can a customer service agent reach out to me about the damaged product? I need help arranging a return and processing a refund. - Intent Identified : DAMAGES
+User message : My item arrived damaged, and I would like to request a refund for the purchase price. Could you assist me with the claim process? - Intent Identified : DAMAGES
+User message : The product I received was broken when it arrived. I’d like to file a claim and receive compensation for the damages - Intent Identified : DAMAGES 
+
+ sub_intent_examples::User message : The package I received was severely damaged during shipping, and the product inside is broken. I need assistance with returning this defective item. - Sub Intent Identified : DAMAGED_RETURN_REQUEST
+User message : Can a customer service agent reach out to me about the damaged product? I need help arranging a return and processing a refund. - Sub Intent Identified : OTHERS
+User message : Can someone contact me urgently? The product arrived damaged, and I need immediate assistance to sort out a return or replacement. - Sub Intent Identified : OTHERS
+User message : The product I received was broken when it arrived. I’d like to file a claim and receive compensation for the damages - Sub Intent Identified : CLAIMS_AND_REFUND
+User message : The shipment was damaged during transit, and I am seeking a refund for the defective product. Please let me know the next steps - Sub Intent Identified : CLAIMS_AND_REFUND
+2024-11-18 13:23:55,795 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com//openai/deployments/vassar-text-ada002/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2024-11-18 13:23:55,818 - INFO - HTTP Request: POST http://localhost:8000/api/v1/collections/5f0bb24d-e4c1-4622-a3e7-f6f90181d5fe/query "HTTP/1.1 200 OK"
+2024-11-18 13:23:57,062 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com/openai/deployments/vassar-4o-mini/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-11-18 13:23:57,369 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com//openai/deployments/vassar-text-ada002/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2024-11-18 13:23:57,388 - INFO - HTTP Request: POST http://localhost:8000/api/v1/collections/5f0bb24d-e4c1-4622-a3e7-f6f90181d5fe/query "HTTP/1.1 200 OK"
+2024-11-18 13:23:58,567 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com/openai/deployments/vassar-4o-mini/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-11-18 13:23:58,570 - INFO - Row #148: PASS - Expected Intent: 'Damages', Classified Intent: 'DAMAGES'
+2024-11-18 13:23:58,914 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com//openai/deployments/vassar-text-ada002/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2024-11-18 13:23:58,937 - INFO - HTTP Request: POST http://localhost:8000/api/v1/collections/5f0bb24d-e4c1-4622-a3e7-f6f90181d5fe/query "HTTP/1.1 200 OK"
+2024-11-18 13:24:00,546 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com/openai/deployments/vassar-4o-mini/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-11-18 13:24:00,793 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com//openai/deployments/vassar-text-ada002/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2024-11-18 13:24:00,812 - INFO - HTTP Request: POST http://localhost:8000/api/v1/collections/5f0bb24d-e4c1-4622-a3e7-f6f90181d5fe/query "HTTP/1.1 200 OK"
+2024-11-18 13:24:02,080 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com/openai/deployments/vassar-4o-mini/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-11-18 13:24:02,084 - INFO - Row #149: PASS - Expected Intent: 'Damages', Classified Intent: 'DAMAGES'
+2024-11-18 13:24:02,388 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com//openai/deployments/vassar-text-ada002/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2024-11-18 13:24:02,412 - INFO - HTTP Request: POST http://localhost:8000/api/v1/collections/5f0bb24d-e4c1-4622-a3e7-f6f90181d5fe/query "HTTP/1.1 200 OK"
+2024-11-18 13:24:06,071 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com/openai/deployments/vassar-4o-mini/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-11-18 13:24:06,385 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com//openai/deployments/vassar-text-ada002/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2024-11-18 13:24:06,404 - INFO - HTTP Request: POST http://localhost:8000/api/v1/collections/5f0bb24d-e4c1-4622-a3e7-f6f90181d5fe/query "HTTP/1.1 200 OK"
+2024-11-18 13:24:08,120 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com/openai/deployments/vassar-4o-mini/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-11-18 13:24:08,123 - ERROR - Row #150: FAIL - Expected Intent: 'OTHERS', Classified Intent: 'DAMAGES'
+email_history::User: Subject: Broken upon arrival, Body: My item was broken when it arrived. I’d like to get a refund. 
+Bot: You can return the damaged item for a refund. 
+
+ user_latest_email::User: Subject: Broken product, Body: Can I return it. I am expecting a Refund for this 
+
+ intent_examples:: User message : I purchased this product recently, but I want to return it for a refund. Could you guide me through how to proceed with the return? - Intent Identified : RETURNS
+User message : ’d like to start the return process for my most recent order. The product wasn’t what I expected, and I’d like to send it back  - Intent Identified : RETURNS
+User message : Can a customer service agent reach out to me about the damaged product? I need help arranging a return and processing a refund. - Intent Identified : DAMAGES
+User message : The item was delivered in poor condition with visible damage. Can I get a refund or compensation for this issue? - Intent Identified : DAMAGES
+User message : My item arrived damaged, and I would like to request a refund for the purchase price. Could you assist me with the claim process? - Intent Identified : DAMAGES 
+
+ sub_intent_examples::User message : Can a customer service agent reach out to me about the damaged product? I need help arranging a return and processing a refund. - Sub Intent Identified : OTHERS
+User message : My item arrived damaged, and I would like to request a refund for the purchase price. Could you assist me with the claim process? - Sub Intent Identified : CLAIMS_AND_REFUND
+User message : The product I received was broken when it arrived. I’d like to file a claim and receive compensation for the damages - Sub Intent Identified : CLAIMS_AND_REFUND
+User message : The package I received was severely damaged during shipping, and the product inside is broken. I need assistance with returning this defective item. - Sub Intent Identified : DAMAGED_RETURN_REQUEST
+User message : I’d like to speak with someone directly about the damaged product I received. Please give me a call to discuss the return and refund process. - Sub Intent Identified : OTHERS
+2024-11-18 13:24:08,425 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com//openai/deployments/vassar-text-ada002/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2024-11-18 13:24:08,450 - INFO - HTTP Request: POST http://localhost:8000/api/v1/collections/5f0bb24d-e4c1-4622-a3e7-f6f90181d5fe/query "HTTP/1.1 200 OK"
+2024-11-18 13:24:09,964 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com/openai/deployments/vassar-4o-mini/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-11-18 13:24:10,274 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com//openai/deployments/vassar-text-ada002/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2024-11-18 13:24:10,292 - INFO - HTTP Request: POST http://localhost:8000/api/v1/collections/5f0bb24d-e4c1-4622-a3e7-f6f90181d5fe/query "HTTP/1.1 200 OK"
+2024-11-18 13:24:11,499 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com/openai/deployments/vassar-4o-mini/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-11-18 13:24:11,502 - INFO - Row #151: PASS - Expected Intent: 'Returns', Classified Intent: 'RETURNS'
+2024-11-18 13:24:11,808 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com//openai/deployments/vassar-text-ada002/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2024-11-18 13:24:11,832 - INFO - HTTP Request: POST http://localhost:8000/api/v1/collections/5f0bb24d-e4c1-4622-a3e7-f6f90181d5fe/query "HTTP/1.1 200 OK"
+2024-11-18 13:24:13,039 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com/openai/deployments/vassar-4o-mini/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-11-18 13:24:13,361 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com//openai/deployments/vassar-text-ada002/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2024-11-18 13:24:13,380 - INFO - HTTP Request: POST http://localhost:8000/api/v1/collections/5f0bb24d-e4c1-4622-a3e7-f6f90181d5fe/query "HTTP/1.1 200 OK"
+2024-11-18 13:24:14,883 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com/openai/deployments/vassar-4o-mini/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-11-18 13:24:14,887 - INFO - Row #152: PASS - Expected Intent: 'Returns', Classified Intent: 'RETURNS'
+2024-11-18 13:24:15,190 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com//openai/deployments/vassar-text-ada002/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2024-11-18 13:24:15,213 - INFO - HTTP Request: POST http://localhost:8000/api/v1/collections/5f0bb24d-e4c1-4622-a3e7-f6f90181d5fe/query "HTTP/1.1 200 OK"
+2024-11-18 13:24:16,314 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com/openai/deployments/vassar-4o-mini/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-11-18 13:24:16,557 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com//openai/deployments/vassar-text-ada002/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2024-11-18 13:24:16,576 - INFO - HTTP Request: POST http://localhost:8000/api/v1/collections/5f0bb24d-e4c1-4622-a3e7-f6f90181d5fe/query "HTTP/1.1 200 OK"
+2024-11-18 13:24:18,260 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com/openai/deployments/vassar-4o-mini/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-11-18 13:24:18,264 - INFO - Row #153: PASS - Expected Intent: 'OTHERS', Classified Intent: 'OTHERS'
+2024-11-18 13:24:18,568 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com//openai/deployments/vassar-text-ada002/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2024-11-18 13:24:18,591 - INFO - HTTP Request: POST http://localhost:8000/api/v1/collections/5f0bb24d-e4c1-4622-a3e7-f6f90181d5fe/query "HTTP/1.1 200 OK"
+2024-11-18 13:24:19,769 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com/openai/deployments/vassar-4o-mini/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-11-18 13:24:20,081 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com//openai/deployments/vassar-text-ada002/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2024-11-18 13:24:20,100 - INFO - HTTP Request: POST http://localhost:8000/api/v1/collections/5f0bb24d-e4c1-4622-a3e7-f6f90181d5fe/query "HTTP/1.1 200 OK"
+2024-11-18 13:24:22,558 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com/openai/deployments/vassar-4o-mini/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-11-18 13:24:22,561 - INFO - Row #154: PASS - Expected Intent: 'OTHERS', Classified Intent: 'OTHERS'
+2024-11-18 13:24:23,789 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com//openai/deployments/vassar-text-ada002/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2024-11-18 13:24:23,812 - INFO - HTTP Request: POST http://localhost:8000/api/v1/collections/5f0bb24d-e4c1-4622-a3e7-f6f90181d5fe/query "HTTP/1.1 200 OK"
+2024-11-18 13:24:25,110 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com/openai/deployments/vassar-4o-mini/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-11-18 13:24:25,426 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com//openai/deployments/vassar-text-ada002/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2024-11-18 13:24:25,445 - INFO - HTTP Request: POST http://localhost:8000/api/v1/collections/5f0bb24d-e4c1-4622-a3e7-f6f90181d5fe/query "HTTP/1.1 200 OK"
+2024-11-18 13:24:26,550 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com/openai/deployments/vassar-4o-mini/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-11-18 13:24:26,554 - INFO - Row #155: PASS - Expected Intent: 'TRADE_APPLICATION', Classified Intent: 'TRADE_APPLICATION'
+2024-11-18 13:24:26,856 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com//openai/deployments/vassar-text-ada002/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2024-11-18 13:24:26,879 - INFO - HTTP Request: POST http://localhost:8000/api/v1/collections/5f0bb24d-e4c1-4622-a3e7-f6f90181d5fe/query "HTTP/1.1 200 OK"
+2024-11-18 13:24:28,402 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com/openai/deployments/vassar-4o-mini/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-11-18 13:24:28,707 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com//openai/deployments/vassar-text-ada002/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2024-11-18 13:24:28,726 - INFO - HTTP Request: POST http://localhost:8000/api/v1/collections/5f0bb24d-e4c1-4622-a3e7-f6f90181d5fe/query "HTTP/1.1 200 OK"
+2024-11-18 13:24:30,236 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com/openai/deployments/vassar-4o-mini/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-11-18 13:24:30,240 - INFO - Row #156: PASS - Expected Intent: 'OTHERS', Classified Intent: 'OTHERS'
+2024-11-18 13:24:30,545 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com//openai/deployments/vassar-text-ada002/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2024-11-18 13:24:30,567 - INFO - HTTP Request: POST http://localhost:8000/api/v1/collections/5f0bb24d-e4c1-4622-a3e7-f6f90181d5fe/query "HTTP/1.1 200 OK"
+2024-11-18 13:24:31,774 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com/openai/deployments/vassar-4o-mini/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-11-18 13:24:32,079 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com//openai/deployments/vassar-text-ada002/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2024-11-18 13:24:32,096 - INFO - HTTP Request: POST http://localhost:8000/api/v1/collections/5f0bb24d-e4c1-4622-a3e7-f6f90181d5fe/query "HTTP/1.1 200 OK"
+2024-11-18 13:24:34,945 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com/openai/deployments/vassar-4o-mini/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-11-18 13:24:34,948 - INFO - Row #157: PASS - Expected Intent: 'TRADE_APPLICATION', Classified Intent: 'TRADE_APPLICATION'
+2024-11-18 13:24:35,253 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com//openai/deployments/vassar-text-ada002/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2024-11-18 13:24:35,274 - INFO - HTTP Request: POST http://localhost:8000/api/v1/collections/5f0bb24d-e4c1-4622-a3e7-f6f90181d5fe/query "HTTP/1.1 200 OK"
+2024-11-18 13:24:36,384 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com/openai/deployments/vassar-4o-mini/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-11-18 13:24:36,629 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com//openai/deployments/vassar-text-ada002/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2024-11-18 13:24:36,657 - INFO - HTTP Request: POST http://localhost:8000/api/v1/collections/5f0bb24d-e4c1-4622-a3e7-f6f90181d5fe/query "HTTP/1.1 200 OK"
+2024-11-18 13:24:37,838 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com/openai/deployments/vassar-4o-mini/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-11-18 13:24:37,841 - INFO - Row #158: PASS - Expected Intent: 'TRADE_APPLICATION', Classified Intent: 'TRADE_APPLICATION'
+2024-11-18 13:24:38,120 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com//openai/deployments/vassar-text-ada002/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2024-11-18 13:24:38,143 - INFO - HTTP Request: POST http://localhost:8000/api/v1/collections/5f0bb24d-e4c1-4622-a3e7-f6f90181d5fe/query "HTTP/1.1 200 OK"
+2024-11-18 13:24:39,585 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com/openai/deployments/vassar-4o-mini/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-11-18 13:24:39,589 - INFO - Row #159: PASS - Expected Intent: 'BANTER', Classified Intent: 'BANTER'
+2024-11-18 13:24:39,860 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com//openai/deployments/vassar-text-ada002/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2024-11-18 13:24:39,884 - INFO - HTTP Request: POST http://localhost:8000/api/v1/collections/5f0bb24d-e4c1-4622-a3e7-f6f90181d5fe/query "HTTP/1.1 200 OK"
+2024-11-18 13:24:41,004 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com/openai/deployments/vassar-4o-mini/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-11-18 13:24:41,007 - INFO - Row #160: PASS - Expected Intent: 'BANTER', Classified Intent: 'BANTER'
+2024-11-18 13:24:41,305 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com//openai/deployments/vassar-text-ada002/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2024-11-18 13:24:41,329 - INFO - HTTP Request: POST http://localhost:8000/api/v1/collections/5f0bb24d-e4c1-4622-a3e7-f6f90181d5fe/query "HTTP/1.1 200 OK"
+2024-11-18 13:24:42,838 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com/openai/deployments/vassar-4o-mini/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-11-18 13:24:42,841 - INFO - Row #161: PASS - Expected Intent: 'BANTER', Classified Intent: 'BANTER'
+2024-11-18 13:24:43,146 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com//openai/deployments/vassar-text-ada002/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2024-11-18 13:24:43,168 - INFO - HTTP Request: POST http://localhost:8000/api/v1/collections/5f0bb24d-e4c1-4622-a3e7-f6f90181d5fe/query "HTTP/1.1 200 OK"
+2024-11-18 13:24:44,413 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com/openai/deployments/vassar-4o-mini/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-11-18 13:24:44,417 - INFO - Row #162: PASS - Expected Intent: 'BANTER', Classified Intent: 'BANTER'
+2024-11-18 13:24:44,659 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com//openai/deployments/vassar-text-ada002/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2024-11-18 13:24:44,683 - INFO - HTTP Request: POST http://localhost:8000/api/v1/collections/5f0bb24d-e4c1-4622-a3e7-f6f90181d5fe/query "HTTP/1.1 200 OK"
+2024-11-18 13:24:46,314 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com/openai/deployments/vassar-4o-mini/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-11-18 13:24:46,317 - INFO - Row #163: PASS - Expected Intent: 'OTHERS', Classified Intent: 'OTHERS'
+2024-11-18 13:24:46,554 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com//openai/deployments/vassar-text-ada002/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2024-11-18 13:24:46,584 - INFO - HTTP Request: POST http://localhost:8000/api/v1/collections/5f0bb24d-e4c1-4622-a3e7-f6f90181d5fe/query "HTTP/1.1 200 OK"
+2024-11-18 13:24:47,604 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com/openai/deployments/vassar-4o-mini/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-11-18 13:24:47,852 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com//openai/deployments/vassar-text-ada002/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2024-11-18 13:24:47,874 - INFO - HTTP Request: POST http://localhost:8000/api/v1/collections/5f0bb24d-e4c1-4622-a3e7-f6f90181d5fe/query "HTTP/1.1 200 OK"
+2024-11-18 13:24:49,591 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com/openai/deployments/vassar-4o-mini/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-11-18 13:24:49,594 - INFO - Row #164: PASS - Expected Intent: 'PRODUCT_AVAILABILITY', Classified Intent: 'PRODUCT_AVAILABILITY'
+2024-11-18 13:24:49,904 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com//openai/deployments/vassar-text-ada002/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2024-11-18 13:24:49,926 - INFO - HTTP Request: POST http://localhost:8000/api/v1/collections/5f0bb24d-e4c1-4622-a3e7-f6f90181d5fe/query "HTTP/1.1 200 OK"
+2024-11-18 13:24:51,237 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com/openai/deployments/vassar-4o-mini/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-11-18 13:24:51,537 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com//openai/deployments/vassar-text-ada002/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2024-11-18 13:24:51,557 - INFO - HTTP Request: POST http://localhost:8000/api/v1/collections/5f0bb24d-e4c1-4622-a3e7-f6f90181d5fe/query "HTTP/1.1 200 OK"
+2024-11-18 13:24:52,838 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com/openai/deployments/vassar-4o-mini/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-11-18 13:24:52,842 - INFO - Row #165: PASS - Expected Intent: 'Damages', Classified Intent: 'DAMAGES'
+2024-11-18 13:24:53,078 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com//openai/deployments/vassar-text-ada002/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2024-11-18 13:24:53,099 - INFO - HTTP Request: POST http://localhost:8000/api/v1/collections/5f0bb24d-e4c1-4622-a3e7-f6f90181d5fe/query "HTTP/1.1 200 OK"
+2024-11-18 13:24:54,526 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com/openai/deployments/vassar-4o-mini/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-11-18 13:24:54,781 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com//openai/deployments/vassar-text-ada002/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2024-11-18 13:24:54,801 - INFO - HTTP Request: POST http://localhost:8000/api/v1/collections/5f0bb24d-e4c1-4622-a3e7-f6f90181d5fe/query "HTTP/1.1 200 OK"
+2024-11-18 13:24:55,861 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com/openai/deployments/vassar-4o-mini/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-11-18 13:24:55,865 - INFO - Row #166: PASS - Expected Intent: 'Returns', Classified Intent: 'RETURNS'
+2024-11-18 13:24:56,146 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com//openai/deployments/vassar-text-ada002/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2024-11-18 13:24:56,168 - INFO - HTTP Request: POST http://localhost:8000/api/v1/collections/5f0bb24d-e4c1-4622-a3e7-f6f90181d5fe/query "HTTP/1.1 200 OK"
+2024-11-18 13:24:57,906 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com/openai/deployments/vassar-4o-mini/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-11-18 13:24:58,193 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com//openai/deployments/vassar-text-ada002/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2024-11-18 13:24:58,214 - INFO - HTTP Request: POST http://localhost:8000/api/v1/collections/5f0bb24d-e4c1-4622-a3e7-f6f90181d5fe/query "HTTP/1.1 200 OK"
+2024-11-18 13:24:59,324 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com/openai/deployments/vassar-4o-mini/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-11-18 13:24:59,327 - INFO - Row #167: PASS - Expected Intent: 'ORDER_STATUS', Classified Intent: 'ORDER_STATUS'
+2024-11-18 13:24:59,672 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com//openai/deployments/vassar-text-ada002/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2024-11-18 13:24:59,693 - INFO - HTTP Request: POST http://localhost:8000/api/v1/collections/5f0bb24d-e4c1-4622-a3e7-f6f90181d5fe/query "HTTP/1.1 200 OK"
+2024-11-18 13:25:01,276 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com/openai/deployments/vassar-4o-mini/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-11-18 13:25:01,579 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com//openai/deployments/vassar-text-ada002/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2024-11-18 13:25:01,599 - INFO - HTTP Request: POST http://localhost:8000/api/v1/collections/5f0bb24d-e4c1-4622-a3e7-f6f90181d5fe/query "HTTP/1.1 200 OK"
+2024-11-18 13:25:03,111 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com/openai/deployments/vassar-4o-mini/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-11-18 13:25:03,114 - INFO - Row #168: PASS - Expected Intent: 'Damages', Classified Intent: 'DAMAGES'
+2024-11-18 13:25:03,422 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com//openai/deployments/vassar-text-ada002/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2024-11-18 13:25:03,445 - INFO - HTTP Request: POST http://localhost:8000/api/v1/collections/5f0bb24d-e4c1-4622-a3e7-f6f90181d5fe/query "HTTP/1.1 200 OK"
+2024-11-18 13:25:04,743 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com/openai/deployments/vassar-4o-mini/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-11-18 13:25:05,055 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com//openai/deployments/vassar-text-ada002/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2024-11-18 13:25:05,074 - INFO - HTTP Request: POST http://localhost:8000/api/v1/collections/5f0bb24d-e4c1-4622-a3e7-f6f90181d5fe/query "HTTP/1.1 200 OK"
+2024-11-18 13:25:06,445 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com/openai/deployments/vassar-4o-mini/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-11-18 13:25:06,449 - INFO - Row #169: PASS - Expected Intent: 'ORDER_STATUS', Classified Intent: 'ORDER_STATUS'
+2024-11-18 13:25:06,693 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com//openai/deployments/vassar-text-ada002/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2024-11-18 13:25:06,716 - INFO - HTTP Request: POST http://localhost:8000/api/v1/collections/5f0bb24d-e4c1-4622-a3e7-f6f90181d5fe/query "HTTP/1.1 200 OK"
+2024-11-18 13:25:08,332 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com/openai/deployments/vassar-4o-mini/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-11-18 13:25:08,639 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com//openai/deployments/vassar-text-ada002/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2024-11-18 13:25:08,659 - INFO - HTTP Request: POST http://localhost:8000/api/v1/collections/5f0bb24d-e4c1-4622-a3e7-f6f90181d5fe/query "HTTP/1.1 200 OK"
+2024-11-18 13:25:10,273 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com/openai/deployments/vassar-4o-mini/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-11-18 13:25:10,276 - INFO - Row #170: PASS - Expected Intent: 'DAMAGES', Classified Intent: 'DAMAGES'
+2024-11-18 13:25:10,582 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com//openai/deployments/vassar-text-ada002/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2024-11-18 13:25:10,603 - INFO - HTTP Request: POST http://localhost:8000/api/v1/collections/5f0bb24d-e4c1-4622-a3e7-f6f90181d5fe/query "HTTP/1.1 200 OK"
+2024-11-18 13:25:11,582 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com/openai/deployments/vassar-4o-mini/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-11-18 13:25:11,585 - INFO - Row #171: PASS - Expected Intent: 'BANTER', Classified Intent: 'BANTER'
+2024-11-18 13:25:11,824 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com//openai/deployments/vassar-text-ada002/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2024-11-18 13:25:11,845 - INFO - HTTP Request: POST http://localhost:8000/api/v1/collections/5f0bb24d-e4c1-4622-a3e7-f6f90181d5fe/query "HTTP/1.1 200 OK"
+2024-11-18 13:25:13,246 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com/openai/deployments/vassar-4o-mini/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-11-18 13:25:13,556 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com//openai/deployments/vassar-text-ada002/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2024-11-18 13:25:13,574 - INFO - HTTP Request: POST http://localhost:8000/api/v1/collections/5f0bb24d-e4c1-4622-a3e7-f6f90181d5fe/query "HTTP/1.1 200 OK"
+2024-11-18 13:25:15,498 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com/openai/deployments/vassar-4o-mini/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-11-18 13:25:15,501 - INFO - Row #172: PASS - Expected Intent: 'OTHERS', Classified Intent: 'OTHERS'
+2024-11-18 13:25:15,806 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com//openai/deployments/vassar-text-ada002/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2024-11-18 13:25:15,833 - INFO - HTTP Request: POST http://localhost:8000/api/v1/collections/5f0bb24d-e4c1-4622-a3e7-f6f90181d5fe/query "HTTP/1.1 200 OK"
+2024-11-18 13:25:17,627 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com/openai/deployments/vassar-4o-mini/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-11-18 13:25:17,872 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com//openai/deployments/vassar-text-ada002/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2024-11-18 13:25:17,894 - INFO - HTTP Request: POST http://localhost:8000/api/v1/collections/5f0bb24d-e4c1-4622-a3e7-f6f90181d5fe/query "HTTP/1.1 200 OK"
+2024-11-18 13:25:19,550 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com/openai/deployments/vassar-4o-mini/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-11-18 13:25:19,553 - ERROR - Row #173: FAIL - Expected Intent: 'OTHERS', Classified Intent: 'RETURNS'
+email_history::User: Bot: 
+
+ user_latest_email::User: Subject: , Body: This is not what I ordered. Order number 296574 Pesce Vase Please tell me how to return and confirm that the actual vase I ordered is on its way. 
+
+ intent_examples:: User message : I need to return this order. #295108. Please let men know how to proceed. - Intent Identified : RETURNS
+User message : Could you confirm when my order will be delivered? I’d like to return it if there’s any delay in shipping. - Intent Identified : ORDER_STATUS
+User message : My order #289925, I ordered 4 counter height bar stools but received bar stools. I need to return them. Please advise how to return. Thank you for your help - Intent Identified : RETURNS
+User message : I need to return my Pohai Cluster Bowl but my email doesnt have an order number. - Intent Identified : RETURNS
+User message : I need to process a return for the above referenced order number (unfortunately, the candle holders are too tall for my space). Can you let me know how I complete the process? - Intent Identified : RETURNS 
+
+ sub_intent_examples::User message : I need to return this order. #295108. Please let men know how to proceed. - Sub Intent Identified : QUERIES
+User message : ’d like to start the return process for my most recent order. The product wasn’t what I expected, and I’d like to send it back  - Sub Intent Identified : RETURNS_PROCESSING
+User message : The order is taking too long to arrive. Can you return it to the sender instead of delivering it? - Sub Intent Identified : RETURNING_UNDELIVERED_ORDER
+User message : I need to process a return for the above referenced order number (unfortunately, the candle holders are too tall for my space). Can you let me know how I complete the process? - Sub Intent Identified : RETURN_PROCESSING
+User message : I need to return my Pohai Cluster Bowl but my email doesnt have an order number. - Sub Intent Identified : RETURN_PROCESSING
+2024-11-18 13:25:19,796 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com//openai/deployments/vassar-text-ada002/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2024-11-18 13:25:19,821 - INFO - HTTP Request: POST http://localhost:8000/api/v1/collections/5f0bb24d-e4c1-4622-a3e7-f6f90181d5fe/query "HTTP/1.1 200 OK"
+2024-11-18 13:25:20,859 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com/openai/deployments/vassar-4o-mini/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-11-18 13:25:21,101 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com//openai/deployments/vassar-text-ada002/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2024-11-18 13:25:21,121 - INFO - HTTP Request: POST http://localhost:8000/api/v1/collections/5f0bb24d-e4c1-4622-a3e7-f6f90181d5fe/query "HTTP/1.1 200 OK"
+2024-11-18 13:25:22,465 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com/openai/deployments/vassar-4o-mini/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-11-18 13:25:22,468 - INFO - Row #174: PASS - Expected Intent: 'PRODUCT_AVAILABILITY', Classified Intent: 'PRODUCT_AVAILABILITY'
+2024-11-18 13:25:22,769 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com//openai/deployments/vassar-text-ada002/embeddings?api-version=2023-05-15 "HTTP/1.1 200 OK"
+2024-11-18 13:25:22,793 - INFO - HTTP Request: POST http://localhost:8000/api/v1/collections/5f0bb24d-e4c1-4622-a3e7-f6f90181d5fe/query "HTTP/1.1 200 OK"
+2024-11-18 13:25:26,701 - INFO - HTTP Request: POST https://vassar-openai.openai.azure.com/openai/deployments/vassar-4o-mini/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-11-18 13:25:26,705 - INFO - Row #175: PASS - Expected Intent: 'OTHERS', Classified Intent: 'OTHERS'
+2024-11-18 13:25:26,854 - INFO - Start Time: 13:15:15
+2024-11-18 13:25:26,854 - INFO - End Time: 13:25:26
+2024-11-18 13:25:26,854 - INFO - Updated Excel file saved at: /home/saiprakesh/PycharmProjects/Prompt Testing Using Excel/email_prompt_test/automation_testing_email.xlsx
