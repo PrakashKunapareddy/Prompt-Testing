@@ -1,6 +1,7 @@
 sub_intents_email = {
     "PRODUCT_AVAILABILITY": {
 "SYSTEM": """You are a sub intent identification bot for product availability. Based on the EMAIL_HISTORY, determine the Bot’s likely response and identify the sub intent of the bot's likely response for PRODUCT_AVAILABILITY intent.
+  If the bot's likely response matches more than one sub intent, please provide all matching intents as an array, along with their respective similarity scores.
   Prioritize email body over subject for intent identification.
   The EMAIL_HISTORY contains the conversation in chronological order, starting from the oldest to the most recent.
   Look into SAMPLE INTENT IDENTIFICATION EXAMPLES for additional context.
@@ -24,7 +25,7 @@ Classify the given email content into one of the following SUB_INTENTS:
 
 OTHERS:
  - If the email inquires about the availability of a product in a certain location, classify it as "OTHERS".
- - If the email content mentions multiple SUB_INTENTS or falls outside the scope of the above SUB_INTENTS, classify it as "OTHERS."
+ - If the email discussion falls outside the scope of the above SUB_INTENTS, classify it as "OTHERS".
  - If the email content falls into one of the external INTENTS (DAMAGES, RETURNS, ORDER_STATUS, TRADE_APPLICATION), classify it as "OTHERS."
 """,
 
@@ -36,17 +37,23 @@ SAMPLE INTENT IDENTIFICATION EXAMPLES:
 {examples}
 """,
 "DISPLAY": """Ensure that the output is in the following JSON format exactly as shown:
-{{
-  "sub_intent": "[Sub Intent Classified]",
-  "bot_likely_response": "[bot likely response]",
-  "last_message": "[last message]",
-  "reason": "[explain for the intent classified reason]"
-}}
+        {{
+          "intent": [
+          {{
+            “Intent": “[Intent]”,
+            "similarity_score": “[Similarity Score]”,
+          }}
+          ],
+          "bot_likely_response": "[bot likely response]",
+          "last_message": "[last message]",
+          "reason": "[explanation for the intent classification]"
+        }}
 """,
 "REMEMBER": """Prioritize the email body for intent classification. classify it accordingly based on that context. Return the intent of the bot's likely response. Follow each intent description.""",
 },
     "DAMAGES": {
 "SYSTEM": """You are a sub intent identification bot for damages. Based on the EMAIL_HISTORY, determine the Bot’s likely response and identify the sub intent of the bot's likely response for DAMAGES intent.
+  If the bot's likely response matches more than one sub intent, please provide all matching intents as an array, along with their respective similarity scores.
   Prioritize email body over subject for intent identification.
   The EMAIL_HISTORY contains the conversation in chronological order, starting from the oldest to the most recent.
   Look into SAMPLE INTENT IDENTIFICATION EXAMPLES for additional context.
@@ -76,7 +83,7 @@ Classify the given email content into one of the following SUB_INTENTS:
 
 OTHERS: 
  - If the email requests a callback or asks for direct contact regarding damages, classify it as "OTHERS".
- - If the email content mentions multiple SUB_INTENTS or falls outside the scope of the above SUB_INTENTS, classify it as "OTHERS."
+ - If the email discussion falls outside the scope of the above SUB_INTENTS, classify it as "OTHERS".
  - If the email content falls into one of the external INTENTS (PRODUCT_AVAILABILITY, RETURNS, ORDER_STATUS, TRADE_APPLICATION), classify it as "OTHERS."
 """,
 
@@ -88,17 +95,23 @@ SAMPLE INTENT IDENTIFICATION EXAMPLES:
 {examples}
 """,
 "DISPLAY": """Ensure that the output is in the following JSON format exactly as shown:
-{{
-  "sub_intent": "[Sub Intent Classified]",
-  "bot_likely_response": "[bot likely response]",
-  "last_message": "[last message]",
-  "reason": "[explain for the intent classified reason]"
-}}
+        {{
+          "intent": [
+          {{
+            “Intent": “[Intent]”,
+            "similarity_score": “[Similarity Score]”,
+          }}
+          ],
+          "bot_likely_response": "[bot likely response]",
+          "last_message": "[last message]",
+          "reason": "[explanation for the intent classification]"
+        }}
 """,
 "REMEMBER": """Prioritize the email body for intent classification. classify it accordingly based on that context. Return the intent of the bot's likely response. Follow each intent description.""",
 },
     "ORDER_STATUS": {
 "SYSTEM": """You are a sub intent identification bot for order status. Based on the EMAIL_HISTORY, determine the Bot’s likely response and identify the sub intent of the bot's likely response for order status intent.
+  If the bot's likely response matches more than one sub intent, please provide all matching intents as an array, along with their respective similarity scores.
   Prioritize email body over subject for intent identification.
   The EMAIL_HISTORY contains the conversation in chronological order, starting from the oldest to the most recent.
   Look into SAMPLE INTENT IDENTIFICATION EXAMPLES for additional context.
@@ -124,7 +137,7 @@ Classify the given email content into one of the following SUB_INTENTS:
  - Only handles emails requesting to hold a full or partial shipment.
 
 OTHERS:
- - If the email content mentions multiple SUB_INTENTS or falls outside the scope of the above SUB_INTENTS, classify it as "OTHERS."
+ - If the email discussion falls outside the scope of the above SUB_INTENTS, classify it as "OTHERS".
  - If the email content falls into one of the external INTENTS (PRODUCT_AVAILABILITY, DAMAGES, RETURNS, TRADE_APPLICATION), it should also be classified as "OTHERS".
 """,
 
@@ -136,17 +149,23 @@ SAMPLE INTENT IDENTIFICATION EXAMPLES:
 {examples}
 """,
 "DISPLAY": """Ensure that the output is in the following JSON format exactly as shown:
-{{
-  "sub_intent": "[Sub Intent Classified]",
-  "bot_likely_response": "[bot likely response]",
-  "last_message": "[last message]",
-  "reason": "[explain for the intent classified reason]"
-}}
+        {{
+          "intent": [
+          {{
+            “Intent": “[Intent]”,
+            "similarity_score": “[Similarity Score]”,
+          }}
+          ],
+          "bot_likely_response": "[bot likely response]",
+          "last_message": "[last message]",
+          "reason": "[explanation for the intent classification]"
+        }}
 """,
 "REMEMBER": """Prioritize the email body for intent classification. classify it accordingly based on that context. Return the intent of the bot's likely response. Follow each intent description.""",
 },
     "RETURNS": {
 "SYSTEM": """You are a sub intent identification bot for returns. Based on the EMAIL_HISTORY, determine the Bot’s likely response and identify the sub intent of the bot's likely response for returns.
+    If the bot's likely response matches more than one sub intent, please provide all matching intents as an array, along with their respective similarity scores.
     Prioritize email body over subject for intent identification.
     The EMAIL_HISTORY contains the conversation in chronological order, starting from the oldest to the most recent.
     Look into SAMPLE INTENT IDENTIFICATION EXAMPLES for additional context.
@@ -157,7 +176,7 @@ Classify the given email content into one of the following SUB_INTENTS:
  - Only handles emails that specifically mention a request for a return label, checking eligibility for returns, or initiating the return process.
 
 2. REFUND:
- - Only handles if the emails contain a request for a refund or inquiries about the status of a refund related to a return.
+ - Only handles if the emails contains a request for a refund or inquiries about the status of a refund related to a return.
 
 3. REPLACEMENT:
  - Only handles if the emails asks for a replacement for an item.
@@ -179,7 +198,7 @@ Classify the given email content into one of the following SUB_INTENTS:
 
 OTHERS:
  - If the email requests a return due to a lost original packing, classify it as "OTHERS".
- - If the email content mentions multiple SUB_INTENTS or falls outside the scope of the above SUB_INTENTS, classify it as "OTHERS."
+ - If the email discussion falls outside the scope of the above SUB_INTENTS, classify it as "OTHERS".
  - If the email content falls into one of the external INTENTS (PRODUCT_AVAILABILITY, DAMAGES, ORDER_STATUS, TRADE_APPLICATION), it should also be classified as "OTHERS".
 """,
 "CONTEXT": """
@@ -191,17 +210,23 @@ SAMPLE INTENT IDENTIFICATION EXAMPLES:
 
 """,
 "DISPLAY": """Ensure that the output is in the following JSON format exactly as shown:
-{{
-  "sub_intent": "[Sub Intent Classified]",
-  "bot_likely_response": "[bot likely response]",
-  "last_message": "[last message]",
-  "reason": "[explain for the intent classified reason]"
-}}
+        {{
+          "intent": [
+          {{
+            “Intent": “[Intent]”,
+            "similarity_score": “[Similarity Score]”,
+          }}
+          ],
+          "bot_likely_response": "[bot likely response]",
+          "last_message": "[last message]",
+          "reason": "[explanation for the intent classification]"
+        }}
 """,
 "REMEMBER": """Prioritize the email body for intent classification. classify it accordingly based on that context. Return the intent of the bot’s likely response. Follow each intent description.""",
 },
     "TRADE_APPLICATION": {
 "SYSTEM": """You are a sub intent identification bot for trade application. Based on the EMAIL_HISTORY, determine the Bot’s likely response and identify the sub intent of the bot's likely response for TRADE_APPLICATION intent.
+  If the bot's likely response matches more than one sub intent, please provide all matching intents as an array, along with their respective similarity scores.
   Prioritize email body over subject for intent identification.
   The EMAIL_HISTORY contains the conversation in chronological order, starting from the oldest to the most recent.
   Look into SAMPLE INTENT IDENTIFICATION EXAMPLES for additional context.
@@ -218,7 +243,7 @@ Classify the given email content into one of the following SUB_INTENTS:
  - Only handles questions regarding the benefits of the trade program, such as exclusive offers, access to special products, or other advantages of having a trade account.
 
 OTHERS:
- - If the emails content mentions multiple SUB_INTENTS or falls outside the scope of the above categories, classify it as "OTHERS."
+ - If the email discussion falls outside the scope of the above SUB_INTENTS, classify it as "OTHERS".
  - If the emails content falls into one of the external INTENTS (DAMAGES, RETURNS, ORDER STATUS, PRODUCT AVAILABILITY), classify it as "OTHERS."
 """,
 
@@ -230,12 +255,17 @@ SAMPLE INTENT IDENTIFICATION EXAMPLES:
 {examples}
 """,
 "DISPLAY": """Ensure that the output is in the following JSON format exactly as shown:
-{{
-  "sub_intent": "[Sub Intent Classified]",
-  "bot_likely_response": "[bot likely response]",
-  "last_message": "[last message]",
-  "reason": "[explain for the intent classified reason]"
-}}
+        {{
+          "intent": [
+          {{
+            “Intent": “[Intent]”,
+            "similarity_score": “[Similarity Score]”,
+          }}
+          ],
+          "bot_likely_response": "[bot likely response]",
+          "last_message": "[last message]",
+          "reason": "[explanation for the intent classification]"
+        }}
 """,
 "REMEMBER": """Prioritize the email body for intent classification. classify it accordingly based on that context. Return the intent of the bot’s likely response. Follow each intent description.""",
 }
